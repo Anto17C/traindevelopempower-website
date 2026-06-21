@@ -205,14 +205,14 @@ section { padding: 80px 0; }
   color: #fff;
 }
 .hero-btn-wa {
-  background: #25D366;
+  background: rgba(255,255,255,.08);
   color: #fff;
-  border-color: #25D366;
+  border-color: rgba(255,255,255,.3);
 }
 .hero-btn-wa:hover {
-  background: #20ba5a;
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.6);
   color: #fff;
-  transform: translateY(-2px);
 }
 
 /* ── PAGE HERO ── */
@@ -558,12 +558,17 @@ details[open] summary::after { content: '−'; }
   background: #fff;
   border: 1.5px solid var(--border);
   border-radius: 12px;
-  padding: 24px 20px;
+  padding: 28px 24px;
   transition: all .25s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .why-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
 .why-icon {
-  width: 44px; height: 44px;
+  width: 48px; height: 48px;
+  margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
   margin-bottom: 14px;
   display: flex; align-items: center; justify-content: center;
   background: rgba(201,168,76,0.1);
@@ -571,8 +576,8 @@ details[open] summary::after { content: '−'; }
   color: var(--gold);
 }
 .why-icon svg { width: 24px; height: 24px; }
-.why-title { color: var(--navy) !important; font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
-.why-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
+.why-title { color: var(--navy) !important; text-align: center; font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { text-align: center; font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
 @media (max-width: 1024px) {
   .why-header { grid-template-columns: 1fr; gap: 36px; }
