@@ -508,7 +508,7 @@ details[open] summary::after { content: '−'; }
 .footer-col-brand p { font-size: .8rem; color: rgba(255,255,255,.58); line-height: 1.65; margin-bottom: 16px; }
 .footer-social { display: flex; gap: 8px; flex-wrap: wrap; }
 .footer-social a {
-  width: 28px; height: 28px; border-radius: 50%;
+  width: 22px; height: 22px; border-radius: 50%;
   background: rgba(255,255,255,.1);
   display: flex; align-items: center; justify-content: center;
   color: rgba(255,255,255,.7); transition: all .2s;
@@ -522,7 +522,7 @@ details[open] summary::after { content: '−'; }
   display: inline-block;
 }
 .footer-col-links ul { list-style: none; }
-.footer-col-links ul li { margin-bottom: 0; }
+.footer-col-links ul li { margin: 0; padding: 0; line-height: 1.8; }
 .footer-col-links ul a { color: rgba(255,255,255,.6); font-size: .8rem; transition: color .2s; }
 .footer-col-links ul a:hover { color: var(--gold); }
 .footer-company-name { color: var(--gold); font-size: .82rem; font-weight: 700; margin-bottom: 6px; }
@@ -660,7 +660,7 @@ details[open] summary::after { content: '−'; }
   text-align: left;
 }
 .cta-left h2 { color: #fff; margin-bottom: 10px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
-.cta-left p { color: rgba(255,255,255,.75); font-size: .9rem; margin: 0; }
+.cta-left p { color: rgba(255,255,255,.75); font-size: .8rem; margin: 0; }
 .cta-right {
   display: flex;
   flex-direction: row;
