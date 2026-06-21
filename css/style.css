@@ -127,7 +127,7 @@ section { padding: 80px 0; }
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 480px;
+  min-height: 580px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -721,7 +721,7 @@ details[open] summary::after { content: '−'; }
   display: grid;
   grid-template-columns: 52% 48%;
   align-items: center;
-  min-height: 340px;
+  min-height: 300px;
   padding: 48px 0;
 }
 .page-hero-left { display: flex; flex-direction: column; justify-content: center; }
