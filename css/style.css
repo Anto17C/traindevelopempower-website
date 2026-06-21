@@ -270,7 +270,7 @@ section { padding: 80px 0; }
 }
 .cat-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); border-color: var(--gold); }
 .cat-card-img {
-  height: 190px; overflow: hidden; background: var(--light);
+  height: 200px; overflow: hidden; background: var(--light);
   position: relative;
 }
 .cat-card-img img {
@@ -544,7 +544,7 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── WHY SECTION ── */
-.why-section { background: var(--light); }
+.why-section { background: #fff; }
 .why-header {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
