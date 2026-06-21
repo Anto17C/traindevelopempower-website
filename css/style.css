@@ -721,7 +721,7 @@ details[open] summary::after { content: '−'; }
   display: grid;
   grid-template-columns: 52% 48%;
   align-items: center;
-  min-height: 300px;
+  min-height: 340px;
   padding: 48px 0;
 }
 .page-hero-left { display: flex; flex-direction: column; justify-content: center; }
