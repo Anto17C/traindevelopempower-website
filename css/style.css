@@ -127,7 +127,7 @@ section { padding: 80px 0; }
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 610px;
+  min-height: 580px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -162,7 +162,7 @@ section { padding: 80px 0; }
 .hero-right { /* empty - shows background image */ }
 .hero h4 { color: var(--gold); margin-bottom: 10px; font-size: .78rem; letter-spacing: .14em; }
 .hero h1 { color: #fff; margin-bottom: 12px; font-size: clamp(1.9rem, 3.2vw, 2.8rem); line-height: 1.15; }
-.hero p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 20px; }
+.hero p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 20px; max-width: 480px; }
 .hero-btns {
   display: flex;
   gap: 7px;
