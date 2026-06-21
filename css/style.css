@@ -806,7 +806,7 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── ABOUT PAGE ADDITIONS ── */
-.page-hero-short .page-hero-inner { min-height: 240px; padding: 36px 0; }
+.page-hero-short .page-hero-inner { min-height: 200px; padding: 28px 0; }
 
 .feature-grid-4 { grid-template-columns: repeat(4,1fr) !important; }
 
@@ -838,4 +838,55 @@ details[open] summary::after { content: '−'; }
 @media (max-width: 768px) {
   .feature-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
   [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+}
+
+/* ── DELIVERY METHOD SECTION ── */
+.delivery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.delivery-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform .25s;
+}
+.delivery-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.delivery-img { height: 220px; overflow: hidden; }
+.delivery-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.delivery-card:hover .delivery-img img { transform: scale(1.05); }
+.delivery-body {
+  background: var(--navy);
+  padding: 20px 22px;
+}
+.delivery-icon {
+  width: 44px; height: 44px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.delivery-body h3 { color: #fff; font-size: 1rem; margin-bottom: 10px; }
+.delivery-body p { color: rgba(255,255,255,.72); font-size: .84rem; line-height: 1.65; margin: 0; }
+
+/* ── GLOBAL EXPERIENCE SECTION ── */
+.global-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
+.global-text h2 { margin: 10px 0 0; }
+.global-countries { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; margin-top: 4px; }
+.global-countries ul { list-style: none; }
+.global-countries ul li {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid var(--border);
+  font-size: .875rem; color: var(--text); font-weight: 500;
+}
+.global-countries ul li:last-child { border-bottom: none; }
+.global-countries svg { color: var(--gold); flex-shrink: 0; }
+.global-map { border-radius: var(--radius); overflow: hidden; }
+
+@media (max-width: 1024px) {
+  .delivery-grid { grid-template-columns: 1fr; }
+  .global-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .delivery-grid { grid-template-columns: 1fr; }
+  .global-countries { grid-template-columns: 1fr; }
 }
