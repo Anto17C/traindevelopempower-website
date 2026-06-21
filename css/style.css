@@ -522,7 +522,7 @@ details[open] summary::after { content: '−'; }
   display: inline-block;
 }
 .footer-col-links ul { list-style: none; }
-.footer-col-links ul li { margin: 0; padding: 0; line-height: 1.8; }
+.footer-col-links ul li { margin: 0; padding: 0; line-height: 1.4; }
 .footer-col-links ul a { color: rgba(255,255,255,.6); font-size: .8rem; transition: color .2s; }
 .footer-col-links ul a:hover { color: var(--gold); }
 .footer-company-name { color: var(--gold); font-size: .82rem; font-weight: 700; margin-bottom: 6px; }
@@ -659,7 +659,7 @@ details[open] summary::after { content: '−'; }
   flex: 1;
   text-align: left;
 }
-.cta-left h2 { color: #fff; margin-bottom: 10px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+.cta-left h2 { color: #fff; margin-bottom: 10px; font-size: 1.2rem; }
 .cta-left p { color: rgba(255,255,255,.75); font-size: .8rem; margin: 0; }
 .cta-right {
   display: flex;
