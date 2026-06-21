@@ -624,7 +624,7 @@ details[open] summary::after { content: '−'; }
 }
 .cta-left {
   flex: 1;
-  text-align: right;
+  text-align: left;
 }
 .cta-left h2 { color: #fff; margin-bottom: 10px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
 .cta-left p { color: rgba(255,255,255,.75); font-size: .9rem; margin: 0; }
@@ -639,10 +639,10 @@ details[open] summary::after { content: '−'; }
 .cta-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 11px 20px;
+  gap: 5px;
+  padding: 9px 13px;
   border-radius: 50px;
-  font-size: .8rem;
+  font-size: .74rem;
   font-weight: 700;
   white-space: nowrap;
   transition: all .2s;
