@@ -804,3 +804,38 @@ details[open] summary::after { content: '−'; }
   .about-story-visual { grid-template-columns: 1fr; height: auto; }
   .about-story-img { height: 220px; }
 }
+
+/* ── ABOUT PAGE ADDITIONS ── */
+.page-hero-short .page-hero-inner { min-height: 240px; padding: 36px 0; }
+
+.feature-grid-4 { grid-template-columns: repeat(4,1fr) !important; }
+
+.philosophy-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 28px 24px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  border-bottom: 3px solid var(--gold);
+  background: #fff;
+  transition: box-shadow .2s;
+}
+.philosophy-card:hover { box-shadow: var(--shadow); }
+.philosophy-icon {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+}
+.philosophy-title {
+  font-size: .95rem; font-weight: 800; color: var(--navy);
+  margin-bottom: 10px; letter-spacing: .04em;
+}
+.philosophy-card p { font-size: .85rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+@media (max-width: 768px) {
+  .feature-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+  [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+}
