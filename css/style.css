@@ -544,28 +544,42 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── WHY SECTION ── */
-.why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.why-section { background: var(--light); }
+.why-header {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: center;
+}
+.why-header > div:first-child h2 { margin: 12px 0 16px; }
+.why-header > div:first-child p { color: var(--muted); font-size: .95rem; margin-bottom: 24px; }
+.why-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
 .why-card {
   background: #fff;
   border: 1.5px solid var(--border);
-  border-radius: 14px;
-  padding: 32px 24px;
-  text-align: center;
+  border-radius: 12px;
+  padding: 24px 20px;
   transition: all .25s;
 }
-.why-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-4px); }
+.why-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
 .why-icon {
-  width: 56px; height: 56px;
-  margin: 0 auto 16px;
+  width: 44px; height: 44px;
+  margin-bottom: 14px;
   display: flex; align-items: center; justify-content: center;
+  background: rgba(201,168,76,0.1);
+  border-radius: 10px;
   color: var(--gold);
 }
-.why-icon svg { width: 36px; height: 36px; }
-.why-title { color: var(--gold) !important; font-size: .95rem; font-weight: 700; margin-bottom: 10px; }
-.why-card p { font-size: .875rem; color: var(--muted); margin: 0; line-height: 1.6; }
+.why-icon svg { width: 24px; height: 24px; }
+.why-title { color: var(--navy) !important; font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
+@media (max-width: 1024px) {
+  .why-header { grid-template-columns: 1fr; gap: 36px; }
+  .why-grid { grid-template-columns: repeat(4,1fr); }
+}
 @media (max-width: 768px) {
-  .why-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
 }
 @media (max-width: 480px) {
   .why-grid { grid-template-columns: 1fr; }
