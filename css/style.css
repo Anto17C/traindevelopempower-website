@@ -205,14 +205,14 @@ section { padding: 80px 0; }
   color: #fff;
 }
 .hero-btn-wa {
-  background: rgba(255,255,255,.08);
+  background: #25D366;
   color: #fff;
-  border-color: rgba(255,255,255,.3);
+  border-color: #25D366;
 }
 .hero-btn-wa:hover {
-  background: rgba(255,255,255,.15);
-  border-color: rgba(255,255,255,.6);
+  background: #20ba5a;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ── PAGE HERO ── */
@@ -544,7 +544,7 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── WHY SECTION ── */
-.why-section { background: #fff; }
+.why-section { background: var(--light); }
 .why-header {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -558,38 +558,21 @@ details[open] summary::after { content: '−'; }
   background: #fff;
   border: 1.5px solid var(--border);
   border-radius: 12px;
-  padding: 36px 28px;
-  text-align: center;
+  padding: 24px 20px;
   transition: all .25s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .why-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
-.why-card-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-}
 .why-icon {
-  width: 52px; height: 52px;
-  flex-shrink: 0;
+  width: 44px; height: 44px;
+  margin-bottom: 14px;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(201,168,76,0.12);
+  background: rgba(201,168,76,0.1);
   border-radius: 10px;
   color: var(--gold);
 }
-.why-icon svg { width: 26px; height: 26px; }
-.why-title { color: var(--navy) !important; font-size: 1rem; font-weight: 700; margin: 0; }
-.why-body {
-  width: 100%;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-.why-body p { font-size: .9rem; color: var(--muted); margin: 0; line-height: 1.7; }
+.why-icon svg { width: 24px; height: 24px; }
+.why-title { color: var(--navy) !important; font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
 @media (max-width: 1024px) {
   .why-header { grid-template-columns: 1fr; gap: 36px; }
