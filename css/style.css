@@ -205,14 +205,14 @@ section { padding: 80px 0; }
   color: #fff;
 }
 .hero-btn-wa {
-  background: #25D366;
+  background: rgba(255,255,255,.08);
   color: #fff;
-  border-color: #25D366;
+  border-color: rgba(255,255,255,.3);
 }
 .hero-btn-wa:hover {
-  background: #20ba5a;
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.6);
   color: #fff;
-  transform: translateY(-2px);
 }
 
 /* ── PAGE HERO ── */
@@ -559,19 +559,27 @@ details[open] summary::after { content: '−'; }
   border: 1.5px solid var(--border);
   border-radius: 12px;
   padding: 24px 20px;
+  text-align: center;
   transition: all .25s;
 }
 .why-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
+.why-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
 .why-icon {
-  width: 44px; height: 44px;
-  margin-bottom: 14px;
+  width: 36px; height: 36px;
+  flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(201,168,76,0.1);
-  border-radius: 10px;
+  background: rgba(201,168,76,0.12);
+  border-radius: 8px;
   color: var(--gold);
 }
-.why-icon svg { width: 24px; height: 24px; }
-.why-title { color: var(--navy) !important; font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+.why-icon svg { width: 20px; height: 20px; }
+.why-title { color: var(--navy) !important; font-size: .9rem; font-weight: 700; margin: 0; }
 .why-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
 @media (max-width: 1024px) {
