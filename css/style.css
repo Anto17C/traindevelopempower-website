@@ -809,7 +809,7 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── ABOUT PAGE ADDITIONS ── */
-.page-hero-short .page-hero-inner { min-height: 180px; padding: 24px 0; }
+.page-hero-short .page-hero-inner { min-height: 140px; padding: 24px 0; }
 
 .feature-grid-4 { grid-template-columns: repeat(3,1fr) !important; }
 
