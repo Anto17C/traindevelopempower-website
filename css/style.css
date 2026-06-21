@@ -127,7 +127,7 @@ section { padding: 80px 0; }
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 610px;
+  min-height: 650px;
   display: flex;
   align-items: center;
   overflow: hidden;
