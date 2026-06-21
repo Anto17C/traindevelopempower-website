@@ -544,7 +544,7 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── WHY SECTION ── */
-.why-section { background: var(--light); }
+.why-section { background: #fff; }
 .why-header {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -568,7 +568,7 @@ details[open] summary::after { content: '−'; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 .why-icon {
   width: 36px; height: 36px;
@@ -580,7 +580,12 @@ details[open] summary::after { content: '−'; }
 }
 .why-icon svg { width: 20px; height: 20px; }
 .why-title { color: var(--navy) !important; font-size: .9rem; font-weight: 700; margin: 0; }
-.why-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
+.why-body {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.why-body p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
 @media (max-width: 1024px) {
   .why-header { grid-template-columns: 1fr; gap: 36px; }
