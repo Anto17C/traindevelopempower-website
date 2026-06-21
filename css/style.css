@@ -522,7 +522,7 @@ details[open] summary::after { content: '−'; }
   display: inline-block;
 }
 .footer-col-links ul { list-style: none; }
-.footer-col-links ul li { margin-bottom: 4px; }
+.footer-col-links ul li { margin-bottom: 2px; }
 .footer-col-links ul a { color: rgba(255,255,255,.6); font-size: .8rem; transition: color .2s; }
 .footer-col-links ul a:hover { color: var(--gold); }
 .footer-company-name { color: var(--gold); font-size: .82rem; font-weight: 700; margin-bottom: 6px; }
