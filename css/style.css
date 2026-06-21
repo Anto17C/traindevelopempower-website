@@ -627,14 +627,13 @@ details[open] summary::after { content: '−'; }
 .why-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
 .why-icon {
   width: 48px; height: 48px;
-  margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
   display: flex; align-items: center; justify-content: center;
   background: rgba(201,168,76,0.1);
-  border-radius: 10px;
+  border-radius: 50%;
   color: var(--gold);
 }
-.why-icon svg { width: 24px; height: 24px; }
+.why-icon svg { width: 26px; height: 26px; }
 .why-title { color: var(--navy) !important; text-align: center; font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
 .why-card p { text-align: center; font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
