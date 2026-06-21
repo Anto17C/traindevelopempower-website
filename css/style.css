@@ -674,7 +674,7 @@ details[open] summary::after { content: '−'; }
   gap: 5px;
   padding: 9px 13px;
   border-radius: 50px;
-  font-size: .74rem;
+  font-size: .68rem;
   font-weight: 700;
   white-space: nowrap;
   transition: all .2s;
@@ -809,7 +809,7 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── ABOUT PAGE ADDITIONS ── */
-.page-hero-short .page-hero-inner { min-height: 140px; padding: 24px 0; }
+.page-hero-short .page-hero-inner { min-height: 150px; padding: 24px 0; }
 
 .feature-grid-4 { grid-template-columns: repeat(3,1fr) !important; }
 
