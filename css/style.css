@@ -311,7 +311,7 @@ section { padding: 80px 0; }
 .feature-box p { font-size: .84rem; color: var(--muted); margin: 0; }
 
 /* ── INDUSTRY SECTION ── */
-.ind-section { background: var(--light); }
+.ind-section { background: #fff; }
 .ind-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -622,14 +622,19 @@ details[open] summary::after { content: '−'; }
   align-items: center;
   gap: 48px;
 }
-.cta-left { flex: 1; }
+.cta-left {
+  flex: 1;
+  text-align: right;
+}
 .cta-left h2 { color: #fff; margin-bottom: 10px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
 .cta-left p { color: rgba(255,255,255,.75); font-size: .9rem; margin: 0; }
 .cta-right {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   flex-shrink: 0;
+  align-items: center;
 }
 .cta-pill {
   display: inline-flex;
