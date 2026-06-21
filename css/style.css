@@ -81,10 +81,9 @@ section { padding: 80px 0; }
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 
-.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo img { height: 40px; width: auto; filter: brightness(0) invert(1); }
-.logo-text { font-size: .95rem; font-weight: 800; color: #fff; line-height: 1.15; }
-.logo-text small { display: block; font-size: .58rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .08em; text-transform: uppercase; }
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 46px; width: auto; }
+.logo-text { display: none; }
 
 /* NAV */
 .main-nav { display: flex; align-items: center; gap: 2px; }
@@ -114,8 +113,8 @@ section { padding: 80px 0; }
 
 .nav-cta {
   background: var(--gold); color: var(--navy) !important;
-  padding: 9px 20px; border-radius: 8px; font-size: .85rem;
-  font-weight: 800; margin-left: 10px; transition: all .2s; white-space: nowrap;
+  padding: 8px 14px; border-radius: 8px; font-size: .78rem;
+  font-weight: 800; margin-left: 8px; transition: all .2s; white-space: nowrap;
 }
 .nav-cta:hover { background: var(--gold2) !important; color: var(--navy) !important; transform: translateY(-1px); }
 
@@ -128,7 +127,7 @@ section { padding: 80px 0; }
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 620px;
+  min-height: 680px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -154,10 +153,10 @@ section { padding: 80px 0; }
 .hero .container { position: relative; z-index: 2; padding: 80px 28px; width: 100%; }
 .hero-inner {
   display: grid;
-  grid-template-columns: 45% 55%;
-  gap: 40px;
+  grid-template-columns: 52% 48%;
+  gap: 0;
   align-items: center;
-  min-height: 460px;
+  min-height: 520px;
 }
 .hero-left { display: flex; flex-direction: column; justify-content: center; }
 .hero-right { /* empty - shows background image */ }
@@ -166,16 +165,17 @@ section { padding: 80px 0; }
 .hero p { color: rgba(255,255,255,.82); font-size: 1rem; margin-bottom: 36px; }
 .hero-btns {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
+  max-width: 540px;
 }
 .hero-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 11px 22px;
+  gap: 6px;
+  padding: 10px 16px;
   border-radius: 50px;
-  font-size: .82rem;
+  font-size: .78rem;
   font-weight: 700;
   transition: all .2s;
   white-space: nowrap;
