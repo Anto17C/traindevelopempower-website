@@ -522,10 +522,10 @@ details[open] summary::after { content: '−'; }
   display: inline-block;
 }
 .footer-col-links ul { list-style: none; }
-.footer-col-links ul li { margin: 0; padding: 0; line-height: 1.2; }
+.footer-col-links ul li { margin: 0; padding: 0; line-height: 1.3; }
 .footer-col-links ul a { color: rgba(255,255,255,.6); font-size: .8rem; transition: color .2s; }
 .footer-col-links ul a:hover { color: var(--gold); }
-.footer-company-name { color: var(--gold); font-size: .78rem; font-weight: 700; margin-bottom: 6px; white-space: nowrap; }
+.footer-company-name { color: var(--gold); font-size: .80rem; font-weight: 700; margin-bottom: 6px; }
 .footer-address { color: rgba(255,255,255,.58); font-size: .78rem; line-height: 1.55; margin-bottom: 12px; }
 .footer-contact-list { list-style: none; }
 .footer-contact-list li { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
