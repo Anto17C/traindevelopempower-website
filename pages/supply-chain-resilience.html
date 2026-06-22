@@ -11,6 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="../images/logo.webp">
 <style>
+/* ── COURSE FAQ ── */
+.course-content details summary::-webkit-details-marker { display: none; }
+.course-content details summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); flex-shrink: 0; margin-left: 12px; }
+.course-content details[open] summary::after { content: '−'; }
+.course-content details[open] summary { color: var(--gold); }
+
 /* ── COURSE HERO ── */
 .course-hero {
   position: relative;
@@ -569,35 +575,30 @@
             <details style="border:1.5px solid var(--border); border-radius:10px; margin-bottom:8px; overflow:hidden; background:#fff;">
               <summary style="padding:14px 18px; font-weight:600; color:var(--navy); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
                 Can this program be customized for our organization?
-                <span style="color:var(--gold); font-size:1.3rem; flex-shrink:0; margin-left:12px;">+</span>
               </summary>
               <div style="padding:0 18px 14px; font-size:.84rem; color:var(--muted); line-height:1.65;">Yes. The program can be tailored to align with your organizational operational environments, industry challenges, and participant experience levels.</div>
             </details>
             <details style="border:1.5px solid var(--border); border-radius:10px; margin-bottom:8px; overflow:hidden; background:#fff;">
               <summary style="padding:14px 18px; font-weight:600; color:var(--navy); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
                 Is this course available for virtual delivery?
-                <span style="color:var(--gold); font-size:1.3rem; flex-shrink:0; margin-left:12px;">+</span>
               </summary>
               <div style="padding:0 18px 14px; font-size:.84rem; color:var(--muted); line-height:1.65;">Yes. The program is available onsite at your location, as a live virtual instructor-led format, or as a hybrid option combining both delivery approaches.</div>
             </details>
             <details style="border:1.5px solid var(--border); border-radius:10px; margin-bottom:8px; overflow:hidden; background:#fff;">
               <summary style="padding:14px 18px; font-weight:600; color:var(--navy); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
                 Does this course include practical case studies?
-                <span style="color:var(--gold); font-size:1.3rem; flex-shrink:0; margin-left:12px;">+</span>
               </summary>
               <div style="padding:0 18px 14px; font-size:.84rem; color:var(--muted); line-height:1.65;">Yes. The program uses industry case studies, scenario analysis, risk mapping exercises, and practical workshops to ensure learning is applied and relevant to real operational challenges.</div>
             </details>
             <details style="border:1.5px solid var(--border); border-radius:10px; margin-bottom:8px; overflow:hidden; background:#fff;">
               <summary style="padding:14px 18px; font-weight:600; color:var(--navy); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
                 Who is this course most suitable for?
-                <span style="color:var(--gold); font-size:1.3rem; flex-shrink:0; margin-left:12px;">+</span>
               </summary>
               <div style="padding:0 18px 14px; font-size:.84rem; color:var(--muted); line-height:1.65;">This program is suitable for supply chain managers, procurement and logistics professionals, operations managers, business continuity personnel, and risk management teams responsible for supply chain resilience planning.</div>
             </details>
             <details style="border:1.5px solid var(--border); border-radius:10px; margin-bottom:8px; overflow:hidden; background:#fff;">
               <summary style="padding:14px 18px; font-weight:600; color:var(--navy); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
                 Can the duration be customized?
-                <span style="color:var(--gold); font-size:1.3rem; flex-shrink:0; margin-left:12px;">+</span>
               </summary>
               <div style="padding:0 18px 14px; font-size:.84rem; color:var(--muted); line-height:1.65;">Yes. The program duration can be adjusted to meet your organizational schedule and training objectives. Most programs run between 3 and 5 days but can be condensed or extended based on requirements.</div>
             </details>
@@ -752,20 +753,9 @@
 document.querySelectorAll('details').forEach(detail => {
   detail.addEventListener('toggle', () => {
     if (detail.open) {
-      const summary = detail.querySelector('summary');
-      const icon = summary.querySelector('span');
-      if (icon) icon.textContent = '−';
       document.querySelectorAll('details').forEach(other => {
-        if (other !== detail && other.open) {
-          other.removeAttribute('open');
-          const otherIcon = other.querySelector('summary span');
-          if (otherIcon) otherIcon.textContent = '+';
-        }
+        if (other !== detail) other.removeAttribute('open');
       });
-    } else {
-      const summary = detail.querySelector('summary');
-      const icon = summary.querySelector('span');
-      if (icon) icon.textContent = '+';
     }
   });
 });
