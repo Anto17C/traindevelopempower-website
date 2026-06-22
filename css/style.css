@@ -448,7 +448,6 @@ section { padding: 80px 0; }
   position: sticky;
   top: 88px;
   align-self: start;
-padding: 120px;
 }
 .faq-section-img img { width: 100%; height: auto; object-fit: contain; display: block; }
 
