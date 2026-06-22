@@ -12,48 +12,25 @@
 <link rel="icon" href="../images/logo.webp">
 <style>
 /* ── INDUSTRY DESCRIPTION CARDS ── */
-.ind-desc-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-.ind-desc-card {
-  background: #fff;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px 22px 24px;
-  text-align: center;
-  transition: box-shadow .2s, transform .2s;
-  display: flex;
-  flex-direction: column;
+.ind-card.ind-card-desc {
   align-items: center;
+  padding: 20px 16px;
+  cursor: default;
 }
-.ind-desc-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: var(--gold); }
-.ind-desc-icon {
-  width: 72px; height: 72px;
-  background: var(--light);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 16px;
-  flex-shrink: 0;
+.ind-card.ind-card-desc p {
+  font-size: .8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 8px 0 10px;
+  text-align: center;
 }
-.ind-desc-icon .ind-icon { width: 44px; height: 44px; object-fit: contain; }
-.ind-desc-card h6 {
-  font-size: .88rem; font-weight: 800;
-  color: var(--navy); text-transform: uppercase;
-  letter-spacing: .04em; margin-bottom: 10px;
-  position: relative; padding-bottom: 10px;
+.ind-card.ind-card-desc a {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--sky);
+  text-align: center;
 }
-.ind-desc-card h6::after {
-  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 28px; height: 2px; background: var(--gold); border-radius: 2px;
-}
-.ind-desc-card p {
-  font-size: .83rem; color: var(--muted); line-height: 1.65;
-  margin: 0 0 14px; flex: 1;
-}
-.ind-desc-card a { font-size: .82rem; font-weight: 700; color: var(--sky); }
-.ind-desc-card a:hover { color: var(--gold); }
+.ind-card.ind-card-desc a:hover { color: var(--gold); }
 
 /* ── COMMITMENT SECTION ── */
 .commitment-grid {
@@ -88,11 +65,11 @@
 }
 
 @media (max-width: 1024px) {
-  .ind-desc-grid { grid-template-columns: repeat(2, 1fr); }
+  .ind-grid[style] { grid-template-columns: repeat(3, 1fr) !important; }
   .commitment-grid { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 640px) {
-  .ind-desc-grid { grid-template-columns: 1fr; }
+  .ind-grid[style] { grid-template-columns: repeat(2, 1fr) !important; }
   .commitment-icons-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -185,77 +162,77 @@
       <h2>Sectors We Serve</h2>
       <p style="color:var(--muted);max-width:600px;margin:12px auto 0;">We design and deliver customized in-house training solutions for organizations across the following industrial and commercial sectors throughout the Middle East, Africa, and Asia-Pacific.</p>
     </div>
-    <div class="ind-desc-grid">
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-oil-gas.webp" alt="Oil &amp; Gas" class="ind-icon"></div>
-        <h6>Oil &amp; Gas</h6>
-        <p>Supporting exploration, production, refining, and operations with industry-relevant training focused on safety, reliability, efficiency, and operational excellence.</p>
+    <div class="ind-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-oil-gas.webp" alt="Oil &amp; Gas" class="ind-icon">
+        <span>Oil &amp; Gas</span>
+        <p>Supporting exploration, production, refining, and operations with training focused on safety, reliability, efficiency, and operational excellence.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-manufacturing.webp" alt="Manufacturing" class="ind-icon"></div>
-        <h6>Manufacturing</h6>
-        <p>Building capability across production, quality, maintenance, and continuous improvement to enhance efficiency and performance in manufacturing environments.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-manufacturing.webp" alt="Manufacturing" class="ind-icon">
+        <span>Manufacturing</span>
+        <p>Building capability across production, quality, maintenance, and continuous improvement to enhance efficiency in manufacturing environments.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-logistics.webp" alt="Logistics &amp; Transport" class="ind-icon"></div>
-        <h6>Logistics &amp; Transport</h6>
-        <p>Improving supply chain visibility, logistics performance, inventory management, transportation efficiency, and end-to-end operational effectiveness.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-logistics.webp" alt="Logistics &amp; Transport" class="ind-icon">
+        <span>Logistics &amp; Transport</span>
+        <p>Improving supply chain visibility, logistics performance, inventory management, and end-to-end operational effectiveness.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-utilities.webp" alt="Utilities &amp; Energy" class="ind-icon"></div>
-        <h6>Utilities &amp; Energy</h6>
-        <p>Supporting workforce development, asset management, reliability improvement, operational performance, and regulatory compliance across utility operations.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-utilities.webp" alt="Utilities &amp; Energy" class="ind-icon">
+        <span>Utilities &amp; Energy</span>
+        <p>Supporting workforce development, asset management, reliability, operational performance, and compliance across utility operations.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-government.webp" alt="Government &amp; Public Sector" class="ind-icon"></div>
-        <h6>Government &amp; Public Sector</h6>
-        <p>Building capability in leadership, policy implementation, operational efficiency, procurement, and public service excellence across government organizations.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-government.webp" alt="Government &amp; Public Sector" class="ind-icon">
+        <span>Government &amp; Public Sector</span>
+        <p>Building capability in leadership, procurement, operational efficiency, and public service excellence across government organizations.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-construction.webp" alt="Construction &amp; Engineering" class="ind-icon"></div>
-        <h6>Construction &amp; Engineering</h6>
-        <p>Strengthening project management, safety, quality, planning, and execution capabilities across complex infrastructure and engineering projects.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-construction.webp" alt="Construction &amp; Engineering" class="ind-icon">
+        <span>Construction &amp; Engineering</span>
+        <p>Strengthening project management, safety, quality, and execution capabilities across complex infrastructure and engineering projects.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-banking.webp" alt="Banking &amp; Financial Services" class="ind-icon"></div>
-        <h6>Banking &amp; Financial Services</h6>
-        <p>Developing risk management, compliance, leadership, and operational excellence capability for banking and financial services organizations.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-banking.webp" alt="Banking &amp; Financial Services" class="ind-icon">
+        <span>Banking &amp; Financial Services</span>
+        <p>Developing risk management, compliance, leadership, and operational excellence capability for financial services organizations.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-healthcare.svg" alt="Healthcare" class="ind-icon"></div>
-        <h6>Healthcare</h6>
-        <p>Strengthening operational efficiency, patient safety, compliance, and leadership capability for healthcare organizations and medical institutions.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-healthcare.svg" alt="Healthcare" class="ind-icon">
+        <span>Healthcare</span>
+        <p>Strengthening operational efficiency, patient safety, compliance, and leadership capability for healthcare organizations.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-ports.webp" alt="Ports &amp; Maritime" class="ind-icon"></div>
-        <h6>Ports &amp; Maritime</h6>
-        <p>Enhancing operational efficiency, logistics coordination, safety management, and workforce capability within port and maritime environments.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-ports.webp" alt="Ports &amp; Maritime" class="ind-icon">
+        <span>Ports &amp; Maritime</span>
+        <p>Enhancing operational efficiency, logistics coordination, safety management, and workforce capability in port and maritime environments.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-retail.webp" alt="Retail &amp; Wholesale" class="ind-icon"></div>
-        <h6>Retail &amp; Wholesale</h6>
-        <p>Building capability in supply chain, procurement, inventory management, customer service, and leadership for retail and wholesale organizations.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-retail.webp" alt="Retail &amp; Wholesale" class="ind-icon">
+        <span>Retail &amp; Wholesale</span>
+        <p>Building capability in supply chain, procurement, inventory management, and leadership for retail and wholesale organizations.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-corporate.webp" alt="Corporate Services" class="ind-icon"></div>
-        <h6>Corporate Services</h6>
-        <p>Developing leadership, management, communication, operational effectiveness, and professional skills across corporate support functions.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-corporate.webp" alt="Corporate Services" class="ind-icon">
+        <span>Corporate Services</span>
+        <p>Developing leadership, management, communication, and professional effectiveness across corporate support functions.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
-      <div class="ind-desc-card">
-        <div class="ind-desc-icon"><img src="../images/ind-education.webp" alt="Education" class="ind-icon"></div>
-        <h6>Education</h6>
-        <p>Improving leadership, management, operational performance, and institutional capability for schools, universities, and education sector organizations.</p>
+      <div class="ind-card ind-card-desc">
+        <img src="../images/ind-education.webp" alt="Education" class="ind-icon">
+        <span>Education</span>
+        <p>Improving leadership, management, operational performance, and institutional capability for education sector organizations.</p>
         <a href="courses.html">Explore Training →</a>
       </div>
     </div>
