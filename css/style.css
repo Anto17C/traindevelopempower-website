@@ -99,10 +99,10 @@ section { padding: 80px 0; }
 /* DROPDOWN */
 .nav-item { position: relative; }
 .dropdown {
-  display: none; position: absolute; top: 100%; left: 0;
+  display: none; position: absolute; top: calc(100% + 8px); left: 0;
   background: #fff; border: 1px solid var(--border);
   border-radius: var(--radius); box-shadow: var(--shadow-lg);
-  min-width: 240px; padding: 8px; z-index: 500; padding-top: 16px;
+  min-width: 240px; padding: 8px; z-index: 500;
 }
 .nav-item:hover .dropdown { display: block; }
 .dropdown a {
@@ -430,7 +430,57 @@ section { padding: 80px 0; }
 
 /* ── FAQ ── */
 .faq-list { max-width: 800px; margin: 0 auto; }
-.faq-bg { padding: 40px 0; }
+.faq-bg { background: var(--navy); padding: 40px 0; }
+.faq-bg .section-label::before { background: var(--gold); }
+.faq-bg h2 { color: #fff; }
+
+/* ── FAQ + IMAGE SECTION (standard) ── */
+.faq-section-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: start;
+}
+.faq-section-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 88px;
+  align-self: start;
+}
+.faq-section-img img { width: 100%; height: auto; object-fit: contain; display: block; }
+
+.faq-list-courses details {
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  background: rgba(255,255,255,.05);
+}
+.faq-list-courses summary {
+  padding: 6px 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .88rem;
+  min-height: 44px;
+}
+.faq-list-courses summary::-webkit-details-marker { display: none; }
+.faq-list-courses summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); flex-shrink: 0; margin-left: 12px; }
+.faq-list-courses details[open] { border-color: var(--gold); background: rgba(255,255,255,.07); }
+.faq-list-courses details[open] summary { color: var(--gold); }
+.faq-list-courses details[open] summary::after { content: '−'; }
+.faq-list-courses .faq-body { padding: 0 18px 12px; font-size: .84rem; color: rgba(255,255,255,.72); line-height: 1.65; }
+
+@media (max-width: 1024px) {
+  .faq-section-inner { grid-template-columns: 1fr; }
+  .faq-section-img { position: static; }
+}
 details { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
 summary {
   padding: 18px 22px; font-weight: 600; color: var(--navy);
@@ -810,7 +860,8 @@ details[open] summary::after { content: '−'; }
 }
 
 /* ── ABOUT PAGE ADDITIONS ── */
-.page-hero-short .page-hero-inner { min-height: 150px; padding: 24px 0; }
+.page-hero-short .page-hero-inner,
+.page-hero-split.page-hero-short .page-hero-inner { min-height: 150px; padding: 24px 0; }
 
 .feature-grid-4 { grid-template-columns: repeat(3,1fr) !important; }
 
