@@ -56,11 +56,9 @@
   box-shadow: var(--shadow-lg);
   position: sticky;
   top: 88px;
-  max-height: 320px;
   align-self: start;
-  margin-top: 80px;
 }
-.faq-section-img img { width: 100%; height: 320px; object-fit: cover; object-position: center top; display: block; }
+.faq-section-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 
 .faq-list-courses { }
 .faq-list-courses details {
@@ -139,7 +137,7 @@
 </div></div>
 </header>
 
-<!-- ── HERO (split layout matching homepage standard) ── -->
+<!-- ── HERO ── -->
 <section class="page-hero page-hero-split page-hero-short">
   <div class="page-hero-bg" style="background-image:url('../images/courses-hero.webp'); background-position: center right;"></div>
   <div class="page-hero-overlay-split"></div>
@@ -264,7 +262,6 @@
           </tr>
         </thead>
         <tbody>
-          <!-- SUPPLY CHAIN & LOGISTICS -->
           <tr class="course-row" data-code="scl-001" data-title="supply chain resilience risk management" data-cat="supplychainlogistics" data-desc="strengthen supply chain resilience and improve risk management capability.">
             <td><span class="code-badge">SCL-001</span></td>
             <td>Supply Chain Resilience &amp; Risk Management</td>
@@ -300,7 +297,6 @@
             <td style="color:var(--muted);font-size:.84rem;">Improve forecast accuracy and strengthen demand planning capability.</td>
             <td><a href="demand-planning.html" class="learn-link">Learn More →</a></td>
           </tr>
-          <!-- MAINTENANCE & RELIABILITY -->
           <tr class="course-row" data-code="mnt-001" data-title="maintenance planning scheduling excellence" data-cat="maintenancereliability" data-desc="improve maintenance planning, scheduling effectiveness, and resource utilization.">
             <td><span class="code-badge">MNT-001</span></td>
             <td>Maintenance Planning &amp; Scheduling Excellence</td>
@@ -336,7 +332,6 @@
             <td style="color:var(--muted);font-size:.84rem;">Plan and execute shutdowns, turnarounds, and outages effectively.</td>
             <td><span class="soon-badge">Coming Soon</span></td>
           </tr>
-          <!-- PROCUREMENT & CONTRACTS -->
           <tr class="course-row" data-code="prc-001" data-title="strategic sourcing category management" data-cat="procurementcontracts" data-desc="develop sourcing strategies and optimize category performance.">
             <td><span class="code-badge">PRC-001</span></td>
             <td>Strategic Sourcing &amp; Category Management</td>
@@ -372,7 +367,6 @@
             <td style="color:var(--muted);font-size:.84rem;">Strengthen negotiation capability and commercial performance.</td>
             <td><span class="soon-badge">Coming Soon</span></td>
           </tr>
-          <!-- OPERATIONS & PRODUCTIVITY -->
           <tr class="course-row" data-code="ops-001" data-title="operational excellence continuous improvement" data-cat="operationsproductivity" data-desc="drive sustainable operational improvement and performance.">
             <td><span class="code-badge">OPS-001</span></td>
             <td>Operational Excellence &amp; Continuous Improvement</td>
@@ -408,7 +402,6 @@
             <td style="color:var(--muted);font-size:.84rem;">Optimize workflows and improve organizational performance.</td>
             <td><span class="soon-badge">Coming Soon</span></td>
           </tr>
-          <!-- SECURITY & RISK -->
           <tr class="course-row" data-code="sec-001" data-title="enterprise risk management" data-cat="securityrisk" data-desc="strengthen enterprise-wide risk identification and mitigation.">
             <td><span class="code-badge">SEC-001</span></td>
             <td>Enterprise Risk Management</td>
@@ -444,7 +437,6 @@
             <td style="color:var(--muted);font-size:.84rem;">Improve incident response and investigation capability.</td>
             <td><span class="soon-badge">Coming Soon</span></td>
           </tr>
-          <!-- HSE & COMPLIANCE -->
           <tr class="course-row" data-code="hse-001" data-title="health safety environmental management" data-cat="hsecompliance" data-desc="strengthen hse systems and workplace safety performance.">
             <td><span class="code-badge">HSE-001</span></td>
             <td>Health, Safety &amp; Environmental Management</td>
@@ -480,7 +472,6 @@
             <td style="color:var(--muted);font-size:.84rem;">Develop leadership and behaviors that support safety excellence.</td>
             <td><span class="soon-badge">Coming Soon</span></td>
           </tr>
-          <!-- LEADERSHIP & MANAGEMENT -->
           <tr class="course-row" data-code="ldp-001" data-title="leadership excellence managers" data-cat="leadershipmanagement" data-desc="develop leadership capability and management effectiveness.">
             <td><span class="code-badge">LDP-001</span></td>
             <td>Leadership Excellence for Managers</td>
@@ -528,7 +519,7 @@
   </div>
 </section>
 
-<!-- ── FAQ SECTION (navy bg, two-column with image) ── -->
+<!-- ── FAQ SECTION ── -->
 <section class="faq-bg">
   <div class="container">
     <div class="faq-section-inner">
@@ -682,8 +673,6 @@
     const q = searchInput.value.toLowerCase().trim();
     const isAllFilter = activeFilter === 'all';
     const isSearching = q.length > 0;
-
-    // Collect rows that pass category + text filters
     const matched = [];
     rows.forEach(row => {
       const matchCat  = !isAllFilter ? row.dataset.cat === activeFilter : true;
@@ -691,23 +680,16 @@
                           .some(f => f && f.includes(q));
       if (matchCat && matchText) matched.push(row);
     });
-
-    // Show/hide rows — apply limit only when "All" tab + no search
     const applyLimit = isAllFilter && !isSearching && !showAll;
     rows.forEach(row => row.classList.add('hidden-row'));
     matched.forEach((row, i) => {
       if (!applyLimit || i < LIMIT) row.classList.remove('hidden-row');
     });
-
-    // No results message
     noResults.style.display = matched.length === 0 ? 'block' : 'none';
-
-    // View All button — show only when limit is active and there are more rows
     viewAllWrap.style.display = (applyLimit && matched.length > LIMIT) ? 'block' : 'none';
   }
 
   searchInput.addEventListener('input', () => { showAll = false; applyFilters(); });
-
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -717,15 +699,24 @@
       applyFilters();
     });
   });
-
   viewAllBtn.addEventListener('click', () => {
     showAll = true;
     applyFilters();
     viewAllWrap.style.display = 'none';
   });
-
   applyFilters();
 })();
+
+// ── FAQ ACCORDION — one open at a time ──
+document.querySelectorAll('.faq-list-courses details').forEach(detail => {
+  detail.addEventListener('toggle', () => {
+    if (detail.open) {
+      document.querySelectorAll('.faq-list-courses details').forEach(other => {
+        if (other !== detail) other.removeAttribute('open');
+      });
+    }
+  });
+});
 </script>
 </body>
 </html>
