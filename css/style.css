@@ -162,7 +162,7 @@ section { padding: 80px 0; }
 .hero-right { /* empty - shows background image */ }
 .hero h4 { color: var(--gold); margin-bottom: 10px; font-size: .78rem; letter-spacing: .14em; }
 .hero h1 { color: #fff; margin-bottom: 12px; font-size: clamp(1.9rem, 3.2vw, 2.8rem); line-height: 1.15; }
-.hero p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 0; max-width: 480px; }
+.hero p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 0; max-width: 100%; }
 .hero-btns {
   display: flex;
   gap: 7px;
@@ -430,7 +430,7 @@ section { padding: 80px 0; }
 
 /* ── FAQ ── */
 .faq-list { max-width: 800px; margin: 0 auto; }
-.faq-bg { background: var(--navy); padding: 40px 0; }
+.faq-bg { background: #1a2e4a; padding: 40px 0; border-top: 3px solid var(--gold); }
 .faq-bg .section-label::before { background: var(--gold); }
 .faq-bg h2 { color: #fff; }
 
@@ -448,6 +448,7 @@ section { padding: 80px 0; }
   position: sticky;
   top: 88px;
   align-self: start;
+  margin-top: 120px;
 }
 .faq-section-img img { width: 100%; height: auto; object-fit: contain; display: block; }
 
@@ -778,7 +779,7 @@ details[open] summary::after { content: '−'; }
 .page-hero-right { /* shows background image */ }
 .page-hero-split h4 { color: var(--gold); font-size: .78rem; letter-spacing: .14em; margin-bottom: 10px; }
 .page-hero-split h1 { color: #fff; margin-bottom: 14px; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-.page-hero-split p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 24px; max-width: 480px; }
+.page-hero-split p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 24px; max-width: 100%; }
 .page-hero-split .page-hero-btns { display: flex; gap: 8px; flex-wrap: nowrap; align-items: center; }
 .page-hero-split .breadcrumb { margin-bottom: 12px; }
 
