@@ -43,10 +43,11 @@
 .course-body { padding: 56px 0; }
 .course-body-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 280px;
   gap: 48px;
   align-items: start;
 }
+.course-body-grid > div:last-child { align-self: start; }
 .course-content { min-width: 0; }
 
 /* ── SIDEBAR ── */
@@ -197,7 +198,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           Request Proposal
         </a>
-        <a href="#" class="hero-btn hero-btn-dark">
+        <a href="../brochures/scl-resilience-brochure.pdf" download class="hero-btn hero-btn-dark">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
           Download Outline
         </a>
@@ -459,8 +460,8 @@
           </div>
         </div>
 
-        <!-- Request a Proposal — sticky -->
-        <div class="sidebar-sticky">
+        <!-- Request a Proposal — sticky independently -->
+        <div style="position:sticky; top:88px;">
           <div class="sidebar-proposal">
             <h4>Request a Proposal</h4>
             <p>Contact us to discuss your training requirements and receive a customized proposal for this program.</p>
