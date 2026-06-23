@@ -861,7 +861,7 @@ details[open] summary::after { content: '−'; }
 
 /* ── ABOUT PAGE ADDITIONS ── */
 .page-hero-short .page-hero-inner,
-.page-hero-split.page-hero-short .page-hero-inner { min-height: 150px; padding: 24px 0; }
+.page-hero-split.page-hero-short .page-hero-inner { min-height: 150px; padding: 24px 0 0 0; }
 
 .feature-grid-4 { grid-template-columns: repeat(3,1fr) !important; }
 
