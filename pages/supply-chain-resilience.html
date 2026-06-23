@@ -23,7 +23,18 @@
   background-image: url('../images/scl-resilience-hero.webp');
   background-size: cover;
   background-position: center;
-  opacity: .18;
+  opacity: 1;
+}
+.course-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10,22,40,0.97) 0%,
+    rgba(10,22,40,0.92) 35%,
+    rgba(10,22,40,0.75) 55%,
+    rgba(10,22,40,0.35) 75%,
+    rgba(10,22,40,0.15) 100%
+  );
 }
 .course-hero-inner {
   position: relative; z-index: 2;
@@ -38,6 +49,7 @@
   margin-bottom: 16px;
 }
 .course-hero h1 { color: #fff; font-size: clamp(1.6rem, 2.8vw, 2.2rem); margin-bottom: 12px; line-height: 1.2; max-width: 520px; }
+.course-hero p { margin-bottom: 36px; }
 
 /* ── BODY GRID ── */
 .course-body { padding: 56px 0; }
@@ -45,9 +57,8 @@
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: 48px;
-  align-items: start;
 }
-.course-body-grid > div:last-child { align-self: start; }
+.course-content { min-width: 0; align-self: start; }
 .course-content { min-width: 0; }
 
 /* ── SIDEBAR ── */
@@ -179,6 +190,7 @@
 <!-- ── HERO ── -->
 <section class="course-hero">
   <div class="course-hero-bg"></div>
+  <div class="course-hero-overlay"></div>
   <div class="container">
     <div class="course-hero-inner">
       <nav class="breadcrumb" style="margin-bottom:16px;">
@@ -425,9 +437,9 @@
       </div>
 
       <!-- RIGHT: SIDEBAR -->
-      <div style="align-self: start;">
-        <!-- Program At a Glance — static -->
-        <div class="sidebar-glance">
+      <div>
+        <!-- Program At a Glance — scrolls away normally -->
+        <div class="sidebar-glance" style="margin-bottom:20px;">
           <div class="sidebar-glance-img">
             <img src="../images/scl-resilience-hero.webp" alt="Supply Chain Resilience Training">
           </div>
