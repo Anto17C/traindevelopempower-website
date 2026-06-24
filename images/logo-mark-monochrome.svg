@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Train Develop Empower monochrome brand mark">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Train Develop Empower monochrome Executive Seal mark">
   <rect width="128" height="128" rx="25" fill="#0A1628"/>
-  <path d="M23 28h82v21H76L50 104H23l29-55H23z" fill="#fff"/>
-  <path d="M82 19h28L61 109H33z" fill="#fff"/>
+  <circle cx="64" cy="64" r="47" fill="#fff"/>
+  <circle cx="64" cy="64" r="40" fill="none" stroke="#0A1628" stroke-width="4"/>
+  <path d="M32 48h65v17H73L53 96H33l22-31H32z" fill="#0A1628"/>
+  <path d="M77 39h20L61 101H41z" fill="#0A1628"/>
 </svg>
