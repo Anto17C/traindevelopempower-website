@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" fill="none">
-  <!-- Icon mark -->
-  <rect x="0" y="8" width="34" height="34" rx="6" fill="#C9A84C"/>
-  <text x="17" y="30" font-family="Arial" font-weight="900" font-size="18" fill="#0A1628" text-anchor="middle">TDE</text>
-  <!-- Wordmark -->
-  <text x="44" y="24" font-family="Arial" font-weight="800" font-size="13" fill="white" letter-spacing="0.3">TRAIN DEVELOP</text>
-  <text x="44" y="39" font-family="Arial" font-weight="800" font-size="13" fill="white" letter-spacing="0.3">EMPOWER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 72" role="img" aria-labelledby="t d">
+  <title id="t">Train Develop Empower</title><desc id="d">Train Develop Empower corporate training logo</desc>
+  <rect x="4" y="4" width="64" height="64" rx="13" fill="#fff"/>
+  <path d="M16 18h40v11H42L29 58H16l14-29H16z" fill="#0A1628"/>
+  <path d="M46 14h14L35 60H21z" fill="#17A6A6"/>
+  <path d="M53 14h7v13z" fill="#C9A84C"/>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing=".7">
+    <text x="82" y="31">TRAIN DEVELOP</text><text x="82" y="57">EMPOWER</text>
+  </g>
+  <rect x="281" y="39" width="37" height="3" rx="1.5" fill="#C9A84C"/>
 </svg>
