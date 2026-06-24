@@ -479,6 +479,64 @@ section { padding: 80px 0; }
 .faq-list-courses details[open] summary::after { content: '−'; }
 .faq-list-courses .faq-body { padding: 0 18px 12px; font-size: .84rem; color: var(--muted); line-height: 1.65; }
 
+/* ── IN-HOUSE TRAINING SOLUTIONS ── */
+.ih-intro-grid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 64px;
+  align-items: center;
+}
+.ih-intro-copy p { color: var(--muted); line-height: 1.8; }
+.ih-outcomes-panel {
+  background: linear-gradient(145deg, var(--navy), var(--slate));
+  border-radius: 18px;
+  padding: 34px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.ih-outcomes-panel::after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(201,168,76,.10);
+  right: -60px;
+  bottom: -70px;
+}
+.ih-outcomes-panel h3 { color: #fff; margin-bottom: 20px; font-size: 1.25rem; }
+.ih-outcome {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+  position: relative;
+  z-index: 1;
+}
+.ih-outcome:first-of-type { border-top: none; padding-top: 0; }
+.ih-outcome-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(201,168,76,.18);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+.ih-outcome strong { display: block; color: #fff; font-size: .9rem; margin-bottom: 4px; }
+.ih-outcome span { color: rgba(255,255,255,.66); font-size: .8rem; line-height: 1.55; }
+.program-accordion { max-width: 900px; margin: 0 auto; }
+.program-accordion .faq-body a { color: var(--sky); font-weight: 700; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .ih-intro-grid { grid-template-columns: 1fr; gap: 34px; }
+}
+
 @media (max-width: 1024px) {
   .faq-section-inner { grid-template-columns: 1fr; }
   .faq-section-img { position: static; }
