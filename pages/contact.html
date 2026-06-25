@@ -67,6 +67,12 @@
   margin-top: 32px;
 }
 .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+.form-error { display:none; margin-bottom:16px; padding:12px 14px; border-radius:8px; background:#FFF5F5; border:1px solid #FEB2B2; color:#9B2C2C; font-size:.86rem; }
+.form-status-note { margin:12px 0 0; color:var(--muted); font-size:.77rem; line-height:1.55; }
+.form-status-note a { color:var(--slate); text-decoration:underline; }
+.turnstile-wrap { min-height:65px; margin:4px 0 18px; }
+.form-honeypot { position:absolute !important; left:-10000px !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+.form-submit:disabled { cursor:not-allowed; opacity:.72; transform:none; }
 
 @media (max-width: 1024px) {
   .contact-main-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -151,45 +157,49 @@
         <div class="section-label"><span>Request a Proposal</span></div>
         <h2 style="margin:10px 0 8px;">Tell Us About Your Training Needs</h2>
         <p style="color:var(--muted); font-size:.9rem; margin-bottom:28px;">Fill in the form below and our team will get back to you to discuss a customized in-house training solution for your organization.</p>
-        <div class="form-card">
-          <div id="formSuccess" class="form-success">Thank you! We'll be in touch shortly to discuss your training requirements.</div>
+        <form id="proposalForm" class="form-card" action="/api/proposal" method="post">
+          <div id="formSuccess" class="form-success" role="status" aria-live="polite">Thank you! Your training request has been sent. We'll be in touch shortly.</div>
+          <div id="formError" class="form-error" role="alert" aria-live="assertive"></div>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Leave this field empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">First Name *</label>
-              <input type="text" class="form-input" placeholder="Your first name">
+              <label class="form-label" for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Your first name" autocomplete="given-name" maxlength="80" required>
             </div>
             <div class="form-group">
-              <label class="form-label">Last Name *</label>
-              <input type="text" class="form-input" placeholder="Your last name">
+              <label class="form-label" for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Your last name" autocomplete="family-name" maxlength="80" required>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Job Title</label>
-            <input type="text" class="form-input" placeholder="e.g. HR Manager, Training Director">
+            <label class="form-label" for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle" class="form-input" placeholder="e.g. HR Manager, Training Director" autocomplete="organization-title" maxlength="120">
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">Organization *</label>
-              <input type="text" class="form-input" placeholder="Your company name">
+              <label class="form-label" for="organization">Organization *</label>
+              <input type="text" id="organization" name="organization" class="form-input" placeholder="Your company name" autocomplete="organization" maxlength="160" required>
             </div>
             <div class="form-group">
-              <label class="form-label">Country *</label>
-              <input type="text" class="form-input" placeholder="Your country">
+              <label class="form-label" for="country">Country *</label>
+              <input type="text" id="country" name="country" class="form-input" placeholder="Your country" autocomplete="country-name" maxlength="100" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">Email Address *</label>
-              <input type="email" class="form-input" placeholder="your@email.com">
+              <label class="form-label" for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" maxlength="254" required>
             </div>
             <div class="form-group">
-              <label class="form-label">Phone Number</label>
-              <input type="tel" class="form-input" placeholder="+1 234 567 8900">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 234 567 8900" autocomplete="tel" maxlength="40">
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Training Category of Interest</label>
-            <select class="form-select">
+            <label class="form-label" for="category">Training Category of Interest</label>
+            <select id="category" name="category" class="form-select">
               <option value="">Select a category...</option>
               <option>Supply Chain &amp; Logistics</option>
               <option>Maintenance &amp; Reliability</option>
@@ -203,11 +213,13 @@
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label">Training Requirements &amp; Message *</label>
-            <textarea class="form-textarea" placeholder="Please describe your training requirements, number of participants, preferred timeline, and any specific objectives or challenges you'd like to address..."></textarea>
+            <label class="form-label" for="message">Training Requirements &amp; Message *</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Please describe your training requirements, number of participants, preferred timeline, and any specific objectives or challenges you'd like to address..." maxlength="5000" required></textarea>
           </div>
-          <button class="form-submit" onclick="document.getElementById('formSuccess').style.display='block'; this.textContent='Submitted ✓'; this.style.background='#276749';">Submit Training Request</button>
-        </div>
+          <div id="turnstileWidget" class="turnstile-wrap" aria-label="Spam verification"></div>
+          <button type="submit" class="form-submit" disabled>Submit Training Request</button>
+          <p class="form-status-note">Your information is used only to respond to this enquiry and prepare the requested training proposal.</p>
+        </form>
       </div>
 
       <!-- RIGHT: GET IN TOUCH + MAP -->
@@ -373,6 +385,7 @@
   </div>
 </footer>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
