@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var btn = form.querySelector('.form-submit');
     var success = document.getElementById('formSuccess');
     var errorBox = document.getElementById('formError');
-    var turnstileId = null;
     var defaultButtonText = 'Submit Training Request';
+    var accessKeyInput = form.querySelector('input[name="access_key"]');
 
     function showFormError(message) {
       if (success) success.style.display = 'none';
@@ -66,64 +66,46 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    function resetTurnstile() {
-      if (window.turnstile && turnstileId !== null) window.turnstile.reset(turnstileId);
-    }
-
-    fetch('/api/form-config', { headers: { Accept: 'application/json' } })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Form configuration unavailable');
-        return response.json();
-      })
-      .then(function (config) {
-        if (!config.siteKey) throw new Error('Form configuration unavailable');
-        if (!window.turnstile) throw new Error('Verification service unavailable');
-        window.turnstile.ready(function () {
-          turnstileId = window.turnstile.render('#turnstileWidget', {
-            sitekey: config.siteKey,
-            theme: 'light',
-            callback: function () { btn.disabled = false; },
-            'expired-callback': function () { btn.disabled = true; },
-            'error-callback': function () {
-              btn.disabled = true;
-              showFormError('Verification could not load. Please refresh the page or email us directly.');
-            }
-          });
-        });
-      })
-      .catch(function () {
-        showFormError('The online form is temporarily unavailable. Please email iht@traindevelopempower.com.');
-      });
-
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
+
+      if (accessKeyInput && accessKeyInput.value === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
+        showFormError('The online form is not configured yet. Please email iht@traindevelopempower.com.');
+        return;
+      }
+
       if (success) success.style.display = 'none';
       if (errorBox) errorBox.style.display = 'none';
       btn.textContent = 'Sending...';
       btn.disabled = true;
+
       try {
+        var formData = new FormData(form);
         var resp = await fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
+          body: formData,
           headers: { Accept: 'application/json' }
         });
         var result = await resp.json().catch(function () { return {}; });
+
         if (resp.ok && result.success) {
           form.reset();
           if (success) success.style.display = 'block';
           btn.textContent = 'Message Sent!';
-          resetTurnstile();
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
           showFormError(result.message || 'We could not send your request. Please try again or email us directly.');
           btn.textContent = defaultButtonText;
-          resetTurnstile();
         }
       } catch (err) {
         showFormError('We could not connect to the form service. Please try again or email us directly.');
         btn.textContent = defaultButtonText;
-        resetTurnstile();
+      } finally {
+        setTimeout(function () {
+          btn.disabled = false;
+          if (btn.textContent === 'Message Sent!') btn.textContent = defaultButtonText;
+        }, 1800);
       }
     });
   }
