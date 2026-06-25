@@ -1,5 +1,5 @@
-# Clean public URLs for static HTML pages
-# Old /pages URLs permanently redirect to clean URLs.
+# Clean URL redirects
+# Old /pages URLs permanently redirect to clean root URLs.
 /pages/about.html /about 301
 /pages/about /about 301
 /pages/about/ /about 301
@@ -202,55 +202,3 @@
 /supply-chain-resilience/ /supply-chain-resilience 301
 /terms-and-conditions/ /terms-and-conditions 301
 /training-categories/ /training-categories 301
-
-# Clean URLs proxy to the existing files in /pages/.
-/about /pages/about.html 200
-/asset-management-lifecycle-optimization /pages/asset-management-lifecycle-optimization.html 200
-/building-high-performing-teams /pages/building-high-performing-teams.html 200
-/building-positive-safety-culture /pages/building-positive-safety-culture.html 200
-/business-continuity-crisis-management /pages/business-continuity-crisis-management.html 200
-/business-process-optimization /pages/business-process-optimization.html 200
-/cancellation-policy /pages/cancellation-policy.html 200
-/coaching-mentoring-performance /pages/coaching-mentoring-performance.html 200
-/communication-influencing-skills /pages/communication-influencing-skills.html 200
-/compliance-management-regulatory-requirements /pages/compliance-management-regulatory-requirements.html 200
-/contact /pages/contact.html 200
-/contract-management-administration /pages/contract-management-administration.html 200
-/corporate-security-management /pages/corporate-security-management.html 200
-/courses /pages/courses.html 200
-/demand-planning /pages/demand-planning.html 200
-/emotional-intelligence-leaders /pages/emotional-intelligence-leaders.html 200
-/enterprise-risk-management /pages/enterprise-risk-management.html 200
-/health-safety-environmental-management /pages/health-safety-environmental-management.html 200
-/hse-compliance /pages/hse-compliance.html 200
-/in-house-corporate-training /pages/in-house-corporate-training.html 200
-/incident-investigation-response /pages/incident-investigation-response.html 200
-/incident-investigation-root-cause-analysis /pages/incident-investigation-root-cause-analysis.html 200
-/industries /pages/industries.html 200
-/inventory-optimization /pages/inventory-optimization.html 200
-/leadership-excellence-managers /pages/leadership-excellence-managers.html 200
-/leadership-management /pages/leadership-management.html 200
-/lean-principles-business-performance /pages/lean-principles-business-performance.html 200
-/logistics-distribution /pages/logistics-distribution.html 200
-/maintenance-planning-scheduling /pages/maintenance-planning-scheduling.html 200
-/maintenance-reliability /pages/maintenance-reliability.html 200
-/negotiation-skills-procurement-professionals /pages/negotiation-skills-procurement-professionals.html 200
-/operational-excellence-continuous-improvement /pages/operational-excellence-continuous-improvement.html 200
-/operations-productivity /pages/operations-productivity.html 200
-/process-improvement-performance-management /pages/process-improvement-performance-management.html 200
-/procurement-best-practices-commercial-excellence /pages/procurement-best-practices-commercial-excellence.html 200
-/procurement-contracts /pages/procurement-contracts.html 200
-/productivity-improvement-strategies /pages/productivity-improvement-strategies.html 200
-/reliability-centered-maintenance /pages/reliability-centered-maintenance.html 200
-/risk-assessment-hazard-identification /pages/risk-assessment-hazard-identification.html 200
-/root-cause-analysis-failure-investigation /pages/root-cause-analysis-failure-investigation.html 200
-/security-risk /pages/security-risk.html 200
-/security-risk-assessment-mitigation /pages/security-risk-assessment-mitigation.html 200
-/shutdown-turnaround-outage-management /pages/shutdown-turnaround-outage-management.html 200
-/strategic-procurement /pages/strategic-procurement.html 200
-/strategic-sourcing-category-management /pages/strategic-sourcing-category-management.html 200
-/supplier-relationship-management /pages/supplier-relationship-management.html 200
-/supply-chain-logistics /pages/supply-chain-logistics.html 200
-/supply-chain-resilience /pages/supply-chain-resilience.html 200
-/terms-and-conditions /pages/terms-and-conditions.html 200
-/training-categories /pages/training-categories.html 200

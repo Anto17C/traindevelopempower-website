@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance Management &amp; Regulatory Requirements Training | Train Develop Empower</title>
+<meta name="description" content="Strengthen compliance management capabilities, improve regulatory adherence, reduce organizational risk, and establish effective compliance frameworks.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest">
+<style>
+/* ── COURSE HERO — uses standard page-hero classes ── */
+.course-hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,76,.15);
+  border: 1px solid rgba(201,168,76,.3);
+  color: var(--gold);
+  padding: 5px 14px; border-radius: 20px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+  margin-bottom: 10px;
+}
+
+/* ── BODY GRID ── */
+.course-body { padding: 56px 0; }
+.course-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+}
+.course-content { min-width: 0; align-self: start; }
+.course-content { min-width: 0; }
+
+/* ── SIDEBAR ── */
+.sidebar-glance {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.sidebar-glance-img { height: 160px; overflow: hidden; }
+.sidebar-glance-img img { width: 100%; height: 100%; object-fit: cover; }
+.sidebar-glance-body { padding: 22px; }
+.sidebar-glance-body h4 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; }
+.glance-row { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--muted); padding: 7px 0; border-bottom: 1px solid var(--border); }
+.glance-row:last-child { border-bottom: none; }
+.glance-row svg { color: var(--sky); flex-shrink: 0; }
+.glance-row strong { color: var(--navy); }
+
+.sidebar-sticky { position: sticky; top: 88px; }
+.sidebar-proposal { background: var(--navy); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+.sidebar-proposal h4 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; }
+.sidebar-proposal p { color: rgba(255,255,255,.65); font-size: .8rem; margin-bottom: 16px; line-height: 1.6; }
+.sidebar-cat { background: var(--light); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; }
+.sidebar-cat h5 { color: var(--navy); font-size: .82rem; font-weight: 700; margin-bottom: 8px; }
+.sidebar-cat p { font-size: .77rem; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
+
+/* ── SECTION LABELS ── */
+.section-title {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .14em;
+  color: var(--gold); font-weight: 700;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.section-title::before { content: ''; width: 28px; height: 2px; background: var(--gold); flex-shrink: 0; }
+
+/* ── CONTENT STYLES ── */
+.course-overview { font-size: .9rem; color: var(--muted); line-height: 1.8; }
+.course-overview p { margin-bottom: 14px; }
+.course-overview p:last-child { margin-bottom: 0; }
+
+.two-col-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+.info-card { background: var(--light); border-radius: var(--radius); padding: 22px; border: 1.5px solid var(--border); }
+.info-card h5 { color: var(--navy); font-size: .85rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.info-card h5 svg { color: var(--gold); }
+.info-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.info-card ul li { font-size: .8rem; color: var(--muted); padding-left: 14px; position: relative; line-height: 1.5; }
+.info-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: .72rem; }
+
+.attend-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.attend-pill { background: var(--navy); color: #fff; padding: 8px 14px; border-radius: 20px; font-size: .78rem; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.attend-pill span { font-size: .95rem; }
+
+.method-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+.method-item { background: var(--light); border: 1.5px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
+.method-item-icon { font-size: 1.4rem; margin-bottom: 8px; }
+.method-item p { font-size: .74rem; color: var(--muted); margin: 0; line-height: 1.4; font-weight: 500; }
+
+.modules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
+.module-card { background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.module-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.module-number { background: var(--navy); color: var(--gold); width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 800; flex-shrink: 0; }
+.module-card h6 { color: var(--navy); font-size: .83rem; font-weight: 700; margin: 0; line-height: 1.3; }
+.module-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.module-card ul li { font-size: .77rem; color: var(--muted); padding-left: 12px; position: relative; line-height: 1.45; }
+.module-card ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
+
+.delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 14px; }
+.delivery-card { background: var(--navy); border-radius: var(--radius); padding: 22px; }
+.delivery-card h5 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.delivery-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+.delivery-card ul li { font-size: .8rem; color: rgba(255,255,255,.75); padding-left: 14px; position: relative; line-height: 1.5; }
+.delivery-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: .7rem; }
+
+/* ── OTHER COURSES BAR ── */
+.other-courses-bar { background: var(--light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 0; }
+.other-courses-inner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.other-courses-label { font-size: .78rem; font-weight: 700; color: var(--navy); white-space: nowrap; }
+.other-course-pill { background: #fff; border: 1.5px solid var(--border); color: var(--navy); padding: 7px 14px; border-radius: 20px; font-size: .78rem; font-weight: 600; text-decoration: none; transition: border-color .2s, color .2s; white-space: nowrap; }
+.other-course-pill:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── SIDEBAR BUTTONS ── */
+.btn-sidebar-gold { background: var(--gold); color: var(--navy); padding: 11px 16px; border-radius: 9px; font-weight: 700; font-size: .85rem; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; margin-bottom: 8px; transition: opacity .2s; }
+.btn-sidebar-gold:hover { opacity: .88; }
+.btn-sidebar-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.3); padding: 10px 16px; border-radius: 9px; font-weight: 600; font-size: .85rem; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; margin-bottom: 8px; transition: border-color .2s; }
+.btn-sidebar-outline:hover { border-color: #fff; color: #fff; }
+
+@media (max-width: 1024px) {
+  .course-body-grid { grid-template-columns: 1fr; }
+  .two-col-cards { grid-template-columns: 1fr; }
+  .modules-grid { grid-template-columns: 1fr; }
+  .method-grid { grid-template-columns: repeat(2, 1fr); }
+  .delivery-grid { grid-template-columns: 1fr; }
+  .sidebar-sticky { position: static; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="container"><div class="header-inner">
+  <a href="/" class="logo"><img src="../images/logo.svg" alt="Train Develop Empower"></a>
+  <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  <nav class="main-nav">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/in-house-corporate-training" class="nav-link">In-House Training</a>
+    <a href="/courses" class="nav-link">Courses</a>
+    <div class="nav-item">
+      <a href="/training-categories" class="nav-link">Categories
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+      </a>
+      <div class="dropdown">
+        <a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a>
+        <a href="/procurement-contracts">Procurement &amp; Contracts</a>
+        <a href="/procurement-contracts">Procurement &amp; Contracts</a>
+        <a href="/operations-productivity">Operations &amp; Productivity</a>
+        <a href="/security-risk">Security &amp; Risk</a>
+        <a href="/hse-compliance">HSE &amp; Compliance</a>
+        <a href="/leadership-management">Leadership &amp; Management</a>
+      </div>
+    </div>
+    <a href="/industries" class="nav-link">Industries</a>
+    <a href="/contact" class="nav-cta">Request Proposal</a>
+  </nav>
+</div></div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="page-hero page-hero-split page-hero-short">
+  <div class="page-hero-bg" style="background-image:url('../images/hse-compliance-management-hero.webp'); background-position:center center;"></div>
+  <div class="page-hero-overlay-split"></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <nav class="breadcrumb">
+          <a href="/">Home</a><span class="sep">›</span>
+          <a href="/training-categories">Categories</a><span class="sep">›</span>
+          <a href="/hse-compliance">HSE &amp; Compliance</a><span class="sep">›</span>
+          <span>Compliance Management &amp; Regulatory Requirements</span>
+        </nav>
+        <div class="course-hero-label">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          In-House Corporate Training — HSE-004
+        </div>
+        <h1>Compliance Management &amp; Regulatory Requirements.</h1>
+        <p>Strengthen compliance management capabilities, improve regulatory adherence, reduce organizational risk, and establish effective compliance frameworks that support sustainable business performance.</p>
+        <div class="page-hero-btns">
+          <a href="contact.html" class="hero-btn hero-btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Request Proposal
+          </a>
+          <a href="mailto:iht@traindevelopempower.com?subject=Request%20course%20outline%3A%20Compliance%20Management%20%26%20Regulatory%20Requirements" class="hero-btn hero-btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Request Outline
+          </a>
+          <a href="mailto:iht@traindevelopempower.com" class="hero-btn hero-btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#E53E3E" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Email Us
+          </a>
+          <a href="tel:+66903247862" class="hero-btn hero-btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call Us
+          </a>
+          <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Compliance%20Management%20%26%20Regulatory%20Requirements%20in-house%20corporate%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20training%20requirements." target="_blank" rel="noopener" class="hero-btn hero-btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+      <div class="page-hero-right"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAIN BODY ── -->
+<div class="course-body">
+  <div class="container">
+    <div class="course-body-grid">
+      <div class="course-content">
+        <div style="margin-bottom:48px;">
+          <div class="section-title">Course Overview</div>
+          <div class="course-overview">
+            <p>Organizations today operate within increasingly complex regulatory environments where compliance failures can result in legal penalties, operational disruptions, reputational damage, financial losses, and reduced stakeholder confidence. Effective compliance management enables organizations to identify regulatory obligations, implement controls, strengthen governance, and ensure ongoing adherence to applicable laws, standards, and industry requirements.</p>
+            <p>This in-house training program is designed to help organizations strengthen compliance management capabilities through structured compliance frameworks, regulatory monitoring processes, governance systems, risk management practices, and continuous improvement methodologies. Participants will learn practical approaches for managing compliance obligations, conducting compliance assessments, developing compliance programs, and fostering a culture of accountability.</p>
+            <p>The Compliance Management &amp; Regulatory Requirements program combines internationally recognized compliance principles with practical tools and methodologies that help organizations reduce compliance risks, improve governance, and strengthen organizational performance.</p>
+          </div>
+          <div class="two-col-cards">
+            <div class="info-card">
+              <h5><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Business Challenges Addressed</h5>
+              <ul>
+                <li>Increasing regulatory complexity</li>
+                <li>Changing legal and industry requirements</li>
+                <li>Compliance violations and enforcement risks</li>
+                <li>Weak compliance governance structures</li>
+                <li>Inconsistent compliance monitoring processes</li>
+                <li>Limited employee awareness of compliance obligations</li>
+                <li>Operational and reputational risks</li>
+                <li>Audit findings and corrective action challenges</li>
+                <li>Poor compliance reporting and oversight</li>
+                <li>Difficulty sustaining compliance programs</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h5><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> Key Learning Outcomes</h5>
+              <ul>
+                <li>Understand compliance management principles and frameworks</li>
+                <li>Identify and interpret regulatory requirements effectively</li>
+                <li>Develop and implement compliance programs</li>
+                <li>Strengthen compliance governance and accountability</li>
+                <li>Conduct compliance assessments and reviews</li>
+                <li>Improve compliance monitoring and reporting processes</li>
+                <li>Manage compliance risks proactively</li>
+                <li>Support internal and external audit activities</li>
+                <li>Foster a culture of ethics and compliance</li>
+                <li>Strengthen organizational resilience and regulatory readiness</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:48px;">
+          <div class="section-title">Who Should Attend</div>
+          <p style="font-size:.88rem; color:var(--muted); margin-bottom:0;">This in-house program is designed for professionals involved in compliance, governance, risk management, HSE, operations, and organizational oversight, including:</p>
+          <div class="attend-pills">
+            <div class="attend-pill"><span>🏭</span> Compliance Managers</div>
+            <div class="attend-pill"><span>👷</span> HSE Managers</div>
+            <div class="attend-pill"><span>🔧</span> Risk Managers</div>
+            <div class="attend-pill"><span>📊</span> Internal Auditors</div>
+            <div class="attend-pill"><span>⚙️</span> Operations Managers</div>
+            <div class="attend-pill"><span>📋</span> Legal and Regulatory Personnel</div>
+            <div class="attend-pill"><span>🧰</span> Governance Professionals</div>
+            <div class="attend-pill"><span>🛡️</span> Quality Managers</div>
+            <div class="attend-pill"><span>🏆</span> Supervisors and Department Managers</div>
+            <div class="attend-pill"><span>📈</span> Personnel responsible for compliance and regulatory oversight</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:48px;">
+          <div class="section-title">Training Methodology</div>
+          <p style="font-size:.88rem; color:var(--muted); margin-bottom:0;">This highly interactive in-house training program combines practical learning approaches designed to support operational application and organizational relevance, including: Programs can be customized to align with organizational regulatory environments, industry sectors, and participant experience levels.</p>
+          <div class="method-grid">
+            <div class="method-item"><div class="method-item-icon">🎓</div><p>Instructor-Led Discussions</p></div>
+            <div class="method-item"><div class="method-item-icon">📋</div><p>Industry Case Studies</p></div>
+            <div class="method-item"><div class="method-item-icon">⚙️</div><p>Compliance Assessment Workshops</p></div>
+            <div class="method-item"><div class="method-item-icon">👥</div><p>Regulatory Review Exercises</p></div>
+            <div class="method-item"><div class="method-item-icon">🔍</div><p>Group Discussions</p></div>
+            <div class="method-item"><div class="method-item-icon">🗓️</div><p>Compliance Monitoring Activities</p></div>
+            <div class="method-item"><div class="method-item-icon">💬</div><p>Governance Simulations</p></div>
+            <div class="method-item"><div class="method-item-icon">🤝</div><p>Interactive Team Engagement Sessions</p></div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:48px;">
+          <div class="section-title">Course Modules</div>
+          <div class="modules-grid">
+            <div class="module-card">
+              <div class="module-card-header"><div class="module-number">01</div><h6>Foundations of Compliance Management</h6></div>
+              <ul>
+                <li>Introduction to compliance management principles</li>
+                <li>Understanding regulatory and legal obligations</li>
+                <li>The importance of governance and accountability</li>
+                <li>Compliance management frameworks</li>
+                <li>Roles and responsibilities in compliance programs</li>
+                <li>Ethics and professional conduct</li>
+                <li>Building a culture of compliance</li>
+              </ul>
+            </div>
+            <div class="module-card">
+              <div class="module-card-header"><div class="module-number">02</div><h6>Regulatory Requirements &amp; Compliance Obligations</h6></div>
+              <ul>
+                <li>Identifying applicable regulations and standards</li>
+                <li>Regulatory interpretation techniques</li>
+                <li>Understanding compliance obligations</li>
+                <li>Industry-specific compliance requirements</li>
+                <li>Monitoring regulatory changes</li>
+                <li>Managing regulatory documentation</li>
+                <li>Communicating compliance requirements effectively</li>
+              </ul>
+            </div>
+            <div class="module-card">
+              <div class="module-card-header"><div class="module-number">03</div><h6>Compliance Risk Assessment &amp; Control Frameworks</h6></div>
+              <ul>
+                <li>Compliance risk identification techniques</li>
+                <li>Compliance risk assessment methodologies</li>
+                <li>Developing internal controls</li>
+                <li>Control effectiveness evaluation</li>
+                <li>Managing compliance exposures</li>
+                <li>Compliance risk mitigation strategies</li>
+                <li>Strengthening organizational resilience</li>
+              </ul>
+            </div>
+            <div class="module-card">
+              <div class="module-card-header"><div class="module-number">04</div><h6>Compliance Monitoring, Auditing &amp; Reporting</h6></div>
+              <ul>
+                <li>Compliance monitoring systems</li>
+                <li>Compliance reviews and inspections</li>
+                <li>Internal audit considerations</li>
+                <li>Compliance reporting frameworks</li>
+                <li>Corrective and preventive action management</li>
+                <li>Escalation and reporting procedures</li>
+                <li>Performance measurement and compliance KPIs</li>
+              </ul>
+            </div>
+            <div class="module-card">
+              <div class="module-card-header"><div class="module-number">05</div><h6>Sustaining Compliance Excellence</h6></div>
+              <ul>
+                <li>Continuous improvement methodologies</li>
+                <li>Compliance training and awareness programs</li>
+                <li>Governance review and enhancement</li>
+                <li>Lessons learned and organizational learning</li>
+                <li>Compliance culture development</li>
+                <li>Preparing for regulatory inspections</li>
+                <li>Sustaining long-term compliance performance</li>
+              </ul>
+            </div>
+            <div class="module-card" style="background:var(--light); border-style:dashed; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px;">
+              <div style="color:var(--gold); margin-bottom:10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg>
+              </div>
+              <p style="font-size:.8rem; color:var(--muted); margin-bottom:12px;">Modules can be customized to align with your organization's specific industry, operational environment, and participant experience levels.</p>
+              <a href="contact.html" style="font-size:.8rem; font-weight:700; color:var(--sky); text-decoration:none;">Discuss Customization →</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:48px;">
+          <div class="section-title">Delivery Options &amp; Industries We Serve</div>
+          <div class="delivery-grid">
+            <div class="delivery-card">
+              <h5>In-House Delivery Options</h5>
+              <ul>
+                <li>Onsite at client premises</li>
+                <li>Live virtual instructor-led format</li>
+                <li>Hybrid delivery format</li>
+                <li>Customized duration based on organizational requirements</li>
+              </ul>
+            </div>
+            <div class="delivery-card">
+              <h5>Industries We Serve</h5>
+              <ul>
+                <li>Oil &amp; Gas</li>
+                <li>Petrochemicals</li>
+                <li>Manufacturing</li>
+                <li>Mining &amp; Metals</li>
+                <li>Utilities</li>
+                <li>Logistics &amp; Transportation</li>
+                <li>Infrastructure</li>
+                <li>Construction</li>
+                <li>Government &amp; Public Sector</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="course-sidebar">
+        <div class="sidebar-glance" style="margin-bottom:20px;">
+          <div class="sidebar-glance-img">
+            <img src="../images/hse-compliance-management-hero.webp" alt="Compliance Management &amp; Regulatory Requirements Training">
+          </div>
+          <div class="sidebar-glance-body">
+            <h4>Program At a Glance</h4>
+            <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span><strong>Duration:</strong> 3–5 Days</span></div>
+            <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg><span><strong>Delivery:</strong> Onsite / Virtual</span></div>
+            <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span><strong>Participants:</strong> 10–25 per session</span></div>
+            <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg><span><strong>Format:</strong> Interactive / Practical</span></div>
+            <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg><span><strong>Certificate:</strong> Included</span></div>
+            <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg><span><strong>Customizable:</strong> Yes — fully tailored</span></div>
+          </div>
+        </div>
+        <div style="position:sticky; top:88px;">
+          <div class="sidebar-proposal">
+            <h4>Request a Proposal</h4>
+            <p>Contact us to discuss your training requirements and receive a customized proposal for this program.</p>
+            <a href="contact.html" class="btn-sidebar-gold">Request Proposal</a>
+            <a href="mailto:iht@traindevelopempower.com" class="btn-sidebar-outline">Email Us</a>
+            <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Compliance%20Management%20%26%20Regulatory%20Requirements%20in-house%20corporate%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20training%20requirements." target="_blank" class="btn-sidebar-outline">WhatsApp Us</a>
+          </div>
+          <div class="sidebar-cat">
+            <h5>Part of the HSE &amp; Compliance Category</h5>
+            <p>This program is one of five in-house training courses in our HSE &amp; Compliance category.</p>
+            <a href="hse-compliance.html" style="font-size:.8rem; font-weight:700; color:var(--sky); text-decoration:none;">View All HSE &amp; Compliance Courses →</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<div class="other-courses-bar">
+  <div class="container">
+    <div class="other-courses-inner">
+      <span class="other-courses-label">Other HSE &amp; Compliance Courses:</span>
+      <a href="health-safety-environmental-management.html" class="other-course-pill">Health, Safety &amp; Environmental Management</a>
+      <a href="risk-assessment-hazard-identification.html" class="other-course-pill">Risk Assessment &amp; Hazard Identification</a>
+      <a href="incident-investigation-root-cause-analysis.html" class="other-course-pill">Incident Investigation &amp; Root Cause Analysis</a>
+      <a href="building-positive-safety-culture.html" class="other-course-pill">Building a Positive Safety Culture</a>
+    </div>
+  </div>
+</div>
+
+<section class="faq-bg">
+  <div class="container">
+    <div class="faq-section-inner">
+      <div class="faq-list-courses">
+        <div style="margin-bottom:24px;">
+          <div class="section-label"><span>Common Questions</span></div>
+          <h2 style="color:var(--navy);">Frequently Asked Questions</h2>
+          <p style="color:var(--muted); font-size:.95rem; max-width:560px; margin-top:8px;">Common questions about Compliance Management &amp; Regulatory IHT</p>
+        </div>
+        <details>
+          <summary>Can this program be customized for our organization?</summary>
+          <div class="faq-body">Yes. The program can be tailored to align with your regulatory environment, compliance obligations, governance requirements, and organizational objectives.</div>
+        </details>
+        <details>
+          <summary>Is this course available for virtual delivery?</summary>
+          <div class="faq-body">Yes. The program can be delivered onsite, virtually, or through a hybrid learning format.</div>
+        </details>
+        <details>
+          <summary>Does this course include practical compliance exercises?</summary>
+          <div class="faq-body">Yes. Participants will work through compliance assessments, regulatory reviews, risk evaluations, monitoring activities, and governance exercises.</div>
+        </details>
+        <details>
+          <summary>Who is this course most suitable for?</summary>
+          <div class="faq-body">The program is designed for compliance professionals, HSE managers, risk managers, auditors, operations personnel, and individuals responsible for regulatory compliance and governance.</div>
+        </details>
+        <details>
+          <summary>Can the duration be customized?</summary>
+          <div class="faq-body">Yes. The course can be adapted to suit organizational requirements, participant experience levels, and compliance priorities.</div>
+        </details>
+      </div>
+      <div class="faq-section-img">
+        <img src="../images/hse-compliance-management-faq.webp" alt="Compliance Management &amp; Regulatory Requirements Training" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <h2>Ready to Strengthen Compliance Management and Regulatory Performance?</h2>
+        <p>Partner with Train Develop Empower to equip your team with practical compliance management capabilities that reduce regulatory risks, improve governance, strengthen accountability, and support sustainable business success.</p>
+      </div>
+      <div class="cta-right">
+        <a href="contact.html" class="cta-pill cta-pill-gold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Request Proposal</a>
+        <a href="mailto:iht@traindevelopempower.com" class="cta-pill cta-pill-outline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#E53E3E" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Email Us</a>
+        <a href="tel:+66903247862" class="cta-pill cta-pill-outline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> Call Us</a>
+        <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Compliance%20Management%20%26%20Regulatory%20Requirements%20in-house%20corporate%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20training%20requirements." target="_blank" class="cta-pill cta-pill-outline"><svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Compliance%20Management%20%26%20Regulatory%20Requirements%20in-house%20corporate%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20training%20requirements." class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col-brand">
+        <img src="../images/logo.svg" alt="Train Develop Empower" class="footer-logo">
+        <p>Train Develop Empower Co. LTD helps organizations develop capability, improve performance, and empower people through practical, results-focused in-house corporate training solutions.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+          <a href="#" aria-label="Google"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col-links">
+        <h5 class="footer-col-title">Explore</h5>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/in-house-corporate-training">In-House Training</a></li>
+          <li><a href="/courses">Training Courses</a></li>
+          <li><a href="/industries">Industries We Serve</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/courses">Courses List</a></li>
+          <li><a href="/contact">Request Proposal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col-links">
+        <h5 class="footer-col-title">Training Categories</h5>
+        <ul>
+          <li><a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a></li>
+          <li><a href="/procurement-contracts">Procurement &amp; Contracts</a></li>
+          <li><a href="/procurement-contracts">Procurement &amp; Contracts</a></li>
+          <li><a href="/operations-productivity">Operations &amp; Productivity</a></li>
+          <li><a href="/security-risk">Security &amp; Risk</a></li>
+          <li><a href="/hse-compliance">HSE &amp; Compliance</a></li>
+          <li><a href="/leadership-management">Leadership &amp; People</a></li>
+        </ul>
+      </div>
+      <div class="footer-col-links">
+        <h5 class="footer-col-title">Contact Us</h5>
+        <p class="footer-company-name">Train Develop Empower Co. LTD</p>
+        <p class="footer-address">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand.</p>
+        <ul class="footer-contact-list">
+          <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+66903247862">+66 90 324 7862</a></li>
+          <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:iht@traindevelopempower.com">iht@traindevelopempower.com</a></li>
+          <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg><a href="https://traindevelopempower.com" target="_blank">www.traindevelopempower.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>&copy; 2026 Train Develop Empower Co. LTD. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="cancellation-policy.html">Cancellation Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+document.querySelectorAll('.faq-list-courses details').forEach(detail => {
+  detail.addEventListener('toggle', () => {
+    if (detail.open) {
+      document.querySelectorAll('.faq-list-courses details').forEach(other => {
+        if (other !== detail) other.removeAttribute('open');
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
