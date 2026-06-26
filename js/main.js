@@ -1,4 +1,4 @@
-/* Train Develop Empower — Main JS v3 */
+/* Train Develop Empower — Main JS v4 */
 document.addEventListener('DOMContentLoaded', function () {
 
   // Mobile menu
@@ -96,6 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
           if (success) success.style.display = 'block';
           btn.textContent = 'Message Sent!';
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // CONVERSION: Proposal form submitted
+          pushEvent('proposal_form_submit', { method: 'web_form' });
         } else {
           showFormError(result.message || 'We could not send your request. Please try again or email us directly.');
           btn.textContent = defaultButtonText;
@@ -130,4 +132,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', toggleBackToTop, { passive: true });
   toggleBackToTop();
+
+  // ── CONVERSION TRACKING ──────────────────────────────────────────
+  window.dataLayer = window.dataLayer || [];
+  function pushEvent(eventName, params) {
+    window.dataLayer.push(Object.assign({ event: eventName, page_path: window.location.pathname }, params || {}));
+  }
+
+  // WhatsApp clicks
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      pushEvent('whatsapp_click', { link_text: el.innerText.trim() || 'WhatsApp' });
+    });
+  });
+
+  // Call clicks
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      pushEvent('call_click', { phone_number: el.getAttribute('href').replace('tel:', '') });
+    });
+  });
+
+  // Email clicks
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      pushEvent('email_click', { email_address: el.getAttribute('href').replace('mailto:', '') });
+    });
+  });
+
+  // Brochure / outline downloads
+  document.querySelectorAll('a[href$=".pdf"][download]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var fileName = el.getAttribute('href').split('/').pop();
+      pushEvent('brochure_download', { file_name: fileName, link_text: el.innerText.trim() });
+    });
+  });
+
+  // Request Proposal CTA clicks (links to contact page, not the form itself)
+  document.querySelectorAll('a.btn-sidebar-gold, a.cta-pill-gold, a.nav-cta').forEach(function (el) {
+    el.addEventListener('click', function () {
+      pushEvent('proposal_cta_click', { link_text: el.innerText.trim(), page_path: window.location.pathname });
+    });
+  });
+
 });
