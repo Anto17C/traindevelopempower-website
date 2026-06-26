@@ -72,6 +72,11 @@
   .ind-grid[style] { grid-template-columns: repeat(2, 1fr) !important; }
   .commitment-icons-grid { grid-template-columns: 1fr; }
 }
+.benefit-pills-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+@media (max-width:768px) {
+  .benefit-pills-grid { grid-template-columns:repeat(2,1fr); }
+  .benefit-pills-grid > div { border-right:none !important; border-bottom:1px solid rgba(255,255,255,.08); }
+}
 </style>
 </head>
 <body>

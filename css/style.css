@@ -870,7 +870,7 @@ details[open] summary::after { content: '−'; }
   .why-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
 }
 @media (max-width: 480px) {
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
 }
 
 /* ── CTA STRIP LAYOUT ── */

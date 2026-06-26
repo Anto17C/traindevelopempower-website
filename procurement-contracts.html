@@ -55,6 +55,11 @@
   .course-cards-grid { grid-template-columns: 1fr; }
   .attend-grid { grid-template-columns: repeat(2, 1fr); }
 }
+.benefit-pills-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+@media (max-width:768px) {
+  .benefit-pills-grid { grid-template-columns:repeat(2,1fr); }
+  .benefit-pills-grid > div { border-right:none !important; border-bottom:1px solid rgba(255,255,255,.08); }
+}
 </style>
 </head>
 <body>
@@ -129,7 +134,7 @@
 <!-- ── WHY THIS TRAINING MATTERS ── -->
 <div style="background:var(--navy2); border-bottom:1px solid rgba(255,255,255,.08);">
   <div class="container">
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0;">
+    <div class="benefit-pills-grid">
       <div style="padding:28px 24px; border-right:1px solid rgba(255,255,255,.08); text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
