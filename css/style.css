@@ -1126,3 +1126,26 @@ details[open] summary::after { content: '−'; }
   .delivery-grid { grid-template-columns: 1fr; }
   .global-countries { grid-template-columns: 1fr; }
 }
+
+/* Mobile CTA buttons: 2 per row */
+@media (max-width: 480px) {
+  .hero-btns,
+  .page-hero-btns,
+  .cta-right {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-btns .hero-btn,
+  .page-hero-btns .hero-btn,
+  .cta-right .cta-pill {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
