@@ -9,13 +9,13 @@
   --navy:    #0A1628;
   --navy2:   #112240;
   --slate:   #1E3A5F;
-  --gold:    #C9A84C;
+  --gold:    #8B6914;
   --gold2:   #E8C96D;
-  --sky:     #4A90D9;
+  --sky:     #1E6FB5;
   --light:   #F4F7FB;
   --border:  #E2E8F0;
   --text:    #2D3748;
-  --muted:   #718096;
+  --muted:   #5A6677;
   --white:   #FFFFFF;
   --radius:  10px;
   --shadow:  0 4px 20px rgba(10,22,40,0.10);
@@ -46,6 +46,7 @@ h1 { font-size: clamp(2rem, 4vw, 3rem); }
 h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 h4 { font-size: 0.75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.section-eyebrow { font-size: 0.75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0; }
 h5 { font-size: .95rem; font-weight: 700; }
 h6 { font-size: .875rem; font-weight: 700; }
 

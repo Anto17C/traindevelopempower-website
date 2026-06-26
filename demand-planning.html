@@ -44,7 +44,7 @@
 .sidebar-glance-img { height: 160px; overflow: hidden; }
 .sidebar-glance-img img { width: 100%; height: 100%; object-fit: cover; }
 .sidebar-glance-body { padding: 22px; }
-.sidebar-glance-body h4 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; }
+.sidebar-glance-body h3 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; }
 .glance-row { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--muted); padding: 7px 0; border-bottom: 1px solid var(--border); }
 .glance-row:last-child { border-bottom: none; }
 .glance-row svg { color: var(--sky); flex-shrink: 0; }
@@ -52,10 +52,10 @@
 
 .sidebar-sticky { position: sticky; top: 88px; }
 .sidebar-proposal { background: var(--navy); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
-.sidebar-proposal h4 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; }
+.sidebar-proposal h3 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; }
 .sidebar-proposal p { color: rgba(255,255,255,.65); font-size: .8rem; margin-bottom: 16px; line-height: 1.6; }
 .sidebar-cat { background: var(--light); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; }
-.sidebar-cat h5 { color: var(--navy); font-size: .82rem; font-weight: 700; margin-bottom: 8px; }
+.sidebar-cat h2 { color: var(--navy); font-size: .82rem; font-weight: 700; margin-bottom: 8px; }
 .sidebar-cat p { font-size: .77rem; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
 
 /* ── SECTION LABELS ── */
@@ -74,8 +74,8 @@
 
 .two-col-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
 .info-card { background: var(--light); border-radius: var(--radius); padding: 22px; border: 1.5px solid var(--border); }
-.info-card h5 { color: var(--navy); font-size: .85rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-.info-card h5 svg { color: var(--gold); }
+.info-card h2 { color: var(--navy); font-size: .85rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.info-card h2 svg { color: var(--gold); }
 .info-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .info-card ul li { font-size: .8rem; color: var(--muted); padding-left: 14px; position: relative; line-height: 1.5; }
 .info-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: .72rem; }
@@ -93,14 +93,14 @@
 .module-card { background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px; }
 .module-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .module-number { background: var(--navy); color: var(--gold); width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 800; flex-shrink: 0; }
-.module-card h6 { color: var(--navy); font-size: .83rem; font-weight: 700; margin: 0; line-height: 1.3; }
+.module-card h3 { color: var(--navy); font-size: .83rem; font-weight: 700; margin: 0; line-height: 1.3; }
 .module-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
 .module-card ul li { font-size: .77rem; color: var(--muted); padding-left: 12px; position: relative; line-height: 1.45; }
 .module-card ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
 
 .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 14px; }
 .delivery-card { background: var(--navy); border-radius: var(--radius); padding: 22px; }
-.delivery-card h5 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.delivery-card h2 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; }
 .delivery-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
 .delivery-card ul li { font-size: .8rem; color: rgba(255,255,255,.75); padding-left: 14px; position: relative; line-height: 1.5; }
 .delivery-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: .7rem; }
@@ -133,8 +133,8 @@
 <header class="site-header">
 <div class="container"><div class="header-inner">
   <a href="../index.html" class="logo"><img src="../images/logo.svg" alt="Train Develop Empower"></a>
-  <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  <nav class="main-nav">
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="main-nav">
     <a href="../index.html" class="nav-link">Home</a>
     <a href="/about" class="nav-link">About</a>
     <a href="/in-house-corporate-training" class="nav-link">In-House Training</a>
@@ -158,6 +158,7 @@
   </nav>
 </div></div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="page-hero page-hero-split page-hero-short">
@@ -219,7 +220,7 @@
             <p>The program combines forecasting principles with practical operational planning strategies relevant to organizations operating in dynamic and fast-changing business environments.</p>
           </div>
           <div class="two-col-cards">
-            <div class="info-card"><h5><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Business Challenges Addressed</h5><ul>
+            <div class="info-card"><h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Business Challenges Addressed</h2><ul>
                 <li>Forecast inaccuracies</li>
                 <li>Demand volatility and uncertainty</li>
                 <li>Poor operational planning coordination</li>
@@ -231,7 +232,7 @@
                 <li>Inefficient replenishment planning</li>
                 <li>Operational continuity risks</li>
             </ul></div>
-            <div class="info-card"><h5><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> Key Learning Outcomes</h5><ul>
+            <div class="info-card"><h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> Key Learning Outcomes</h2><ul>
                 <li>Improve demand planning and forecasting processes</li>
                 <li>Strengthen operational planning coordination</li>
                 <li>Improve forecasting accuracy and reliability</li>
@@ -282,7 +283,7 @@
           <div class="section-title">Course Modules</div>
           <div class="modules-grid">
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">01</div><h6>Demand Planning &amp; Forecasting Fundamentals</h6></div>
+              <div class="module-card-header"><div class="module-number">01</div><h3>Demand Planning &amp; Forecasting Fundamentals</h3></div>
               <ul>
                 <li>Principles of forecasting and planning</li>
                 <li>Demand planning concepts</li>
@@ -292,7 +293,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">02</div><h6>Forecasting Methods &amp; Planning Techniques</h6></div>
+              <div class="module-card-header"><div class="module-number">02</div><h3>Forecasting Methods &amp; Planning Techniques</h3></div>
               <ul>
                 <li>Quantitative and qualitative forecasting methods</li>
                 <li>Forecast data analysis principles</li>
@@ -302,7 +303,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">03</div><h6>Inventory Alignment &amp; Supply Coordination</h6></div>
+              <div class="module-card-header"><div class="module-number">03</div><h3>Inventory Alignment &amp; Supply Coordination</h3></div>
               <ul>
                 <li>Inventory planning coordination</li>
                 <li>Replenishment planning approaches</li>
@@ -312,7 +313,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">04</div><h6>Cross-Functional Planning Coordination</h6></div>
+              <div class="module-card-header"><div class="module-number">04</div><h3>Cross-Functional Planning Coordination</h3></div>
               <ul>
                 <li>Sales and operations planning alignment</li>
                 <li>Procurement and supply coordination</li>
@@ -322,7 +323,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">05</div><h6>Forecast Monitoring &amp; Performance Measurement</h6></div>
+              <div class="module-card-header"><div class="module-number">05</div><h3>Forecast Monitoring &amp; Performance Measurement</h3></div>
               <ul>
                 <li>Forecast accuracy measurement</li>
                 <li>Planning KPIs and reporting</li>
@@ -332,7 +333,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">06</div><h6>Planning Risk &amp; Operational Continuity</h6></div>
+              <div class="module-card-header"><div class="module-number">06</div><h3>Planning Risk &amp; Operational Continuity</h3></div>
               <ul>
                 <li>Forecasting-related operational risks</li>
                 <li>Planning disruption impacts</li>
@@ -342,7 +343,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">07</div><h6>Continuous Improvement in Planning &amp; Forecasting</h6></div>
+              <div class="module-card-header"><div class="module-number">07</div><h3>Continuous Improvement in Planning &amp; Forecasting</h3></div>
               <ul>
                 <li>Planning process improvement</li>
                 <li>Forecast review techniques</li>
@@ -362,13 +363,13 @@
         <div style="margin-bottom:48px;">
           <div class="section-title">Delivery Options &amp; Industries We Serve</div>
           <div class="delivery-grid">
-            <div class="delivery-card"><h5>In-House Delivery Options</h5><ul>
+            <div class="delivery-card"><h2>In-House Delivery Options</h2><ul>
                 <li>Onsite at client premises</li>
                 <li>Live virtual instructor-led format</li>
                 <li>Hybrid delivery model</li>
                 <li>Customized duration based on organizational requirements</li>
             </ul></div>
-            <div class="delivery-card"><h5>Industries We Serve</h5><ul>
+            <div class="delivery-card"><h2>Industries We Serve</h2><ul>
                 <li>Logistics &amp; Transportation</li>
                 <li>Warehousing &amp; Distribution</li>
                 <li>Manufacturing</li>
@@ -384,7 +385,7 @@
         <div class="sidebar-glance" style="margin-bottom:20px;">
           <div class="sidebar-glance-img"><img src="../images/scl-demand-hero.webp" alt="Demand Planning &amp; Supply Forecasting Training" width="4305" height="2975"></div>
           <div class="sidebar-glance-body">
-            <h4>Program At a Glance</h4>
+            <h3>Program At a Glance</h3>
             <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span><strong>Duration:</strong> 3–5 Days</span></div>
             <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg><span><strong>Delivery:</strong> Onsite / Virtual</span></div>
             <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7M7 20H2v-2a3 3 0 015.356-1.857M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span><strong>Participants:</strong> 10–25 per session</span></div>
@@ -395,12 +396,12 @@
         </div>
         <div style="position:sticky; top:88px;">
           <div class="sidebar-proposal">
-            <h4>Request a Proposal</h4><p>Contact us to discuss your training requirements and receive a customized proposal for this program.</p>
+            <h3>Request a Proposal</h3><p>Contact us to discuss your training requirements and receive a customized proposal for this program.</p>
             <a href="contact.html" class="btn-sidebar-gold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Request Proposal</a>
             <a href="mailto:iht@traindevelopempower.com" class="btn-sidebar-outline">Email Us</a>
             <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Demand%20Planning%20%26%20Supply%20Forecasting%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20requirements." target="_blank" class="btn-sidebar-outline">WhatsApp Us</a>
           </div>
-          <div class="sidebar-cat"><h5>Part of the Supply Chain &amp; Logistics Category</h5><p>This program is one of five in-house training courses in our Supply Chain &amp; Logistics category.</p><a href="supply-chain-logistics.html" style="font-size:.8rem; font-weight:700; color:var(--sky); text-decoration:none;">View All SCL Courses →</a></div>
+          <div class="sidebar-cat"><h2>Part of the Supply Chain &amp; Logistics Category</h2><p>This program is one of five in-house training courses in our Supply Chain &amp; Logistics category.</p><a href="supply-chain-logistics.html" style="font-size:.8rem; font-weight:700; color:var(--sky); text-decoration:none;">View All SCL Courses →</a></div>
         </div>
       </div>
     </div>
@@ -459,6 +460,7 @@
 <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Demand%20Planning%20%26%20Supply%20Forecasting%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20requirements." class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -474,7 +476,7 @@
         </div>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Explore</h5>
+        <h3 class="footer-col-title">Explore</h3>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="/about">About Us</a></li>
@@ -487,7 +489,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Training Categories</h5>
+        <h3 class="footer-col-title">Training Categories</h3>
         <ul>
           <li><a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a></li>
           <li><a href="/maintenance-reliability">Maintenance &amp; Reliability</a></li>
@@ -499,7 +501,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Contact Us</h5>
+        <h3 class="footer-col-title">Contact Us</h3>
         <p class="footer-company-name">Train Develop Empower Co. LTD</p>
         <p class="footer-address">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand.</p>
         <ul class="footer-contact-list">

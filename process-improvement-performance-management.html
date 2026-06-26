@@ -44,7 +44,7 @@
 .sidebar-glance-img { height: 160px; overflow: hidden; }
 .sidebar-glance-img img { width: 100%; height: 100%; object-fit: cover; }
 .sidebar-glance-body { padding: 22px; }
-.sidebar-glance-body h4 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; }
+.sidebar-glance-body h3 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; }
 .glance-row { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--muted); padding: 7px 0; border-bottom: 1px solid var(--border); }
 .glance-row:last-child { border-bottom: none; }
 .glance-row svg { color: var(--sky); flex-shrink: 0; }
@@ -52,10 +52,10 @@
 
 .sidebar-sticky { position: sticky; top: 88px; }
 .sidebar-proposal { background: var(--navy); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
-.sidebar-proposal h4 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; }
+.sidebar-proposal h3 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; }
 .sidebar-proposal p { color: rgba(255,255,255,.65); font-size: .8rem; margin-bottom: 16px; line-height: 1.6; }
 .sidebar-cat { background: var(--light); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; }
-.sidebar-cat h5 { color: var(--navy); font-size: .82rem; font-weight: 700; margin-bottom: 8px; }
+.sidebar-cat h2 { color: var(--navy); font-size: .82rem; font-weight: 700; margin-bottom: 8px; }
 .sidebar-cat p { font-size: .77rem; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
 
 /* ── SECTION LABELS ── */
@@ -74,8 +74,8 @@
 
 .two-col-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
 .info-card { background: var(--light); border-radius: var(--radius); padding: 22px; border: 1.5px solid var(--border); }
-.info-card h5 { color: var(--navy); font-size: .85rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-.info-card h5 svg { color: var(--gold); }
+.info-card h2 { color: var(--navy); font-size: .85rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.info-card h2 svg { color: var(--gold); }
 .info-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .info-card ul li { font-size: .8rem; color: var(--muted); padding-left: 14px; position: relative; line-height: 1.5; }
 .info-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: .72rem; }
@@ -93,14 +93,14 @@
 .module-card { background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px; }
 .module-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .module-number { background: var(--navy); color: var(--gold); width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 800; flex-shrink: 0; }
-.module-card h6 { color: var(--navy); font-size: .83rem; font-weight: 700; margin: 0; line-height: 1.3; }
+.module-card h3 { color: var(--navy); font-size: .83rem; font-weight: 700; margin: 0; line-height: 1.3; }
 .module-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
 .module-card ul li { font-size: .77rem; color: var(--muted); padding-left: 12px; position: relative; line-height: 1.45; }
 .module-card ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
 
 .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 14px; }
 .delivery-card { background: var(--navy); border-radius: var(--radius); padding: 22px; }
-.delivery-card h5 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.delivery-card h2 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; }
 .delivery-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
 .delivery-card ul li { font-size: .8rem; color: rgba(255,255,255,.75); padding-left: 14px; position: relative; line-height: 1.5; }
 .delivery-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: .7rem; }
@@ -133,8 +133,8 @@
 <header class="site-header">
 <div class="container"><div class="header-inner">
   <a href="../index.html" class="logo"><img src="../images/logo.svg" alt="Train Develop Empower"></a>
-  <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  <nav class="main-nav">
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="main-nav">
     <a href="../index.html" class="nav-link">Home</a>
     <a href="/about" class="nav-link">About</a>
     <a href="/in-house-corporate-training" class="nav-link">In-House Training</a>
@@ -158,6 +158,7 @@
   </nav>
 </div></div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="page-hero page-hero-split page-hero-short">
@@ -220,7 +221,7 @@
           </div>
           <div class="two-col-cards">
             <div class="info-card">
-              <h5><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Business Challenges Addressed</h5>
+              <h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Business Challenges Addressed</h2>
               <ul>
                 <li>Inefficient business processes</li>
                 <li>Inconsistent operational performance</li>
@@ -235,7 +236,7 @@
               </ul>
             </div>
             <div class="info-card">
-              <h5><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> Key Learning Outcomes</h5>
+              <h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> Key Learning Outcomes</h2>
               <ul>
                 <li>Understand process improvement and performance management principles</li>
                 <li>Analyze and improve business processes</li>
@@ -288,7 +289,7 @@
           <div class="section-title">Course Modules</div>
           <div class="modules-grid">
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">01</div><h6>Foundations of Process Improvement &amp; Performance Management</h6></div>
+              <div class="module-card-header"><div class="module-number">01</div><h3>Foundations of Process Improvement &amp; Performance Management</h3></div>
               <ul>
                 <li>Understanding process improvement principles</li>
                 <li>The importance of performance management</li>
@@ -300,7 +301,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">02</div><h6>Process Analysis &amp; Improvement Techniques</h6></div>
+              <div class="module-card-header"><div class="module-number">02</div><h3>Process Analysis &amp; Improvement Techniques</h3></div>
               <ul>
                 <li>Understanding process workflows</li>
                 <li>Process mapping methodologies</li>
@@ -312,7 +313,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">03</div><h6>Performance Measurement &amp; KPI Development</h6></div>
+              <div class="module-card-header"><div class="module-number">03</div><h3>Performance Measurement &amp; KPI Development</h3></div>
               <ul>
                 <li>Understanding performance measurement systems</li>
                 <li>Developing effective KPIs</li>
@@ -324,7 +325,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">04</div><h6>Driving Operational Performance Improvement</h6></div>
+              <div class="module-card-header"><div class="module-number">04</div><h3>Driving Operational Performance Improvement</h3></div>
               <ul>
                 <li>Identifying performance improvement opportunities</li>
                 <li>Data-driven decision-making</li>
@@ -336,7 +337,7 @@
               </ul>
             </div>
             <div class="module-card">
-              <div class="module-card-header"><div class="module-number">05</div><h6>Building Sustainable Performance Management Systems</h6></div>
+              <div class="module-card-header"><div class="module-number">05</div><h3>Building Sustainable Performance Management Systems</h3></div>
               <ul>
                 <li>Establishing performance governance</li>
                 <li>Performance review and feedback mechanisms</li>
@@ -361,7 +362,7 @@
           <div class="section-title">Delivery Options &amp; Industries We Serve</div>
           <div class="delivery-grid">
             <div class="delivery-card">
-              <h5>In-House Delivery Options</h5>
+              <h2>In-House Delivery Options</h2>
               <ul>
                 <li>Onsite at client premises</li>
                 <li>Live virtual instructor-led format</li>
@@ -370,7 +371,7 @@
               </ul>
             </div>
             <div class="delivery-card">
-              <h5>Industries We Serve</h5>
+              <h2>Industries We Serve</h2>
               <ul>
                 <li>Oil &amp; Gas</li>
                 <li>Petrochemicals</li>
@@ -392,7 +393,7 @@
             <img src="../images/ops-process-hero.webp" alt="Process Improvement &amp; Performance Management Training" width="1536" height="1024">
           </div>
           <div class="sidebar-glance-body">
-            <h4>Program At a Glance</h4>
+            <h3>Program At a Glance</h3>
             <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span><strong>Duration:</strong> 3–5 Days</span></div>
             <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg><span><strong>Delivery:</strong> Onsite / Virtual</span></div>
             <div class="glance-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span><strong>Participants:</strong> 10–25 per session</span></div>
@@ -403,14 +404,14 @@
         </div>
         <div style="position:sticky; top:88px;">
           <div class="sidebar-proposal">
-            <h4>Request a Proposal</h4>
+            <h3>Request a Proposal</h3>
             <p>Contact us to discuss your training requirements and receive a customized proposal for this program.</p>
             <a href="contact.html" class="btn-sidebar-gold">Request Proposal</a>
             <a href="mailto:iht@traindevelopempower.com" class="btn-sidebar-outline">Email Us</a>
             <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20am%20interested%20in%20the%20Process%20Improvement%20%26%20Performance%20Management%20in-house%20corporate%20training%20program.%20Please%20contact%20me%20to%20discuss%20our%20training%20requirements." target="_blank" class="btn-sidebar-outline">WhatsApp Us</a>
           </div>
           <div class="sidebar-cat">
-            <h5>Part of the Operations &amp; Productivity Category</h5>
+            <h2>Part of the Operations &amp; Productivity Category</h2>
             <p>This program is one of five in-house training courses in our Operations &amp; Productivity category.</p>
             <a href="operations-productivity.html" style="font-size:.8rem; font-weight:700; color:var(--sky); text-decoration:none;">View All Operations Courses →</a>
           </div>
@@ -493,6 +494,7 @@
 </a>
 
 
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -508,7 +510,7 @@
         </div>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Explore</h5>
+        <h3 class="footer-col-title">Explore</h3>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="/about">About Us</a></li>
@@ -521,7 +523,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Training Categories</h5>
+        <h3 class="footer-col-title">Training Categories</h3>
         <ul>
           <li><a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a></li>
           <li><a href="/procurement-contracts">Procurement &amp; Contracts</a></li>
@@ -533,7 +535,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Contact Us</h5>
+        <h3 class="footer-col-title">Contact Us</h3>
         <p class="footer-company-name">Train Develop Empower Co. LTD</p>
         <p class="footer-address">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand.</p>
         <ul class="footer-contact-list">

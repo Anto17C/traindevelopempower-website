@@ -44,7 +44,7 @@
 .attend-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
 .attend-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); padding: 20px 14px; text-align: center; }
 .attend-icon { font-size: 1.6rem; margin-bottom: 10px; }
-.attend-card h6 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 6px; }
+.attend-card h3 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 6px; }
 .attend-card p { color: rgba(255,255,255,.65); font-size: .75rem; line-height: 1.5; margin: 0; }
 
 @media (max-width: 1024px) {
@@ -62,8 +62,8 @@
 <header class="site-header">
 <div class="container"><div class="header-inner">
   <a href="../index.html" class="logo"><img src="../images/logo.svg" alt="Train Develop Empower"></a>
-  <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  <nav class="main-nav">
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="main-nav">
     <a href="../index.html" class="nav-link">Home</a>
     <a href="/about" class="nav-link">About</a>
     <a href="/in-house-corporate-training" class="nav-link">In-House Training</a>
@@ -87,6 +87,7 @@
   </nav>
 </div></div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="page-hero page-hero-split page-hero-short">
@@ -98,7 +99,7 @@
         <nav class="breadcrumb">
           <a href="../index.html">Home</a><span class="sep">›</span><a href="/training-categories">Categories</a><span class="sep">›</span><span>Security &amp; Risk</span>
         </nav>
-        <h4>Security &amp; Risk In-House Training</h4>
+        <p class="section-eyebrow">Security &amp; Risk In-House Training</p>
         <h1>Protect Assets.<br>Manage Risk.<br>Strengthen Resilience.</h1>
         <p><a href="in-house-corporate-training.html" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px;">Customized in-house training solutions</a> designed to strengthen security capability, improve risk management practices, enhance business continuity, and support organizational resilience.</p>
         <div class="page-hero-btns">
@@ -133,28 +134,28 @@
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Risk Management</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Risk Management</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Identify, assess, and manage operational and business risks more effectively.</p>
       </div>
       <div style="padding:28px 24px; border-right:1px solid rgba(255,255,255,.08); text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Security Awareness</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Security Awareness</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Strengthen workforce awareness and improve organizational security culture.</p>
       </div>
       <div style="padding:28px 24px; border-right:1px solid rgba(255,255,255,.08); text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Business Continuity</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Business Continuity</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Prepare teams to respond effectively to disruptions and critical incidents.</p>
       </div>
       <div style="padding:28px 24px; text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Organisational Resilience</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Organisational Resilience</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Build resilient systems and processes that support long-term stability.</p>
       </div>
     </div>
@@ -177,7 +178,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">SEC-001</span>
-          <h5>Enterprise Risk Management</h5>
+          <h2>Enterprise Risk Management</h2>
           <p>This in-house corporate training program helps organizations to identify, assess, and manage enterprise-wide risks more effectively to protect assets, reduce exposure, and strengthen decision-making.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -189,7 +190,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">SEC-002</span>
-          <h5>Business Continuity &amp; Crisis Management</h5>
+          <h2>Business Continuity &amp; Crisis Management</h2>
           <p>This in-house corporate training program helps organizations to develop proactive business continuity strategies that minimize disruption, support crisis response, and maintain operational resilience.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -201,7 +202,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">SEC-003</span>
-          <h5>Security Risk Assessment &amp; Mitigation</h5>
+          <h2>Security Risk Assessment &amp; Mitigation</h2>
           <p>This in-house corporate training program helps organizations to identify security vulnerabilities, conduct risk assessments, and implement effective mitigation strategies to protect people and assets.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -213,7 +214,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">SEC-004</span>
-          <h5>Corporate Security Management</h5>
+          <h2>Corporate Security Management</h2>
           <p>This in-house corporate training program helps organizations to build comprehensive security management capability that protects people, assets, information, and operational continuity.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -225,7 +226,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">SEC-005</span>
-          <h5>Incident Investigation &amp; Response</h5>
+          <h2>Incident Investigation &amp; Response</h2>
           <p>This in-house corporate training program helps organizations to strengthen incident investigation capability and improve emergency response effectiveness to minimize impact and prevent recurrence.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -236,7 +237,7 @@
           <div style="color:var(--gold); margin-bottom:14px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="40" height="40"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h5 style="color:#fff; font-size:1rem; margin-bottom:10px;">Request a Custom Proposal</h5>
+          <h2 style="color:#fff; font-size:1rem; margin-bottom:10px;">Request a Custom Proposal</h2>
           <p style="color:rgba(255,255,255,.65); font-size:.84rem; margin-bottom:20px;">All programs are fully customized to align with your industry, workforce, and business objectives.</p>
           <span style="display:inline-block; background:var(--gold); color:var(--navy); padding:10px 22px; border-radius:8px; font-weight:700; font-size:.85rem;">Get In Touch →</span>
         </div>
@@ -266,32 +267,32 @@
     <div class="attend-grid">
       <div class="attend-card">
         <div class="attend-icon">🛡️</div>
-        <h6>Security Managers</h6>
+        <h3>Security Managers</h3>
         <p>Responsible for security strategy and asset protection.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">📊</div>
-        <h6>Risk Management Professionals</h6>
+        <h3>Risk Management Professionals</h3>
         <p>Supporting risk assessment and business resilience initiatives.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">🔄</div>
-        <h6>Business Continuity Teams</h6>
+        <h3>Business Continuity Teams</h3>
         <p>Managing continuity planning and crisis preparedness.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">⚙️</div>
-        <h6>Operations Managers</h6>
+        <h3>Operations Managers</h3>
         <p>Responsible for operational risk and performance.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">✅</div>
-        <h6>Compliance Professionals</h6>
+        <h3>Compliance Professionals</h3>
         <p>Supporting governance, risk, and compliance activities.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">👔</div>
-        <h6>Department Leaders</h6>
+        <h3>Department Leaders</h3>
         <p>Leading teams through risk, change, and business challenges.</p>
       </div>
     </div>
@@ -307,19 +308,19 @@
     </div>
     <div class="feature-grid">
       <div class="feature-box">
-        <h6>Customized Solutions</h6>
+        <h3>Customized Solutions</h3>
         <p>Tailored programs designed around your workforce, industry, and operational objectives — not generic off-the-shelf content.</p>
       </div>
       <div class="feature-box">
-        <h6>Industry-Relevant</h6>
+        <h3>Industry-Relevant</h3>
         <p>Practical learning designed around real workplace challenges and business needs across the Middle East, Africa, and Asia-Pacific.</p>
       </div>
       <div class="feature-box">
-        <h6>Global Experience</h6>
+        <h3>Global Experience</h3>
         <p>Supported by nearly two decades of international training experience, combining best practices with local operational relevance.</p>
       </div>
       <div class="feature-box">
-        <h6>Measurable Results</h6>
+        <h3>Measurable Results</h3>
         <p>Focused on capability development, performance improvement, and delivering measurable business impact.</p>
       </div>
     </div>
@@ -403,6 +404,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -418,7 +420,7 @@
         </div>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Explore</h5>
+        <h3 class="footer-col-title">Explore</h3>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="/about">About Us</a></li>
@@ -431,7 +433,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Training Categories</h5>
+        <h3 class="footer-col-title">Training Categories</h3>
         <ul>
           <li><a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a></li>
           <li><a href="/maintenance-reliability">Maintenance &amp; Reliability</a></li>
@@ -443,7 +445,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Contact Us</h5>
+        <h3 class="footer-col-title">Contact Us</h3>
         <p class="footer-company-name">Train Develop Empower Co. LTD</p>
         <p class="footer-address">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand.</p>
         <ul class="footer-contact-list">

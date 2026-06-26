@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
       nav.classList.toggle('open');
+      var isOpen = nav.classList.contains('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
     document.addEventListener('click', function (e) {
       if (!nav.contains(e.target) && !toggle.contains(e.target)) {

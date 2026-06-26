@@ -44,7 +44,7 @@
 .attend-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
 .attend-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); padding: 20px 14px; text-align: center; }
 .attend-icon { font-size: 1.6rem; margin-bottom: 10px; }
-.attend-card h6 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 6px; }
+.attend-card h3 { color: var(--gold); font-size: .8rem; font-weight: 700; margin-bottom: 6px; }
 .attend-card p { color: rgba(255,255,255,.65); font-size: .75rem; line-height: 1.5; margin: 0; }
 
 @media (max-width: 1024px) {
@@ -62,8 +62,8 @@
 <header class="site-header">
 <div class="container"><div class="header-inner">
   <a href="../index.html" class="logo"><img src="../images/logo.svg" alt="Train Develop Empower"></a>
-  <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  <nav class="main-nav">
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="main-nav">
     <a href="../index.html" class="nav-link">Home</a>
     <a href="/about" class="nav-link">About</a>
     <a href="/in-house-corporate-training" class="nav-link">In-House Training</a>
@@ -87,6 +87,7 @@
   </nav>
 </div></div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="page-hero page-hero-split page-hero-short">
@@ -98,7 +99,7 @@
         <nav class="breadcrumb">
           <a href="../index.html">Home</a><span class="sep">›</span><a href="/training-categories">Categories</a><span class="sep">›</span><span>HSE &amp; Compliance</span>
         </nav>
-        <h4>HSE &amp; Compliance In-House Training</h4>
+        <p class="section-eyebrow">HSE &amp; Compliance In-House Training</p>
         <h1>Promote Safety.<br>Strengthen Compliance.<br>Protect People and Operations.</h1>
         <p><a href="in-house-corporate-training.html" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px;">Customized in-house training solutions</a> designed to strengthen health, safety, environmental, and compliance capability while supporting operational excellence and organizational responsibility.</p>
         <div class="page-hero-btns">
@@ -133,28 +134,28 @@
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Workplace Safety</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Workplace Safety</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Reduce incidents and promote a safe working environment for employees and contractors.</p>
       </div>
       <div style="padding:28px 24px; border-right:1px solid rgba(255,255,255,.08); text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Regulatory Compliance</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Regulatory Compliance</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Strengthen compliance with industry standards, regulations, and organizational requirements.</p>
       </div>
       <div style="padding:28px 24px; border-right:1px solid rgba(255,255,255,.08); text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Environmental Responsibility</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Environmental Responsibility</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Support sustainable operations and improve environmental performance.</p>
       </div>
       <div style="padding:28px 24px; text-align:center;">
         <div style="color:var(--gold); margin-bottom:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
-        <h6 style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Safety Culture</h6>
+        <p style="color:#fff; font-size:.82rem; font-weight:700; margin-bottom:5px;">Safety Culture</p>
         <p style="color:rgba(255,255,255,.55); font-size:.76rem; margin:0; line-height:1.5;">Develop a proactive culture where safety and responsibility become part of everyday operations.</p>
       </div>
     </div>
@@ -177,7 +178,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">HSE-001</span>
-          <h5>Health, Safety &amp; Environmental Management</h5>
+          <h2>Health, Safety &amp; Environmental Management</h2>
           <p>This in-house corporate training program helps organizations to build a comprehensive HSE management framework that protects people, minimizes environmental impact, and supports compliance obligations.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -189,7 +190,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">HSE-002</span>
-          <h5>Risk Assessment &amp; Hazard Identification</h5>
+          <h2>Risk Assessment &amp; Hazard Identification</h2>
           <p>This in-house corporate training program helps organizations to develop proactive risk assessment and hazard identification capability that reduces workplace incidents and improves operational safety.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -201,7 +202,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">HSE-003</span>
-          <h5>Incident Investigation &amp; Root Cause Analysis</h5>
+          <h2>Incident Investigation &amp; Root Cause Analysis</h2>
           <p>This in-house corporate training program helps organizations to identify underlying causes of workplace incidents and implement effective corrective actions that prevent recurrence and improve safety performance.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -213,7 +214,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">HSE-004</span>
-          <h5>Compliance Management &amp; Regulatory Requirements</h5>
+          <h2>Compliance Management &amp; Regulatory Requirements</h2>
           <p>This in-house corporate training program helps organizations to improve compliance management capability and meet regulatory requirements across health, safety, environmental, and operational functions.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -225,7 +226,7 @@
         </div>
         <div class="course-card-body">
           <span class="code">HSE-005</span>
-          <h5>Building a Positive Safety Culture</h5>
+          <h2>Building a Positive Safety Culture</h2>
           <p>This in-house corporate training program helps organizations to develop a proactive safety culture where leadership, accountability, and continuous improvement become embedded in everyday operations.</p>
         </div>
         <div class="course-card-foot"><span>Course Outline →</span></div>
@@ -236,7 +237,7 @@
           <div style="color:var(--gold); margin-bottom:14px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="40" height="40"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h5 style="color:#fff; font-size:1rem; margin-bottom:10px;">Request a Custom Proposal</h5>
+          <h2 style="color:#fff; font-size:1rem; margin-bottom:10px;">Request a Custom Proposal</h2>
           <p style="color:rgba(255,255,255,.65); font-size:.84rem; margin-bottom:20px;">All programs are fully customized to align with your industry, workforce, and business objectives.</p>
           <span style="display:inline-block; background:var(--gold); color:var(--navy); padding:10px 22px; border-radius:8px; font-weight:700; font-size:.85rem;">Get In Touch →</span>
         </div>
@@ -266,32 +267,32 @@
     <div class="attend-grid">
       <div class="attend-card">
         <div class="attend-icon">🦺</div>
-        <h6>HSE Professionals</h6>
+        <h3>HSE Professionals</h3>
         <p>Responsible for health, safety, environmental, and compliance activities.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">⛑️</div>
-        <h6>Safety Officers</h6>
+        <h3>Safety Officers</h3>
         <p>Managing workplace safety programs and risk controls.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">⚙️</div>
-        <h6>Operations Managers</h6>
+        <h3>Operations Managers</h3>
         <p>Supporting safe and compliant workplace safety performance.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">👷</div>
-        <h6>Supervisors &amp; Superintendents</h6>
+        <h3>Supervisors &amp; Superintendents</h3>
         <p>Leading teams and maintaining workplace safety standards.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">✅</div>
-        <h6>Compliance Professionals</h6>
+        <h3>Compliance Professionals</h3>
         <p>Supporting regulatory compliance and governance requirements.</p>
       </div>
       <div class="attend-card">
         <div class="attend-icon">👔</div>
-        <h6>Department Leaders</h6>
+        <h3>Department Leaders</h3>
         <p>Promoting a culture of safety, accountability, and continuous improvement.</p>
       </div>
     </div>
@@ -307,19 +308,19 @@
     </div>
     <div class="feature-grid">
       <div class="feature-box">
-        <h6>Customized Solutions</h6>
+        <h3>Customized Solutions</h3>
         <p>Tailored programs designed around your workforce, industry, and operational objectives — not generic off-the-shelf content.</p>
       </div>
       <div class="feature-box">
-        <h6>Industry-Relevant</h6>
+        <h3>Industry-Relevant</h3>
         <p>Practical learning designed around real workplace challenges and business needs across the Middle East, Africa, and Asia-Pacific.</p>
       </div>
       <div class="feature-box">
-        <h6>Global Experience</h6>
+        <h3>Global Experience</h3>
         <p>Supported by nearly two decades of international training experience, combining best practices with local operational relevance.</p>
       </div>
       <div class="feature-box">
-        <h6>Measurable Results</h6>
+        <h3>Measurable Results</h3>
         <p>Focused on capability development, performance improvement, and delivering measurable business impact.</p>
       </div>
     </div>
@@ -403,6 +404,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -418,7 +420,7 @@
         </div>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Explore</h5>
+        <h3 class="footer-col-title">Explore</h3>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="/about">About Us</a></li>
@@ -431,7 +433,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Training Categories</h5>
+        <h3 class="footer-col-title">Training Categories</h3>
         <ul>
           <li><a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a></li>
           <li><a href="/maintenance-reliability">Maintenance &amp; Reliability</a></li>
@@ -443,7 +445,7 @@
         </ul>
       </div>
       <div class="footer-col-links">
-        <h5 class="footer-col-title">Contact Us</h5>
+        <h3 class="footer-col-title">Contact Us</h3>
         <p class="footer-company-name">Train Develop Empower Co. LTD</p>
         <p class="footer-address">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand.</p>
         <ul class="footer-contact-list">
