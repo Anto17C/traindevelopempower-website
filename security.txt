@@ -1,0 +1,5 @@
+Contact: mailto:iht@traindevelopempower.com
+Expires: 2027-06-26T23:59:59z
+Canonical: https://traindevelopempower.com/.well-known/security.txt
+Preferred-Languages: en
+Policy: https://traindevelopempower.com/privacy-policy
