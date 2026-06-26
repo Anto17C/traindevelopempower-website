@@ -28,7 +28,6 @@
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: 48px;
-  align-items: start;
 }
 .course-content { min-width: 0; align-self: start; }
 .course-content { min-width: 0; }
@@ -120,6 +119,8 @@
 
 @media (max-width: 1024px) {
   .course-body-grid { grid-template-columns: 1fr; }
+  .sidebar-glance { order: -1; }
+  .sidebar-sticky { position: static; }
   .two-col-cards { grid-template-columns: 1fr; }
   .modules-grid { grid-template-columns: 1fr; }
   .method-grid { grid-template-columns: repeat(2, 1fr); }
