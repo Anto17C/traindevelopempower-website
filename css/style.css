@@ -1127,31 +1127,55 @@ details[open] summary::after { content: '−'; }
   .global-countries { grid-template-columns: 1fr; }
 }
 
+/* ── BACK TO TOP BUTTON ── */
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 96px;
+  z-index: 520;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,.45);
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 26px rgba(10,22,40,.28);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .2s, visibility .2s, transform .2s, background .2s;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+@media (max-width: 640px) {
+  .back-to-top {
+    right: 22px;
+    bottom: 90px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
 /* Mobile CTA buttons: 2 per row */
 @media (max-width: 480px) {
   .hero-btns,
   .page-hero-btns,
-  .cta-right {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    width: 100%;
-  }
-
-  .hero-btns .hero-btn,
-  .page-hero-btns .hero-btn,
-  .cta-right .cta-pill {
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-/* Force inner page hero CTA buttons to 2 per row on mobile */
-@media (max-width: 480px) {
+  .cta-right,
   .page-hero-split .page-hero-btns {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -1159,10 +1183,13 @@ details[open] summary::after { content: '−'; }
     width: 100% !important;
   }
 
+  .hero-btns .hero-btn,
+  .page-hero-btns .hero-btn,
+  .cta-right .cta-pill,
   .page-hero-split .page-hero-btns .hero-btn {
     width: 100% !important;
-    margin: 0 !important;
     justify-content: center !important;
+    margin: 0 !important;
     text-align: center !important;
     padding-left: 8px;
     padding-right: 8px;

@@ -109,4 +109,23 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // Back to top button
+  var backToTop = document.createElement('button');
+  backToTop.type = 'button';
+  backToTop.className = 'back-to-top';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.innerHTML = '↑';
+  document.body.appendChild(backToTop);
+
+  function toggleBackToTop() {
+    backToTop.classList.toggle('show', window.scrollY > 500);
+  }
+
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
 });
