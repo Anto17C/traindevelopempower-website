@@ -1149,3 +1149,22 @@ details[open] summary::after { content: '−'; }
     padding-right: 10px;
   }
 }
+
+/* Force inner page hero CTA buttons to 2 per row on mobile */
+@media (max-width: 480px) {
+  .page-hero-split .page-hero-btns {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .page-hero-split .page-hero-btns .hero-btn {
+    width: 100% !important;
+    margin: 0 !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
