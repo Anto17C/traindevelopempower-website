@@ -297,6 +297,9 @@ section { padding: 80px 0; }
 .cat-card:hover .cat-card-foot .explore { color: var(--gold); }
 
 /* Dark CTA card */
+/* ── Course card title fix (h2 used for accessibility, sized like original h5) ── */
+.course-card-body h2 { color: var(--navy); font-size: .95rem; margin-bottom: 8px; line-height: 1.3; font-weight: 700; }
+
 .cat-card-cta { background: var(--navy); border-color: var(--navy); min-height: 240px; justify-content: center; }
 .cat-card-cta:hover { border-color: var(--gold); }
 .cat-card-cta .icon { font-size: 2.5rem; margin-bottom: 14px; }
