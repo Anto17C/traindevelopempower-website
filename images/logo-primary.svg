@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 72" role="img" aria-labelledby="t d">
+  <title id="t">Train Develop Empower</title><desc id="d">Primary Train Develop Empower Executive Seal logo</desc>
+  <circle cx="36" cy="36" r="32" fill="#0A1628"/>
+  <circle cx="36" cy="36" r="27" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+  <path d="M15 25h43v11H42L28 57H15l15-21H15z" fill="#fff"/>
+  <path d="M45 19h13L34 60H21z" fill="#17A6A6"/>
+  <g fill="#0A1628" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing=".7">
+    <text x="82" y="31">TRAIN DEVELOP</text><text x="82" y="57">EMPOWER</text>
+  </g>
+  <rect x="281" y="39" width="37" height="3" rx="1.5" fill="#C9A84C"/>
+</svg>
