@@ -1282,6 +1282,38 @@ details[open] summary::after { content: '−'; }
   }
 }
 
+/* Course pages: Program At a Glance is the first card after the hero on mobile. */
+@media (max-width: 768px) {
+  .course-body-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .course-body-grid > .course-sidebar {
+    display: contents !important;
+  }
+  .course-body-grid > .course-sidebar > .sidebar-glance {
+    order: -1 !important;
+    width: 100%;
+  }
+  .course-body-grid > .course-sidebar > :not(.sidebar-glance) {
+    order: 1;
+  }
+}
+
+/* About stats overlay: balanced desktop spacing and centred text columns. */
+@media (min-width: 1025px) {
+  .about-story-stats {
+    width: 230px;
+  }
+  .about-stat {
+    align-items: center;
+  }
+  .about-stat > div:last-child {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+  }
+}
+
 /* Mobile card collections; philosophy cards stay unchanged */
 @media (max-width: 480px) {
   .feature-grid,
