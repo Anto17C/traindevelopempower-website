@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" fill="none">
   <!-- Icon mark -->
-  <rect x="0" y="8" width="34" height="34" rx="6" fill="#C9A84C"/>
+  <rect x="0" y="8" width="34" height="34" rx="6" fill="#F4A417"/>
   <text x="17" y="30" font-family="Arial" font-weight="900" font-size="18" fill="#0A1628" text-anchor="middle">TDE</text>
   <!-- Wordmark -->
   <text x="44" y="24" font-family="Arial" font-weight="800" font-size="13" fill="white" letter-spacing="0.3">TRAIN DEVELOP</text>
