@@ -1248,35 +1248,63 @@ details[open] summary::after { content: '−'; }
 .contact-method-row:has(a[href*="wa.me"]) .cmr-icon { color: #25D366; }
 .contact-method-row:last-of-type .cmr-icon { color: var(--gold); }
 
-/* Mobile card collections: two columns; philosophy cards stay unchanged */
+/* Category-page stats: always show all four items as a balanced 2 x 2 grid */
+@media (max-width: 768px) {
+  .benefit-pills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+  }
+  .benefit-pills-grid > * {
+    display: block !important;
+    visibility: visible !important;
+    min-width: 0;
+  }
+}
+
+/* On stacked course-detail layouts, show Program At a Glance first */
+@media (max-width: 1024px) {
+  .course-body-grid > .course-content {
+    order: 0;
+  }
+  .course-sidebar .sidebar-glance {
+    order: -1;
+    width: 100%;
+  }
+}
+
+/* Mobile card collections; philosophy cards stay unchanged */
 @media (max-width: 480px) {
   .feature-grid,
   .why-grid,
-  .course-cards-grid,
   .attend-grid,
-  .two-col-cards,
-  .modules-grid,
-  .benefit-pills-grid,
-  .challenge-grid {
+  .benefit-pills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .feature-grid > *,
   .why-grid > *,
-  .course-cards-grid > *,
   .attend-grid > *,
-  .two-col-cards > *,
-  .modules-grid > *,
-  .benefit-pills-grid > *,
-  .challenge-grid > * {
+  .benefit-pills-grid > * {
     min-width: 0;
   }
 
   .cat-grid,
   .delivery-grid,
   .method-grid,
-  .commitment-icons-grid {
+  .commitment-icons-grid,
+  .course-cards-grid,
+  .course-body .two-col-cards,
+  .course-body .modules-grid,
+  .course-body .challenge-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .course-body .method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .course-body .method-grid > * {
+    min-width: 0;
   }
 
   .benefit-pills-grid {
