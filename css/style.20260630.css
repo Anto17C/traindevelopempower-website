@@ -991,7 +991,7 @@ details[open] summary::after { content: '−'; }
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 230px;
+  width: 210px;
   flex-shrink: 0;
 }
 .about-stat {
@@ -1046,7 +1046,7 @@ details[open] summary::after { content: '−'; }
     object-fit: cover;
   }
   .about-story-stats {
-    width: min(62%, 220px);
+    width: min(60%, 210px);
     padding: 20px clamp(12px, 4vw, 16px);
   }
   .about-stat { gap: 8px; padding-bottom: 12px; }
