@@ -1224,3 +1224,59 @@ details[open] summary::after { content: '−'; }
     padding-right: 8px;
   }
 }
+
+/* Consistent communication icon colours */
+.hero-btn[href^="mailto:"] svg,
+.cta-pill[href^="mailto:"] svg {
+  color: #E53E3E !important;
+  stroke: #E53E3E !important;
+}
+
+/* Contact methods: preserve the icon slot without framed backgrounds */
+.contact-method-row .cmr-icon {
+  width: 40px !important;
+  height: 40px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+.contact-method-row .cmr-icon svg {
+  width: 34px !important;
+  height: 34px !important;
+}
+.contact-method-row:has(a[href^="mailto:"]) .cmr-icon { color: #E53E3E; }
+.contact-method-row:has(a[href^="tel:"]) .cmr-icon { color: var(--gold); }
+.contact-method-row:has(a[href*="wa.me"]) .cmr-icon { color: #25D366; }
+.contact-method-row:last-of-type .cmr-icon { color: var(--gold); }
+
+/* Mobile card collections: two columns; philosophy cards stay unchanged */
+@media (max-width: 480px) {
+  .cat-grid,
+  .feature-grid,
+  .why-grid,
+  .delivery-grid,
+  .course-cards-grid,
+  .attend-grid,
+  .two-col-cards,
+  .modules-grid,
+  .method-grid,
+  .benefit-pills-grid,
+  .commitment-icons-grid,
+  .challenge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .cat-grid > *,
+  .feature-grid > *,
+  .why-grid > *,
+  .delivery-grid > *,
+  .course-cards-grid > *,
+  .attend-grid > *,
+  .two-col-cards > *,
+  .modules-grid > *,
+  .method-grid > *,
+  .benefit-pills-grid > *,
+  .commitment-icons-grid > *,
+  .challenge-grid > * {
+    min-width: 0;
+  }
+}
