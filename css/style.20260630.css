@@ -1251,23 +1251,42 @@ details[open] summary::after { content: '−'; }
 /* Category-page stats: always show all four items as a balanced 2 x 2 grid */
 @media (max-width: 768px) {
   .benefit-pills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-auto-flow: row !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
   }
   .benefit-pills-grid > * {
     display: block !important;
     visibility: visible !important;
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
     min-width: 0;
+    box-sizing: border-box;
   }
 
-  /* Live category templates use this same stats grid without a class. */
+  /* Live category templates use the same four-card strip without a class. */
   body > div[style*="background:var(--navy2)"] > .container >
-  div[style*="grid-template-columns:repeat(4,1fr)"] {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  div[style*="grid-template-columns"][style*="repeat(4"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    grid-template-columns: none !important;
   }
   body > div[style*="background:var(--navy2)"] > .container >
-  div[style*="grid-template-columns:repeat(4,1fr)"] > * {
+  div[style*="grid-template-columns"][style*="repeat(4"] > * {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
     min-width: 0;
+    box-sizing: border-box;
+    padding: 24px 16px !important;
+  }
+  body > div[style*="background:var(--navy2)"] > .container >
+  div[style*="grid-template-columns"][style*="repeat(4"] > :nth-child(2n) {
+    border-right: none !important;
+  }
+  body > div[style*="background:var(--navy2)"] > .container >
+  div[style*="grid-template-columns"][style*="repeat(4"] > :nth-child(-n+2) {
+    border-bottom: 1px solid rgba(255,255,255,.08);
   }
 }
 
@@ -1299,7 +1318,7 @@ details[open] summary::after { content: '−'; }
   }
 }
 
-/* About stats overlay: balanced desktop spacing and centred text columns. */
+/* About stats overlay: balanced desktop spacing with left-aligned text. */
 @media (min-width: 1025px) {
   .about-story-stats {
     width: 230px;
@@ -1310,7 +1329,7 @@ details[open] summary::after { content: '−'; }
   .about-stat > div:last-child {
     flex: 1;
     min-width: 0;
-    text-align: center;
+    text-align: left;
   }
 }
 
