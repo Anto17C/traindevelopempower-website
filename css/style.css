@@ -958,6 +958,26 @@ details[open] summary::after { content: '−'; }
 .page-hero-split .page-hero-btns { display: flex; gap: 8px; flex-wrap: nowrap; align-items: center; }
 .page-hero-split .breadcrumb { margin-bottom: 12px; }
 
+/* Course heroes: keep the breadcrumb on one desktop row without widening body copy. */
+.page-hero-split .course-hero-label {
+  align-self: flex-start;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+  .page-hero-left:has(> .course-hero-label) {
+    min-width: 0;
+  }
+  .page-hero-left:has(> .course-hero-label) > .breadcrumb {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: max-content;
+    max-width: none;
+  }
+}
+
 @media (max-width: 768px) {
   .page-hero-inner { grid-template-columns: 1fr; }
   .page-hero-right { display: none; }
