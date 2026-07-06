@@ -84,6 +84,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
       try {
         var formData = new FormData(form);
+
+        // Fire-and-forget: create a matching Lead in Zoho CRM in parallel.
+        // This never blocks or affects the visitor's experience — if it's slow
+        // or fails, the Web3Forms submission below still proceeds normally.
+        try {
+          fetch('https://traindevelopempower-form-webhook.naby79.workers.dev', {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'cors',
+          }).catch(function () {
+            // Intentionally ignored — CRM sync issues should never surface to the visitor
+          });
+        } catch (crmErr) {
+          // Intentionally ignored
+        }
+
         var resp = await fetch(form.action, {
           method: 'POST',
           body: formData,
