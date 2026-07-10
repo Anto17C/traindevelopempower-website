@@ -1,399 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Train Develop Empower</title>
-<meta name="description" content="Contact Train Develop Empower to discuss your in-house training requirements and request a customized proposal.">
-<link rel="canonical" href="https://traindevelopempower.com/contact">
-<link rel="stylesheet" href="../css/style.20260630.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="../images/favicon-20260630.svg"><link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32-20260630.png"><link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-20260630.png"><link rel="manifest" href="../site-20260630.webmanifest">
-<style>
-/* ── CONTACT PAGE ── */
-.contact-main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: start;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Haven Siam</title>
+  <meta name="description" content="Tell us where you are in the process — pick a tier, mix specific services, or just ask a question. We'll follow up within one business day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo-assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logo-assets/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/logo-assets/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo-assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-/* Right column contact method items */
-.contact-method-row {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-.contact-method-row:last-of-type { border-bottom: none; }
-.cmr-icon {
-  width: 40px; height: 40px; flex-shrink: 0;
-  background: var(--navy);
-  border-radius: 9px;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--gold);
-}
-.cmr-icon svg { width: 18px; height: 18px; }
-.cmr-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; margin-bottom: 3px; }
-.cmr-value { font-size: .88rem; font-weight: 600; color: var(--navy); }
-.cmr-value a { color: var(--navy); }
-.cmr-value a:hover { color: var(--sky); }
-.cmr-note { font-size: .76rem; color: var(--muted); margin-top: 2px; }
-
-.wa-contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #25D366;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 9px;
-  font-weight: 700;
-  font-size: .875rem;
-  margin-top: 16px;
-  transition: background .2s, transform .2s;
-  text-decoration: none;
-}
-.wa-contact-btn:hover { background: #20ba5a; color: #fff; transform: translateY(-2px); }
-.wa-contact-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
-
-.map-wrap {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  height: 280px;
-  margin-top: 32px;
-}
-.map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
-.form-error { display:none; margin-bottom:16px; padding:12px 14px; border-radius:8px; background:#FFF5F5; border:1px solid #FEB2B2; color:#9B2C2C; font-size:.86rem; }
-.form-status-note { margin:12px 0 0; color:var(--muted); font-size:.77rem; line-height:1.55; }
-.form-status-note a { color:var(--slate); text-decoration:underline; }
-.turnstile-wrap { min-height:65px; margin:4px 0 18px; }
-.form-honeypot { position:absolute !important; left:-10000px !important; width:1px !important; height:1px !important; overflow:hidden !important; }
-.form-submit:disabled { cursor:not-allowed; opacity:.72; transform:none; }
-
-@media (max-width: 1024px) {
-  .contact-main-grid { grid-template-columns: 1fr; gap: 40px; }
-}
-</style>
+  <!-- Google tag (gtag.js) - GA4 Measurement ID: G-Q7VS535171 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VS535171"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7VS535171');
+  </script>
 </head>
 <body>
 
-<header class="site-header">
-<div class="container"><div class="header-inner">
-  <a href="/" class="logo"><img src="../images/logo-20260630.svg" alt="Train Develop Empower"></a>
-  <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  <nav class="main-nav">
-    <a href="/" class="nav-link">Home</a>
-    <a href="/about" class="nav-link">About</a>
-    <a href="/in-house-corporate-training" class="nav-link">In-House Training</a>
-    <a href="/courses" class="nav-link">Courses</a>
-    <div class="nav-item">
-      <a href="/training-categories" class="nav-link">Categories
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-      </a>
-      <div class="dropdown">
-        <a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a>
-        <a href="/maintenance-reliability">Maintenance &amp; Reliability</a>
-        <a href="/procurement-contracts">Procurement &amp; Contracts</a>
-        <a href="/operations-productivity">Operations &amp; Productivity</a>
-        <a href="/security-risk">Security &amp; Risk</a>
-        <a href="/hse-compliance">HSE &amp; Compliance</a>
-        <a href="/leadership-management">Leadership &amp; Management</a>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo logo-link" aria-label="Haven Siam home"><img src="assets/logo-assets/logo-primary.svg" alt="Haven Siam" width="620" height="216"></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="th/index.html" class="lang-link-mobile">ไทย</a>
+      <div class="nav-group">
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <div class="nav-item nav-dropdown">
+          <a href="how-it-works.html" class="nav-dropdown-trigger">How it works</a>
+          <div class="nav-dropdown-menu">
+            <a href="register-company-thailand.html">Register a company</a>
+            <a href="relocate-to-thailand.html">Relocation checklist</a>
+          </div>
+        </div>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="lang-switch">
+        <a href="th/index.html" class="lang-link">ไทย</a>
+      </div>
+      <div class="nav-socials">
+        <a href="tel:+66903247862" class="icon-link icon-phone" aria-label="Call Haven Siam">
+          <img src="assets/icon-phone.webp" alt="" width="727" height="743" loading="lazy">
+        </a>
+        <a href="mailto:hs@havensiam.com" class="icon-link icon-email" aria-label="Email Haven Siam">
+          <img src="assets/icon-email.webp" alt="" width="764" height="591" loading="lazy">
+        </a>
+        <a href="https://wa.me/66903247862" class="icon-link icon-whatsapp" target="_blank" rel="noopener" aria-label="Message Haven Siam on WhatsApp">
+          <img src="assets/icon-whatsapp.webp" alt="" width="722" height="723" loading="lazy">
+        </a>
+        <a href="https://line.me/ti/p/ZmLjFAgyNh" class="icon-link icon-line" target="_blank" rel="noopener" aria-label="Add Haven Siam on LINE">
+          <img src="assets/icon-line.webp" alt="" width="783" height="783" loading="lazy">
+        </a>
+      </div>
+      <a href="contact.html" class="btn btn-coral nav-cta" aria-current="page">Get started</a>
       </div>
     </div>
-    <a href="/industries" class="nav-link">Industries</a>
-    <a href="/contact" class="nav-cta">Request Proposal</a>
   </nav>
-</div></div>
-</header>
 
-<!-- ── HERO ── -->
-<section class="page-hero page-hero-split page-hero-short">
-  <div class="page-hero-bg" style="background-image:url('../images/contact-hero.webp'); background-position:center center;"></div>
-  <div class="page-hero-overlay-split"></div>
-  <div class="container">
-    <div class="page-hero-inner">
-      <div class="page-hero-left">
-        <nav class="breadcrumb">
-          <a href="/">Home</a><span class="sep">›</span><span>Contact</span>
-        </nav>
-        <h4>Contact Train Develop Empower</h4>
-        <h1>Let's Discuss Your Training Requirements.</h1>
-        <p>Whether you're looking to develop leadership capability, improve operational performance, or explore customized in-house training solutions, our team is ready to help.</p>
-        <div class="page-hero-btns">
-          <a href="#proposal" class="hero-btn hero-btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            Request Proposal
-          </a>
-          <a href="mailto:iht@traindevelopempower.com" class="hero-btn hero-btn-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            Email Us
-          </a>
-          <a href="tel:+66903247862" class="hero-btn hero-btn-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#F4A417" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            Call Us
-          </a>
-          <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20would%20like%20to%20discuss%20our%20training%20requirements.%20Please%20contact%20me%20at%20your%20earliest%20convenience." target="_blank" rel="noopener" class="hero-btn hero-btn-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Us
-          </a>
+  <section class="hero page-hero">
+    <img class="hero-bg-image" src="assets/contact-hero.webp" alt="A laptop and phone on a wooden desk with the Bangkok skyline visible through a window at sunset" width="1920" height="1080">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-inner-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Contact</p>
+          <h1>Tell us where you are, we'll tell you what's next</h1>
+          <p class="subhead">Pick a tier if you already know what you need, or mix specific services if you don't. Either way, this goes straight to a real person, not a queue.</p>
+          <p class="supporting">Most people hear back within one business day.</p>
         </div>
       </div>
-      <div class="page-hero-right"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── MAIN CONTACT SECTION ── -->
-<section class="bg-light">
-  <div class="container">
-    <div class="contact-main-grid">
+  <section class="contact-section">
+    <div class="contact-inner">
+      <div class="contact-section-intro">
+        <p class="eyebrow">Start here</p>
+        <h2>One message, then we map the next step</h2>
+        <p>Tell us what you already have, what you need, and how soon you want to move. We’ll point you to the right tier or service mix.</p>
+      </div>
 
-      <!-- LEFT: PROPOSAL FORM -->
-      <div>
-        <div class="section-label"><span>Request a Proposal</span></div>
-        <h2 style="margin:10px 0 8px;">Tell Us About Your Training Needs</h2>
-        <p style="color:var(--muted); font-size:.9rem; margin-bottom:28px;">Fill in the form below and our team will get back to you to discuss a customized in-house training solution for your organization.</p>
-        <form id="proposalForm" class="form-card" action="https://api.web3forms.com/submit" method="post">
-          <input type="hidden" name="access_key" value="bcee330f-6626-42e0-a695-cfc1df761558">
-          <input type="hidden" name="subject" value="New Training Proposal Request - Train Develop Empower">
-          <input type="hidden" name="from_name" value="Train Develop Empower Website">
-          <input type="hidden" name="redirect" value="https://traindevelopempower.com/contact">
-          <div id="formSuccess" class="form-success" role="status" aria-live="polite">Thank you! Your training request has been sent. We'll be in touch shortly.</div>
-          <div id="formError" class="form-error" role="alert" aria-live="assertive"></div>
-          <div class="form-honeypot" aria-hidden="true">
-            <label for="website">Leave this field empty</label><input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off">
+      <form id="inquiryForm" class="inquiry-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f5efa26a-0f75-4a95-bc88-8da7dddb3e95">
+        <input type="hidden" name="subject" value="New inquiry from the Haven Siam website">
+        <input type="checkbox" name="botcheck" class="botcheck-field" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="firstName">First Name *</label>
-              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Your first name" autocomplete="given-name" maxlength="80" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="lastName">Last Name *</label>
-              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Your last name" autocomplete="family-name" maxlength="80" required>
-            </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="jobTitle">Job Title</label>
-            <input type="text" id="jobTitle" name="jobTitle" class="form-input" placeholder="e.g. HR Manager, Training Director" autocomplete="organization-title" maxlength="120">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="contact_handle">Phone, WhatsApp, or LINE (optional)</label>
+            <input type="text" id="contact_handle" name="Phone / WhatsApp / LINE">
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="organization">Organization *</label>
-              <input type="text" id="organization" name="organization" class="form-input" placeholder="Your company name" autocomplete="organization" maxlength="160" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="country">Country *</label>
-              <input type="text" id="country" name="country" class="form-input" placeholder="Your country" autocomplete="country-name" maxlength="100" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="email">Email Address *</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" maxlength="254" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 234 567 8900" autocomplete="tel" maxlength="40">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="category">Training Category of Interest</label>
-            <select id="category" name="category" class="form-select">
-              <option value="">Select a category...</option>
-              <option>Supply Chain &amp; Logistics</option>
-              <option>Maintenance &amp; Reliability</option>
-              <option>Procurement &amp; Contracts</option>
-              <option>Operations &amp; Productivity</option>
-              <option>Security &amp; Risk</option>
-              <option>HSE &amp; Compliance</option>
-              <option>Leadership &amp; Management</option>
-              <option>Multiple Categories</option>
-              <option>Not Sure Yet</option>
+          <div class="form-field">
+            <label for="preferred_contact">Preferred contact method</label>
+            <select id="preferred_contact" name="Preferred contact method">
+              <option value="Email">Email</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="LINE">LINE</option>
+              <option value="Phone">Phone</option>
             </select>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="message">Training Requirements &amp; Message *</label>
-            <textarea id="message" name="message" class="form-textarea" placeholder="Please describe your training requirements, number of participants, preferred timeline, and any specific objectives or challenges you'd like to address..." maxlength="5000" required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Submit Training Request</button>
-          <p class="form-status-note">Your information is used only to respond to this enquiry and prepare the requested training proposal. By submitting this form, you agree to our <a href="/privacy-policy">Privacy Policy</a>.</p>
-        </form>
-      </div>
-
-      <!-- RIGHT: GET IN TOUCH + MAP -->
-      <div>
-        <!-- Contact methods -->
-        <div class="section-label"><span>Get In Touch</span></div>
-        <h2 style="margin:10px 0 8px;">Multiple Ways to Connect</h2>
-        <p style="color:var(--muted); font-size:.9rem; margin-bottom:24px;">Our team is available to discuss your training requirements and help identify the most suitable solutions for your organization.</p>
-
-        <div class="contact-method-row">
-          <div class="cmr-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          </div>
-          <div>
-            <div class="cmr-label">Email</div>
-            <div class="cmr-value"><a href="mailto:iht@traindevelopempower.com">iht@traindevelopempower.com</a></div>
-            <div class="cmr-note">For general enquiries and proposal requests</div>
-          </div>
         </div>
 
-        <div class="contact-method-row">
-          <div class="cmr-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <fieldset class="form-fieldset">
+          <legend>Which tier are you interested in?</legend>
+          <p class="form-hint">Not sure yet? Leave this blank and tell us in the message below.</p>
+          <div class="radio-grid">
+            <label class="radio-option">
+              <input type="radio" name="Tier interest" value="Tier 1 — Digital foundation">
+              <span>Tier 1 — Digital foundation</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="Tier interest" value="Tier 2 — Business launch">
+              <span>Tier 2 — Business launch</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="Tier interest" value="Tier 3 — Full concierge">
+              <span>Tier 3 — Full concierge</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="Tier interest" value="Not sure yet">
+              <span>Not sure yet</span>
+            </label>
           </div>
-          <div>
-            <div class="cmr-label">Phone</div>
-            <div class="cmr-value"><a href="tel:+66903247862">+66 90 324 7862</a></div>
-            <div class="cmr-note">Speak directly with our training team</div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Or, specific services you need (check any)</legend>
+          <div class="checkbox-grid">
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Website design"><span>Website design</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Domain registration"><span>Domain registration</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Web hosting"><span>Web hosting</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Email hosting"><span>Email hosting</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="CRM integration"><span>CRM integration</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Company registration"><span>Company registration</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="BOI application"><span>BOI application</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Visa application"><span>Visa application</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Work permit"><span>Work permit</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Accounting / bookkeeping"><span>Accounting / bookkeeping</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="Services" value="Translation / content"><span>Translation / content</span></label>
           </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your situation, timeline, or any questions."></textarea>
         </div>
 
-        <div class="contact-method-row">
-          <div class="cmr-icon" style="background:#25D366;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div>
-            <div class="cmr-label">WhatsApp</div>
-            <div class="cmr-value"><a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20would%20like%20to%20discuss%20our%20training%20requirements.%20Please%20contact%20me%20at%20your%20earliest%20convenience." target="_blank">+66 90 324 7862</a></div>
-            <div class="cmr-note">Message us on WhatsApp anytime</div>
-          </div>
-        </div>
+        <button type="submit" class="btn btn-coral form-submit" id="submitBtn">Send</button>
 
-        <div class="contact-method-row">
-          <div class="cmr-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <div>
-            <div class="cmr-label">Address</div>
-            <div class="cmr-value">Train Develop Empower Co. LTD</div>
-            <div class="cmr-note">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand</div>
-          </div>
-        </div>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite" tabindex="-1"></p>
+      </form>
 
-        <!-- Map -->
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.5!2d101.2758!3d12.6814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s133%2F118+Moo+2%2C+Thapma%2C+Mueang+Rayong%2C+Rayong+21000%2C+Thailand!5e0!3m2!1sen!2sth!4v1"
-            allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+      <div class="contact-alt">
+        <p class="contact-alt-label">Prefer to skip the form?</p>
+        <div class="contact-icons contact-icons-large">
+          <a href="tel:+66903247862" class="icon-link icon-phone" aria-label="Call Haven Siam">
+            <img src="assets/icon-phone.webp" alt="" width="727" height="743" loading="lazy">
+          </a>
+          <a href="mailto:hs@havensiam.com" class="icon-link icon-email" aria-label="Email Haven Siam">
+            <img src="assets/icon-email.webp" alt="" width="764" height="591" loading="lazy">
+          </a>
+          <a href="https://wa.me/66903247862" class="icon-link icon-whatsapp" target="_blank" rel="noopener" aria-label="Message Haven Siam on WhatsApp">
+            <img src="assets/icon-whatsapp.webp" alt="" width="722" height="723" loading="lazy">
+          </a>
+          <a href="https://line.me/ti/p/ZmLjFAgyNh" class="icon-link icon-line" target="_blank" rel="noopener" aria-label="Add Haven Siam on LINE">
+            <img src="assets/icon-line.webp" alt="" width="783" height="783" loading="lazy">
+          </a>
         </div>
-        <p style="font-size:.78rem; color:var(--muted); margin-top:10px;">133/118 Moo 2, Thapma, Mueang Rayong, Rayong 21000, Thailand</p>
-
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── CTA STRIP ── -->
-<section class="cta-strip">
-  <div class="container">
-    <div class="cta-inner">
-      <div class="cta-left">
-        <h4 style="color:var(--gold); font-size:.7rem; letter-spacing:.14em; margin-bottom:6px;">READY TO GET STARTED?</h4>
-        <h2>Ready to Develop Your Workforce Capability?</h2>
-        <p>Contact Train Develop Empower today to discuss customized in-house training solutions for your organization.</p>
-      </div>
-      <div class="cta-right">
-        <a href="#proposalForm" class="cta-pill cta-pill-gold">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Request Proposal
-        </a>
-        <a href="mailto:iht@traindevelopempower.com" class="cta-pill cta-pill-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          Email Us
-        </a>
-        <a href="tel:+66903247862" class="cta-pill cta-pill-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#F4A417" width="15" height="15"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          Call Us
-        </a>
-        <a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20would%20like%20to%20discuss%20our%20training%20requirements.%20Please%20contact%20me%20at%20your%20earliest%20convenience." target="_blank" class="cta-pill cta-pill-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp Us
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHATSAPP FLOAT ── -->
-<a href="https://wa.me/66903247862?text=Hello%20Train%20Develop%20Empower.%20I%20would%20like%20to%20discuss%20our%20training%20requirements.%20Please%20contact%20me%20at%20your%20earliest%20convenience." class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
-<footer class="site-footer">
-  <div class="container">
+  <footer class="site-footer">
     <div class="footer-grid">
-      <div class="footer-col-brand">
-        <img src="../images/logo-20260630.svg" alt="Train Develop Empower" class="footer-logo">
-        <p>Train Develop Empower Co. LTD helps organizations develop capability, improve performance, and empower people through practical, results-focused in-house corporate training solutions.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a href="#" aria-label="Twitter"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
-          <a href="#" aria-label="Google"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <div class="footer-brand">
+        <div class="logo footer-logo"><img src="assets/logo-assets/logo.svg" alt="Haven Siam" width="430" height="96" loading="lazy"></div>
+        <p>A coordination hub for founders moving themselves or their business to Thailand — website, domain, company registration and BOI, visa, and accounting, in one place.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="how-it-works.html">How it works</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="register-company-thailand.html">Register a company</a>
+        <a href="relocate-to-thailand.html">Relocation checklist</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html#digital">Digital foundation</a>
+        <a href="services.html#formation">Business formation</a>
+        <a href="services.html#financial">Accounting</a>
+        <a href="services.html#content">Content &amp; localization</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="footer-address">131/40 Moo 2, Thap Ma Subdistrict, Mueang Rayong District, Rayong 21000, Thailand</p>
+        <div class="footer-contact-details">
+          <a href="tel:+66903247862"><img src="assets/icon-phone.webp" alt="" width="727" height="743" loading="lazy">+66 90 324 7862</a>
+          <a href="mailto:hs@havensiam.com"><img src="assets/icon-email.webp" alt="" width="764" height="591" loading="lazy">hs@havensiam.com</a>
+          <a href="https://www.havensiam.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20"/><path d="M12 2a15.3 15.3 0 0 0 0 20"/></svg>www.havensiam.com</a>
         </div>
-      </div>
-      <div class="footer-col-links">
-        <h5 class="footer-col-title">Explore</h5>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/in-house-corporate-training">In-House Training</a></li>
-          <li><a href="/courses">Training Courses</a></li>
-          <li><a href="/industries">Industries We Serve</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-          <li><a href="/courses">Courses List</a></li>
-          <li><a href="/contact">Request Proposal</a></li>
-        </ul>
-      </div>
-      <div class="footer-col-links">
-        <h5 class="footer-col-title">Training Categories</h5>
-        <ul>
-          <li><a href="/supply-chain-logistics">Supply Chain &amp; Logistics</a></li>
-          <li><a href="/maintenance-reliability">Maintenance &amp; Reliability</a></li>
-          <li><a href="/procurement-contracts">Procurement &amp; Contracts</a></li>
-          <li><a href="/operations-productivity">Operations &amp; Productivity</a></li>
-          <li><a href="/security-risk">Security &amp; Risk</a></li>
-          <li><a href="/hse-compliance">HSE &amp; Compliance</a></li>
-          <li><a href="/leadership-management">Leadership &amp; People</a></li>
-        </ul>
-      </div>
-      <div class="footer-col-links">
-        <h5 class="footer-col-title">Contact Us</h5>
-        <p class="footer-company-name">Train Develop Empower Co. LTD</p>
-        <p class="footer-address">133/118 Moo 2, Thapma, Mueang Rayong,<br>Rayong 21000, Thailand.</p>
-        <ul class="footer-contact-list">
-          <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+66903247862">+66 90 324 7862</a></li>
-          <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:iht@traindevelopempower.com">iht@traindevelopempower.com</a></li>
-          <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg><a href="https://traindevelopempower.com" target="_blank">www.traindevelopempower.com</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="footer-bottom-inner">
-        <p>&copy; 2026 Train Develop Empower Co. LTD. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="cancellation-policy.html">Cancellation Policy</a>
-          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        <div class="contact-icons">
+          <a href="tel:+66903247862" class="icon-link icon-phone" aria-label="Call Haven Siam">
+            <img src="assets/icon-phone.webp" alt="" width="727" height="743" loading="lazy">
+          </a>
+          <a href="mailto:hs@havensiam.com" class="icon-link icon-email" aria-label="Email Haven Siam">
+            <img src="assets/icon-email.webp" alt="" width="764" height="591" loading="lazy">
+          </a>
+          <a href="https://wa.me/66903247862" class="icon-link icon-whatsapp" target="_blank" rel="noopener" aria-label="Message Haven Siam on WhatsApp">
+            <img src="assets/icon-whatsapp.webp" alt="" width="722" height="723" loading="lazy">
+          </a>
+          <a href="https://line.me/ti/p/ZmLjFAgyNh" class="icon-link icon-line" target="_blank" rel="noopener" aria-label="Add Haven Siam on LINE">
+            <img src="assets/icon-line.webp" alt="" width="783" height="783" loading="lazy">
+          </a>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Haven Siam. your business, settled.</span>
+      <div class="footer-legal-links">
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
 
-<script src="../js/main.js"></script>
+  <a href="https://wa.me/66903247862" class="sticky-whatsapp" target="_blank" rel="noopener" aria-label="Chat with Haven Siam on WhatsApp">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9001 16.124 19.0668 17.6222 17.5816C19.1205 16.0965 19.9715 14.0796 19.99 11.97C19.983 10.9173 19.7682 9.87634 19.3581 8.9068C18.948 7.93725 18.3505 7.05819 17.6 6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.511 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.66 11.93C18.6442 13.6859 17.9355 15.3645 16.6882 16.6006C15.441 17.8366 13.756 18.5301 12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6622 13.4958 10.8301 14.5293 12.2 15.22C12.9185 15.6394 13.7535 15.8148 14.58 15.72C14.8552 15.6654 15.1159 15.5535 15.345 15.3915C15.5742 15.2296 15.7667 15.0212 15.91 14.78C16.0428 14.4856 16.0846 14.1583 16.03 13.84C15.94 13.74 15.81 13.69 15.61 13.59Z"/></svg>
+  </a>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function () {
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    var scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    var form = document.getElementById('inquiryForm');
+    var submitBtn = document.getElementById('submitBtn');
+    var status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.textContent = '';
+      status.className = 'form-status';
+
+      var formData = new FormData(form);
+      var payload = Object.fromEntries(formData);
+      // Combine multi-checked "Services" checkboxes into one readable field
+      var services = formData.getAll('Services');
+      if (services.length) {
+        payload['Services'] = services.join(', ');
+      }
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            form.reset();
+            status.textContent = "Thanks — that's sent. We'll be in touch within one business day.";
+            status.className = 'form-status success';
+            status.focus();
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            status.textContent = 'Something went wrong. Please try again, or reach us directly via WhatsApp or email below.';
+            status.className = 'form-status error';
+            status.focus();
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong. Please try again, or reach us directly via WhatsApp or email below.';
+          status.className = 'form-status error';
+          status.focus();
+          status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send';
+        });
+    });
+  </script>
 </body>
 </html>
