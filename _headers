@@ -14,6 +14,9 @@
 /js/*
   Cache-Control: public, max-age=2592000, immutable
 
+/assets/*
+  Cache-Control: public, max-age=2592000, immutable
+
 /images/*
   Cache-Control: public, max-age=2592000, immutable
 
@@ -21,6 +24,12 @@
   Cache-Control: public, max-age=2592000, immutable
 
 /*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.svg
   Cache-Control: public, max-age=2592000, immutable
 
 /*.ico
