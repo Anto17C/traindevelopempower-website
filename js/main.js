@@ -85,25 +85,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setSourcePage();
 
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
+    form.addEventListener('submit', function (e) {
+      if (!form.reportValidity()) {
+        e.preventDefault();
+        return;
+      }
+
+      var honeypot = form.querySelector('[name="aG9uZXlwb3Q"]');
+      if (honeypot && honeypot.value) {
+        e.preventDefault();
+        showFormError('We could not send your request. Please try again or email us directly at iht@traindevelopempower.com.');
+        return;
+      }
 
       setSourcePage();
       hideFormMessages();
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      try {
-        var formData = new FormData(form);
-        var resp = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          cache: 'no-cache'
-        });
-
-        if (!resp.ok) throw new Error('Submission failed');
-
+      window.setTimeout(function () {
         form.reset();
         setSourcePage();
         if (success) {
@@ -113,15 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.textContent = 'Message Sent!';
         // CONVERSION: Proposal form submitted
         pushEvent('proposal_form_submit', { method: 'zoho_web_to_lead' });
-      } catch (err) {
-        showFormError('We could not send your request. Please try again or email us directly at iht@traindevelopempower.com.');
-        btn.textContent = defaultButtonText;
-      } finally {
-        setTimeout(function () {
+
+        window.setTimeout(function () {
           btn.disabled = false;
-          if (btn.textContent === 'Message Sent!') btn.textContent = defaultButtonText;
+          btn.textContent = defaultButtonText;
         }, 1800);
-      }
+      }, 900);
     });
   }
 
