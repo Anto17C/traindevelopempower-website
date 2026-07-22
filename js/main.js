@@ -58,68 +58,63 @@ document.addEventListener('DOMContentLoaded', function () {
     var success = document.getElementById('formSuccess');
     var errorBox = document.getElementById('formError');
     var defaultButtonText = 'Submit Training Request';
-    var accessKeyInput = form.querySelector('input[name="access_key"]');
+    var sourceField = form.querySelector('[name="LEADCF3"]');
+
+    function hideFormMessages() {
+      if (success) success.style.display = 'none';
+      if (errorBox) {
+        errorBox.textContent = '';
+        errorBox.style.display = 'none';
+      }
+    }
 
     function showFormError(message) {
       if (success) success.style.display = 'none';
       if (errorBox) {
         errorBox.textContent = message;
         errorBox.style.display = 'block';
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
+
+    function setSourcePage() {
+      if (!sourceField) return;
+      sourceField.value = window.location.href;
+      sourceField.setAttribute('value', window.location.href);
+    }
+
+    setSourcePage();
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
 
-      if (accessKeyInput && accessKeyInput.value === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
-        showFormError('The online form is not configured yet. Please email iht@traindevelopempower.com.');
-        return;
-      }
-
-      if (success) success.style.display = 'none';
-      if (errorBox) errorBox.style.display = 'none';
+      setSourcePage();
+      hideFormMessages();
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
       try {
         var formData = new FormData(form);
-
-        // Fire-and-forget: create a matching Lead in Zoho CRM in parallel.
-        // This never blocks or affects the visitor's experience — if it's slow
-        // or fails, the Web3Forms submission below still proceeds normally.
-        try {
-          fetch('https://traindevelopempower-form-webhook.naby79.workers.dev', {
-            method: 'POST',
-            body: new FormData(form),
-            mode: 'cors',
-          }).catch(function () {
-            // Intentionally ignored — CRM sync issues should never surface to the visitor
-          });
-        } catch (crmErr) {
-          // Intentionally ignored
-        }
-
         var resp = await fetch(form.action, {
           method: 'POST',
           body: formData,
-          headers: { Accept: 'application/json' }
+          cache: 'no-cache'
         });
-        var result = await resp.json().catch(function () { return {}; });
 
-        if (resp.ok && result.success) {
-          form.reset();
-          if (success) success.style.display = 'block';
-          btn.textContent = 'Message Sent!';
+        if (!resp.ok) throw new Error('Submission failed');
+
+        form.reset();
+        setSourcePage();
+        if (success) {
+          success.style.display = 'block';
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // CONVERSION: Proposal form submitted
-          pushEvent('proposal_form_submit', { method: 'web_form' });
-        } else {
-          showFormError(result.message || 'We could not send your request. Please try again or email us directly.');
-          btn.textContent = defaultButtonText;
         }
+        btn.textContent = 'Message Sent!';
+        // CONVERSION: Proposal form submitted
+        pushEvent('proposal_form_submit', { method: 'zoho_web_to_lead' });
       } catch (err) {
-        showFormError('We could not connect to the form service. Please try again or email us directly.');
+        showFormError('We could not send your request. Please try again or email us directly at iht@traindevelopempower.com.');
         btn.textContent = defaultButtonText;
       } finally {
         setTimeout(function () {
