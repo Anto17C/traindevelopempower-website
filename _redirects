@@ -1,3 +1,11 @@
+# Domain and homepage normalization
+http://traindevelopempower.com/* https://traindevelopempower.com/:splat 301!
+http://www.traindevelopempower.com/* https://traindevelopempower.com/:splat 301!
+https://www.traindevelopempower.com/* https://traindevelopempower.com/:splat 301!
+/pages/index.html / 301
+/pages/index / 301
+/pages/index/ / 301
+
 # Clean URL redirects
 # Old /pages URLs permanently redirect to clean root URLs.
 /pages/about.html /about 301
