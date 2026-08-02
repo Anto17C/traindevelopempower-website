@@ -55,6 +55,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .courses-intro-grid { grid-template-columns: 1fr; gap: 36px; }
   .courses-intro-img { height: 300px; }
 }
+
+.course-table {
+  table-layout: fixed;
+}
+.course-table th:nth-child(1),
+.course-table td:nth-child(1) { width: 92px; }
+.course-table th:nth-child(2),
+.course-table td:nth-child(2) { width: 34%; }
+.course-table th:nth-child(3),
+.course-table td:nth-child(3) {
+  width: 132px !important;
+  max-width: 132px;
+  white-space: normal;
+  line-height: 1.25;
+}
+.course-table th:nth-child(4),
+.course-table td:nth-child(4) { width: 30%; }
+.course-table th:nth-child(5),
+.course-table td:nth-child(5) { width: 112px; }
+.course-category { font-size: .82rem; }
+
+@media (max-width: 768px) {
+  .course-table { min-width: 640px; }
+  .course-table th,
+  .course-table td { padding: 11px 8px; }
+  .course-table th:nth-child(1),
+  .course-table td:nth-child(1) { width: 68px; }
+  .course-table th:nth-child(2),
+  .course-table td:nth-child(2) { width: 42%; }
+  .course-table th:nth-child(3),
+  .course-table td:nth-child(3) {
+    width: 88px !important;
+    max-width: 88px;
+  }
+  .course-table th:nth-child(4),
+  .course-table td:nth-child(4) { width: 24%; }
+  .course-table th:nth-child(5),
+  .course-table td:nth-child(5) { width: 86px; }
+  .course-table td:nth-child(1) .code-badge { padding: 5px 7px; font-size: .68rem; }
+  .course-table td:nth-child(2) { font-size: .86rem; line-height: 1.35; }
+  .course-table td:nth-child(3) { font-size: .73rem; }
+  .course-table td:nth-child(4) { font-size: .78rem !important; }
+  .course-table td:nth-child(5) .learn-link { font-size: .74rem; }
+}
 @media (max-width: 640px) {
   .courses-highlights { grid-template-columns: 1fr; }
 }
@@ -170,291 +214,291 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <table class="course-table">
         <thead>
           <tr>
-            <th style="width:100px;">Code</th>
+            <th>Code</th>
             <th>Course Title</th>
-            <th style="width:190px;">Category</th>
+            <th>Category</th>
             <th>Description</th>
-            <th style="width:120px;">Action</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <tr class="course-row" data-code="scl-001" data-title="supply chain resilience risk management" data-cat="supplychainlogistics" data-desc="strengthen supply chain resilience and improve risk management capability.">
             <td><a href="/supply-chain-resilience" class="code-badge code-link">SCL-001</a></td>
             <td>Supply Chain Resilience &amp; Risk Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Supply Chain &amp; Logistics</td>
+            <td class="course-category">Supply Chain &amp; Logistics</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen supply chain resilience and improve risk management capability.</td>
             <td><a href="/supply-chain-resilience" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="scl-002" data-title="strategic procurement vendor management" data-cat="supplychainlogistics" data-desc="improve procurement capability and strengthen supplier performance.">
             <td><a href="/strategic-procurement" class="code-badge code-link">SCL-002</a></td>
             <td>Strategic Procurement &amp; Vendor Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Supply Chain &amp; Logistics</td>
+            <td class="course-category">Supply Chain &amp; Logistics</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve procurement capability and strengthen supplier performance.</td>
             <td><a href="/strategic-procurement" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="scl-003" data-title="inventory optimization warehouse management" data-cat="supplychainlogistics" data-desc="optimize inventory levels and improve warehouse efficiency.">
             <td><a href="/inventory-optimization" class="code-badge code-link">SCL-003</a></td>
             <td>Inventory Optimization &amp; Warehouse Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Supply Chain &amp; Logistics</td>
+            <td class="course-category">Supply Chain &amp; Logistics</td>
             <td style="color:var(--muted);font-size:.84rem;">Optimize inventory levels and improve warehouse efficiency.</td>
             <td><a href="/inventory-optimization" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="scl-004" data-title="logistics distribution management excellence" data-cat="supplychainlogistics" data-desc="improve logistics efficiency and distribution performance.">
             <td><a href="/logistics-distribution" class="code-badge code-link">SCL-004</a></td>
             <td>Logistics &amp; Distribution Management Excellence</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Supply Chain &amp; Logistics</td>
+            <td class="course-category">Supply Chain &amp; Logistics</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve logistics efficiency and distribution performance.</td>
             <td><a href="/logistics-distribution" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="scl-005" data-title="demand planning supply forecasting" data-cat="supplychainlogistics" data-desc="improve forecast accuracy and strengthen demand planning capability.">
             <td><a href="/demand-planning" class="code-badge code-link">SCL-005</a></td>
             <td>Demand Planning &amp; Supply Forecasting</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Supply Chain &amp; Logistics</td>
+            <td class="course-category">Supply Chain &amp; Logistics</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve forecast accuracy and strengthen demand planning capability.</td>
             <td><a href="/demand-planning" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="mnt-001" data-title="maintenance planning scheduling excellence" data-cat="maintenancereliability" data-desc="improve maintenance planning, scheduling effectiveness, and resource utilization.">
             <td><a href="/maintenance-planning-scheduling" class="code-badge code-link">MNT-001</a></td>
             <td>Maintenance Planning &amp; Scheduling Excellence</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Maintenance &amp; Reliability</td>
+            <td class="course-category">Maintenance &amp; Reliability</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve maintenance planning, scheduling effectiveness, and resource utilization.</td>
             <td><a href="/maintenance-planning-scheduling" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="mnt-002" data-title="reliability-centered maintenance rcm" data-cat="maintenancereliability" data-desc="apply rcm principles to improve asset performance.">
             <td><a href="/reliability-centered-maintenance" class="code-badge code-link">MNT-002</a></td>
             <td>Reliability-Centered Maintenance (RCM)</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Maintenance &amp; Reliability</td>
+            <td class="course-category">Maintenance &amp; Reliability</td>
             <td style="color:var(--muted);font-size:.84rem;">Apply RCM principles to improve asset performance and reliability.</td>
             <td><a href="/reliability-centered-maintenance" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="mnt-003" data-title="root cause analysis failure investigation" data-cat="maintenancereliability" data-desc="identify failure causes and implement sustainable corrective actions.">
             <td><a href="/root-cause-analysis-failure-investigation" class="code-badge code-link">MNT-003</a></td>
             <td>Root Cause Analysis &amp; Failure Investigation</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Maintenance &amp; Reliability</td>
+            <td class="course-category">Maintenance &amp; Reliability</td>
             <td style="color:var(--muted);font-size:.84rem;">Identify failure causes and implement sustainable corrective actions.</td>
             <td><a href="/root-cause-analysis-failure-investigation" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="mnt-004" data-title="asset management lifecycle optimization" data-cat="maintenancereliability" data-desc="optimize asset lifecycle performance and long-term reliability.">
             <td><a href="/asset-management-lifecycle-optimization" class="code-badge code-link">MNT-004</a></td>
             <td>Asset Management &amp; Lifecycle Optimization</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Maintenance &amp; Reliability</td>
+            <td class="course-category">Maintenance &amp; Reliability</td>
             <td style="color:var(--muted);font-size:.84rem;">Optimize asset lifecycle performance and long-term reliability.</td>
             <td><a href="/asset-management-lifecycle-optimization" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="mnt-005" data-title="shutdown turnaround outage management" data-cat="maintenancereliability" data-desc="plan and execute shutdowns, turnarounds, and outages effectively.">
             <td><a href="/shutdown-turnaround-outage-management" class="code-badge code-link">MNT-005</a></td>
             <td>Shutdown, Turnaround &amp; Outage Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Maintenance &amp; Reliability</td>
+            <td class="course-category">Maintenance &amp; Reliability</td>
             <td style="color:var(--muted);font-size:.84rem;">Plan and execute shutdowns, turnarounds, and outages effectively.</td>
             <td><a href="/shutdown-turnaround-outage-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="prc-001" data-title="strategic sourcing category management" data-cat="procurementcontracts" data-desc="develop sourcing strategies and optimize category performance.">
             <td><a href="/strategic-sourcing-category-management" class="code-badge code-link">PRC-001</a></td>
             <td>Strategic Sourcing &amp; Category Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Procurement &amp; Contracts</td>
+            <td class="course-category">Procurement &amp; Contracts</td>
             <td style="color:var(--muted);font-size:.84rem;">Develop sourcing strategies and optimize category performance.</td>
             <td><a href="/strategic-sourcing-category-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="prc-002" data-title="supplier relationship management" data-cat="procurementcontracts" data-desc="strengthen supplier collaboration and performance management.">
             <td><a href="/supplier-relationship-management" class="code-badge code-link">PRC-002</a></td>
             <td>Supplier Relationship Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Procurement &amp; Contracts</td>
+            <td class="course-category">Procurement &amp; Contracts</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen supplier collaboration and performance management.</td>
             <td><a href="/supplier-relationship-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="prc-003" data-title="contract management administration" data-cat="procurementcontracts" data-desc="improve contract governance and commercial outcomes.">
             <td><a href="/contract-management-administration" class="code-badge code-link">PRC-003</a></td>
             <td>Contract Management &amp; Administration</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Procurement &amp; Contracts</td>
+            <td class="course-category">Procurement &amp; Contracts</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve contract governance and commercial outcomes.</td>
             <td><a href="/contract-management-administration" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="prc-004" data-title="procurement best practices commercial excellence" data-cat="procurementcontracts" data-desc="enhance procurement effectiveness and business value delivery.">
             <td><a href="/procurement-best-practices-commercial-excellence" class="code-badge code-link">PRC-004</a></td>
             <td>Procurement Best Practices &amp; Commercial Excellence</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Procurement &amp; Contracts</td>
+            <td class="course-category">Procurement &amp; Contracts</td>
             <td style="color:var(--muted);font-size:.84rem;">Enhance procurement effectiveness and business value delivery.</td>
             <td><a href="/procurement-best-practices-commercial-excellence" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="prc-005" data-title="negotiation skills procurement professionals" data-cat="procurementcontracts" data-desc="strengthen negotiation capability and commercial performance.">
             <td><a href="/negotiation-skills-procurement-professionals" class="code-badge code-link">PRC-005</a></td>
             <td>Negotiation Skills for Procurement Professionals</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Procurement &amp; Contracts</td>
+            <td class="course-category">Procurement &amp; Contracts</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen negotiation capability and commercial performance.</td>
             <td><a href="/negotiation-skills-procurement-professionals" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ops-001" data-title="operational excellence continuous improvement" data-cat="operationsproductivity" data-desc="drive sustainable operational improvement and performance.">
             <td><a href="/operational-excellence-continuous-improvement" class="code-badge code-link">OPS-001</a></td>
             <td>Operational Excellence &amp; Continuous Improvement</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Operations &amp; Productivity</td>
+            <td class="course-category">Operations &amp; Productivity</td>
             <td style="color:var(--muted);font-size:.84rem;">Drive sustainable operational improvement and performance.</td>
             <td><a href="/operational-excellence-continuous-improvement" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ops-002" data-title="lean principles business performance" data-cat="operationsproductivity" data-desc="apply lean tools to improve efficiency and reduce waste.">
             <td><a href="/lean-principles-business-performance" class="code-badge code-link">OPS-002</a></td>
             <td>Lean Principles for Business Performance</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Operations &amp; Productivity</td>
+            <td class="course-category">Operations &amp; Productivity</td>
             <td style="color:var(--muted);font-size:.84rem;">Apply lean tools to improve efficiency and reduce waste.</td>
             <td><a href="/lean-principles-business-performance" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ops-003" data-title="process improvement performance management" data-cat="operationsproductivity" data-desc="improve business processes and performance measurement.">
             <td><a href="/process-improvement-performance-management" class="code-badge code-link">OPS-003</a></td>
             <td>Process Improvement &amp; Performance Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Operations &amp; Productivity</td>
+            <td class="course-category">Operations &amp; Productivity</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve business processes and performance measurement.</td>
             <td><a href="/process-improvement-performance-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ops-004" data-title="productivity improvement strategies" data-cat="operationsproductivity" data-desc="increase workforce productivity and operational effectiveness.">
             <td><a href="/productivity-improvement-strategies" class="code-badge code-link">OPS-004</a></td>
             <td>Productivity Improvement Strategies</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Operations &amp; Productivity</td>
+            <td class="course-category">Operations &amp; Productivity</td>
             <td style="color:var(--muted);font-size:.84rem;">Increase workforce productivity and operational effectiveness.</td>
             <td><a href="/productivity-improvement-strategies" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ops-005" data-title="business process optimization" data-cat="operationsproductivity" data-desc="optimize workflows and improve organizational performance.">
             <td><a href="/business-process-optimization" class="code-badge code-link">OPS-005</a></td>
             <td>Business Process Optimization</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Operations &amp; Productivity</td>
+            <td class="course-category">Operations &amp; Productivity</td>
             <td style="color:var(--muted);font-size:.84rem;">Optimize workflows and improve organizational performance.</td>
             <td><a href="/business-process-optimization" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="sec-001" data-title="enterprise risk management" data-cat="securityrisk" data-desc="strengthen enterprise-wide risk identification and mitigation.">
             <td><a href="/enterprise-risk-management" class="code-badge code-link">SEC-001</a></td>
             <td>Enterprise Risk Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Security &amp; Risk</td>
+            <td class="course-category">Security &amp; Risk</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen enterprise-wide risk identification and mitigation.</td>
             <td><a href="/enterprise-risk-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="sec-002" data-title="business continuity crisis management" data-cat="securityrisk" data-desc="improve organizational resilience and crisis preparedness.">
             <td><a href="/business-continuity-crisis-management" class="code-badge code-link">SEC-002</a></td>
             <td>Business Continuity &amp; Crisis Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Security &amp; Risk</td>
+            <td class="course-category">Security &amp; Risk</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve organizational resilience and crisis preparedness.</td>
             <td><a href="/business-continuity-crisis-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="sec-003" data-title="security risk assessment mitigation" data-cat="securityrisk" data-desc="identify security risks and implement effective controls.">
             <td><a href="/security-risk-assessment-mitigation" class="code-badge code-link">SEC-003</a></td>
             <td>Security Risk Assessment &amp; Mitigation</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Security &amp; Risk</td>
+            <td class="course-category">Security &amp; Risk</td>
             <td style="color:var(--muted);font-size:.84rem;">Identify security risks and implement effective controls.</td>
             <td><a href="/security-risk-assessment-mitigation" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="sec-004" data-title="corporate security management" data-cat="securityrisk" data-desc="develop effective security management frameworks.">
             <td><a href="/corporate-security-management" class="code-badge code-link">SEC-004</a></td>
             <td>Corporate Security Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Security &amp; Risk</td>
+            <td class="course-category">Security &amp; Risk</td>
             <td style="color:var(--muted);font-size:.84rem;">Develop effective security management frameworks and protocols.</td>
             <td><a href="/corporate-security-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="sec-005" data-title="incident investigation response" data-cat="securityrisk" data-desc="improve incident response and investigation capability.">
             <td><a href="/incident-investigation-response" class="code-badge code-link">SEC-005</a></td>
             <td>Incident Investigation &amp; Response</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Security &amp; Risk</td>
+            <td class="course-category">Security &amp; Risk</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve incident response and investigation capability.</td>
             <td><a href="/incident-investigation-response" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="hse-001" data-title="health safety environmental management" data-cat="hsecompliance" data-desc="strengthen hse systems and workplace safety performance.">
             <td><a href="/health-safety-environmental-management" class="code-badge code-link">HSE-001</a></td>
             <td>Health, Safety &amp; Environmental Management</td>
-            <td style="white-space:nowrap;font-size:.82rem;">HSE &amp; Compliance</td>
+            <td class="course-category">HSE &amp; Compliance</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen HSE systems and workplace safety performance.</td>
             <td><a href="/health-safety-environmental-management" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="hse-002" data-title="risk assessment hazard identification" data-cat="hsecompliance" data-desc="identify hazards and improve risk control effectiveness.">
             <td><a href="/risk-assessment-hazard-identification" class="code-badge code-link">HSE-002</a></td>
             <td>Risk Assessment &amp; Hazard Identification</td>
-            <td style="white-space:nowrap;font-size:.82rem;">HSE &amp; Compliance</td>
+            <td class="course-category">HSE &amp; Compliance</td>
             <td style="color:var(--muted);font-size:.84rem;">Identify hazards and improve risk control effectiveness.</td>
             <td><a href="/risk-assessment-hazard-identification" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="hse-003" data-title="incident investigation root cause analysis" data-cat="hsecompliance" data-desc="improve investigation quality and preventive actions.">
             <td><a href="/incident-investigation-root-cause-analysis" class="code-badge code-link">HSE-003</a></td>
             <td>Incident Investigation &amp; Root Cause Analysis</td>
-            <td style="white-space:nowrap;font-size:.82rem;">HSE &amp; Compliance</td>
+            <td class="course-category">HSE &amp; Compliance</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve investigation quality and preventive corrective actions.</td>
             <td><a href="/incident-investigation-root-cause-analysis" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="hse-004" data-title="compliance management regulatory requirements" data-cat="hsecompliance" data-desc="strengthen compliance capability and regulatory adherence.">
             <td><a href="/compliance-management-regulatory-requirements" class="code-badge code-link">HSE-004</a></td>
             <td>Compliance Management &amp; Regulatory Requirements</td>
-            <td style="white-space:nowrap;font-size:.82rem;">HSE &amp; Compliance</td>
+            <td class="course-category">HSE &amp; Compliance</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen compliance capability and regulatory adherence.</td>
             <td><a href="/compliance-management-regulatory-requirements" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="hse-005" data-title="building positive safety culture" data-cat="hsecompliance" data-desc="develop leadership and behaviors that support safety excellence.">
             <td><a href="/building-positive-safety-culture" class="code-badge code-link">HSE-005</a></td>
             <td>Building a Positive Safety Culture</td>
-            <td style="white-space:nowrap;font-size:.82rem;">HSE &amp; Compliance</td>
+            <td class="course-category">HSE &amp; Compliance</td>
             <td style="color:var(--muted);font-size:.84rem;">Develop leadership and behaviors that support safety excellence.</td>
             <td><a href="/building-positive-safety-culture" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ldp-001" data-title="leadership excellence managers" data-cat="leadershipmanagement" data-desc="develop leadership capability and management effectiveness.">
             <td><a href="/leadership-excellence-managers" class="code-badge code-link">LDP-001</a></td>
             <td>Leadership Excellence for Managers</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Leadership &amp; Management</td>
+            <td class="course-category">Leadership &amp; Management</td>
             <td style="color:var(--muted);font-size:.84rem;">Develop leadership capability and management effectiveness.</td>
             <td><a href="/leadership-excellence-managers" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ldp-002" data-title="coaching mentoring performance" data-cat="leadershipmanagement" data-desc="improve coaching capability and employee development.">
             <td><a href="/coaching-mentoring-performance" class="code-badge code-link">LDP-002</a></td>
             <td>Coaching &amp; Mentoring for Performance</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Leadership &amp; Management</td>
+            <td class="course-category">Leadership &amp; Management</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve coaching capability and employee development effectiveness.</td>
             <td><a href="/coaching-mentoring-performance" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ldp-003" data-title="communication influencing skills" data-cat="leadershipmanagement" data-desc="strengthen communication effectiveness and influence.">
             <td><a href="/communication-influencing-skills" class="code-badge code-link">LDP-003</a></td>
             <td>Communication &amp; Influencing Skills</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Leadership &amp; Management</td>
+            <td class="course-category">Leadership &amp; Management</td>
             <td style="color:var(--muted);font-size:.84rem;">Strengthen communication effectiveness and leadership influence.</td>
             <td><a href="/communication-influencing-skills" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ldp-004" data-title="building high-performing teams" data-cat="leadershipmanagement" data-desc="improve teamwork, collaboration, and accountability.">
             <td><a href="/building-high-performing-teams" class="code-badge code-link">LDP-004</a></td>
             <td>Building High-Performing Teams</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Leadership &amp; Management</td>
+            <td class="course-category">Leadership &amp; Management</td>
             <td style="color:var(--muted);font-size:.84rem;">Improve teamwork, collaboration, and accountability.</td>
             <td><a href="/building-high-performing-teams" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="ldp-005" data-title="emotional intelligence leaders" data-cat="leadershipmanagement" data-desc="enhance leadership effectiveness through emotional intelligence.">
             <td><a href="/emotional-intelligence-leaders" class="code-badge code-link">LDP-005</a></td>
             <td>Emotional Intelligence for Leaders</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Leadership &amp; Management</td>
+            <td class="course-category">Leadership &amp; Management</td>
             <td style="color:var(--muted);font-size:.84rem;">Enhance leadership effectiveness through emotional intelligence.</td>
             <td><a href="/emotional-intelligence-leaders" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="dtx-001" data-title="artificial intelligence for business professionals" data-cat="digitalaitechnologies" data-desc="help leaders and employees understand ai fundamentals, practical business applications, responsible ai adoption, and strategies for improving productivity through artificial intelligence.">
             <td><a href="/artificial-intelligence-business-professionals" class="code-badge code-link">DTX-001</a></td>
             <td>Artificial Intelligence for Business Professionals</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Digital Transformation &amp; AI</td>
+            <td class="course-category">Digital Transformation &amp; AI</td>
             <td style="color:var(--muted);font-size:.84rem;">Help leaders and employees understand AI fundamentals, practical business applications, responsible AI adoption, and strategies for improving productivity through artificial intelligence.</td>
             <td><a href="/artificial-intelligence-business-professionals" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="dtx-002" data-title="generative ai  prompt engineering for the workplace" data-cat="digitalaitechnologies" data-desc="learn how to effectively use modern ai tools such as chatgpt and microsoft copilot to improve communication, reporting, research, analysis, planning, and day-to-day business productivity.">
             <td><a href="/generative-ai-prompt-engineering-workplace" class="code-badge code-link">DTX-002</a></td>
             <td>Generative AI &amp; Prompt Engineering for the Workplace</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Digital Transformation &amp; AI</td>
+            <td class="course-category">Digital Transformation &amp; AI</td>
             <td style="color:var(--muted);font-size:.84rem;">Learn how to effectively use modern AI tools such as ChatGPT and Microsoft Copilot to improve communication, reporting, research, analysis, planning, and day-to-day business productivity.</td>
             <td><a href="/generative-ai-prompt-engineering-workplace" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="dtx-003" data-title="digital transformation strategy  innovation" data-cat="digitalaitechnologies" data-desc="develop practical approaches for leading digital transformation initiatives, improving business processes, managing organizational change, and building innovation-driven organizations.">
             <td><a href="/digital-transformation-strategy-innovation" class="code-badge code-link">DTX-003</a></td>
             <td>Digital Transformation Strategy &amp; Innovation</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Digital Transformation &amp; AI</td>
+            <td class="course-category">Digital Transformation &amp; AI</td>
             <td style="color:var(--muted);font-size:.84rem;">Develop practical approaches for leading digital transformation initiatives, improving business processes, managing organizational change, and building innovation-driven organizations.</td>
             <td><a href="/digital-transformation-strategy-innovation" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="dtx-004" data-title="blockchain technology  business applications" data-cat="digitalaitechnologies" data-desc="understand blockchain fundamentals, smart contracts, digital assets, decentralized systems, and practical business applications beyond cryptocurrency across industries.">
             <td><a href="/blockchain-technology-business-applications" class="code-badge code-link">DTX-004</a></td>
             <td>Blockchain Technology &amp; Business Applications</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Digital Transformation &amp; AI</td>
+            <td class="course-category">Digital Transformation &amp; AI</td>
             <td style="color:var(--muted);font-size:.84rem;">Understand blockchain fundamentals, smart contracts, digital assets, decentralized systems, and practical business applications beyond cryptocurrency across industries.</td>
             <td><a href="/blockchain-technology-business-applications" class="learn-link">Learn More →</a></td>
           </tr>
           <tr class="course-row" data-code="dtx-005" data-title="data analytics  ai-driven decision making" data-cat="digitalaitechnologies" data-desc="develop the capability to interpret business data, use ai-powered analytics tools, build dashboards, identify trends, and make more informed operational and strategic decisions.">
             <td><a href="/data-analytics-ai-driven-decision-making" class="code-badge code-link">DTX-005</a></td>
             <td>Data Analytics &amp; AI-Driven Decision Making</td>
-            <td style="white-space:nowrap;font-size:.82rem;">Digital Transformation &amp; AI</td>
+            <td class="course-category">Digital Transformation &amp; AI</td>
             <td style="color:var(--muted);font-size:.84rem;">Develop the capability to interpret business data, use AI-powered analytics tools, build dashboards, identify trends, and make more informed operational and strategic decisions.</td>
             <td><a href="/data-analytics-ai-driven-decision-making" class="learn-link">Learn More →</a></td>
           </tr>
