@@ -418,6 +418,36 @@ section { padding: 80px 0; }
   border-color: var(--sky); box-shadow: 0 0 0 3px rgba(74,144,217,.1);
 }
 .form-textarea { resize: vertical; min-height: 120px; }
+.course-interest-options {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+.course-interest-placeholder {
+  margin: 0;
+  color: var(--muted);
+  font-size: .86rem;
+}
+.course-interest-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--text);
+  font-size: .86rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.course-interest-choice input {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--sky);
+  flex-shrink: 0;
+}
+.course-interest-other { margin-top: 10px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-submit {
   width: 100%; background: var(--navy); color: #fff;
