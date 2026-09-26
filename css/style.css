@@ -1436,3 +1436,7 @@ details[open] summary::after { content: '−'; }
 .page-hero-split .page-hero-btns, .page-hero-split .page-hero-left:has(> .course-hero-label) .page-hero-btns { flex-wrap: wrap; }
 .cta-alt { grid-column: 1 / -1; }
 .cta-left .cta-alt { margin-top: 10px; }
+
+.footer-social { gap: 10px; }
+.footer-social a { width: 30px; height: 30px; }
+.footer-social a svg { width: 15px; height: 15px; }
