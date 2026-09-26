@@ -1426,3 +1426,12 @@ details[open] summary::after { content: '−'; }
     visibility: visible !important;
   }
 }
+
+/* ── CTA ALT CONTACT LINE (email/call demoted from buttons) ── */
+.cta-alt { flex: 0 0 100%; margin: 6px 0 0; font-size: .85rem; color: rgba(255,255,255,.75); }
+.cta-alt a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.cta-alt a:hover { color: var(--gold); }
+.cta-right .cta-alt { text-align: center; }
+@media (max-width: 768px) { .page-hero-btns .cta-alt { text-align: center; } }
+.page-hero-split .page-hero-btns, .page-hero-split .page-hero-left:has(> .course-hero-label) .page-hero-btns { flex-wrap: wrap; }
+.cta-alt { grid-column: 1 / -1; }
