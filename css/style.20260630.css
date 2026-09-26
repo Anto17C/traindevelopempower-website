@@ -1435,3 +1435,4 @@ details[open] summary::after { content: '−'; }
 @media (max-width: 768px) { .page-hero-btns .cta-alt { text-align: center; } }
 .page-hero-split .page-hero-btns, .page-hero-split .page-hero-left:has(> .course-hero-label) .page-hero-btns { flex-wrap: wrap; }
 .cta-alt { grid-column: 1 / -1; }
+.cta-left .cta-alt { margin-top: 10px; }
