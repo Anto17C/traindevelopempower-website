@@ -377,40 +377,40 @@ document.addEventListener('DOMContentLoaded', function () {
     window.dataLayer.push(Object.assign({ event: eventName, page_path: window.location.pathname }, params || {}));
   }
 
-  // WhatsApp clicks
-  document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      pushEvent('whatsapp_click', { link_text: el.innerText.trim() || 'WhatsApp' });
-    });
-  });
+  // Where on the page a clicked link sits (header, hero, body, sidebar, cta, footer, floating button)
+  function linkLocation(el) {
+    if (el.closest('.wa-float')) return 'floating_button';
+    if (el.closest('.site-header, header, .mobile-menu, .nav-dropdown')) return 'header';
+    if (el.closest('.site-footer, footer')) return 'footer';
+    if (el.closest('.cta-strip')) return 'cta_strip';
+    if (el.closest('.course-sidebar, .sidebar-proposal')) return 'sidebar';
+    if (el.closest('.hero, .page-hero, .page-hero-split')) return 'hero';
+    return 'body';
+  }
 
-  // Call clicks
-  document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      pushEvent('call_click', { phone_number: el.getAttribute('href').replace('tel:', '') });
-    });
-  });
+  // Delegated click tracking: also covers links added after page load.
+  // Event names and existing parameters are unchanged; link_location and link_url are added.
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    var text = (el.innerText || '').trim();
+    var where = { link_location: linkLocation(el), link_url: href };
 
-  // Email clicks
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      pushEvent('email_click', { email_address: el.getAttribute('href').replace('mailto:', '') });
-    });
-  });
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+      pushEvent('whatsapp_click', Object.assign({ link_text: text || 'WhatsApp' }, where));
+    } else if (href.indexOf('tel:') === 0) {
+      pushEvent('call_click', Object.assign({ phone_number: href.replace('tel:', '') }, where));
+    } else if (href.indexOf('mailto:') === 0) {
+      pushEvent('email_click', Object.assign({ email_address: href.replace('mailto:', '') }, where));
+    } else if (/\.pdf$/i.test(href) && el.hasAttribute('download')) {
+      pushEvent('brochure_download', Object.assign({ file_name: href.split('/').pop(), link_text: text }, where));
+    }
 
-  // Brochure / outline downloads
-  document.querySelectorAll('a[href$=".pdf"][download]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      var fileName = el.getAttribute('href').split('/').pop();
-      pushEvent('brochure_download', { file_name: fileName, link_text: el.innerText.trim() });
-    });
-  });
-
-  // Request Proposal CTA clicks (links to contact page, not the form itself)
-  document.querySelectorAll('a.btn-sidebar-gold, a.cta-pill-gold, a.nav-cta').forEach(function (el) {
-    el.addEventListener('click', function () {
-      pushEvent('proposal_cta_click', { link_text: el.innerText.trim(), page_path: window.location.pathname });
-    });
+    // Request Proposal CTA clicks (links to contact page, not the form itself)
+    if (el.matches('a.btn-sidebar-gold, a.cta-pill-gold, a.nav-cta')) {
+      pushEvent('proposal_cta_click', Object.assign({ link_text: text }, where));
+    }
   });
 
 });
