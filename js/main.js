@@ -395,7 +395,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!el) return;
     var href = el.getAttribute('href') || '';
     var text = (el.innerText || '').trim();
-    var where = { link_location: linkLocation(el), link_url: href };
+    // Resolved absolute URL, so relative hrefs (e.g. ../brochures/x.pdf) are reported consistently
+    var where = { link_location: linkLocation(el), link_url: el.href || href };
 
     if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
       pushEvent('whatsapp_click', Object.assign({ link_text: text || 'WhatsApp' }, where));
