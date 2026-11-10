@@ -13,7 +13,25 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', function (e) {
       if (!nav.contains(e.target) && !toggle.contains(e.target)) {
         nav.classList.remove('open');
+        nav.querySelectorAll('.nav-item.open').forEach(function (i) { i.classList.remove('open'); });
       }
+    });
+
+    // Mobile accordion: tapping the arrow expands/collapses a submenu;
+    // tapping the label still navigates to the parent page.
+    nav.querySelectorAll('.nav-item').forEach(function (item) {
+      var link = item.querySelector('.nav-link');
+      var arrow = link && link.querySelector('svg');
+      if (!arrow || !item.querySelector('.dropdown')) return;
+      link.setAttribute('aria-haspopup', 'true');
+      link.setAttribute('aria-expanded', 'false');
+      link.addEventListener('click', function (e) {
+        if (!window.matchMedia('(max-width: 768px)').matches) return;
+        if (!e.target.closest('svg')) return;
+        e.preventDefault();
+        var open = item.classList.toggle('open');
+        link.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
     });
   }
 
