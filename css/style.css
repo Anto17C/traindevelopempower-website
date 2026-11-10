@@ -1478,6 +1478,6 @@ details[open] summary::after { content: '−'; }
   .main-nav .nav-item .nav-link { justify-content: flex-start; gap: 6px; }
   .main-nav .nav-item .nav-link svg {
     width: 34px; height: 34px; padding: 10px; margin: -6px 0 -6px 0;
-    border-radius: 7px; background: rgba(255,255,255,.06);
+    background: none;
   }
 }
