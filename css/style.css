@@ -1481,3 +1481,20 @@ details[open] summary::after { content: '−'; }
     background: none;
   }
 }
+
+/* Mobile menu: scrollable when taller than the screen; two columns in landscape */
+@media (max-width: 768px) {
+  .main-nav {
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .main-nav.open { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; align-content: start; }
+  .main-nav .nav-item.open,
+  .main-nav .nav-cta { grid-column: 1 / -1; }
+  .main-nav .nav-item.open .dropdown { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
+}
