@@ -1440,3 +1440,23 @@ details[open] summary::after { content: '−'; }
 .footer-social { gap: 10px; }
 .footer-social a { width: 30px; height: 30px; }
 .footer-social a svg { width: 15px; height: 15px; }
+
+/* ── ICON-ONLY CONTACT ACTIONS (call / email / WhatsApp) ── */
+.contact-icons { display: inline-flex; align-items: center; gap: 10px; }
+.contact-icon {
+  width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.3);
+  text-decoration: none; transition: background .2s, border-color .2s, transform .2s;
+}
+.contact-icon svg { width: 20px; height: 20px; display: block; }
+.contact-icon:hover { background: rgba(255,255,255,.16); border-color: currentColor; transform: translateY(-2px); }
+.contact-icon:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.contact-icon-call { color: var(--gold); }
+.contact-icon-mail { color: #E53E3E; }
+.contact-icon-wa   { color: #25D366; }
+.contact-icon-mail svg { stroke: currentColor; }
+.sidebar-card .contact-icons, .contact-icons.sidebar { margin-top: 4px; }
+@media (max-width: 768px) {
+  .contact-icons { justify-content: center; margin: 0 auto !important; }
+}
