@@ -1460,3 +1460,11 @@ details[open] summary::after { content: '−'; }
 @media (max-width: 768px) {
   .contact-icons { justify-content: center; margin: 0 auto !important; }
 }
+
+/* Footer contact icons: brand colours (call gold, email red, WhatsApp green) */
+.footer-social a[href^="tel:"]   { color: var(--gold); }
+.footer-social a[href^="mailto:"] { color: #E53E3E; }
+.footer-social a[href*="wa.me"]  { color: #25D366; }
+.footer-social a[href^="tel:"]:hover,
+.footer-social a[href^="mailto:"]:hover,
+.footer-social a[href*="wa.me"]:hover { background: rgba(255,255,255,.2); transform: translateY(-2px); }
