@@ -1504,6 +1504,6 @@ details[open] summary::after { content: '−'; }
   .main-nav .nav-item .dropdown {
     margin: 2px 0 6px 16px;
     padding: 2px 0 2px 12px;
-    border-left: 2px solid rgba(255,255,255,.22);
+    border-left: 2px solid var(--gold);
   }
 }
