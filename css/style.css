@@ -1498,3 +1498,12 @@ details[open] summary::after { content: '−'; }
   .main-nav .nav-cta { grid-column: 1 / -1; }
   .main-nav .nav-item.open .dropdown { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
 }
+
+/* Mobile submenu: vertical guide line along the left of expanded items */
+@media (max-width: 768px) {
+  .main-nav .nav-item .dropdown {
+    margin: 2px 0 6px 16px;
+    padding: 2px 0 2px 12px;
+    border-left: 2px solid rgba(255,255,255,.22);
+  }
+}
