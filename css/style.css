@@ -1492,12 +1492,6 @@ details[open] summary::after { content: '−'; }
     overscroll-behavior: contain;
   }
 }
-@media (max-width: 768px) and (orientation: landscape) {
-  .main-nav.open { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; align-content: start; }
-  .main-nav .nav-item.open,
-  .main-nav .nav-cta { grid-column: 1 / -1; }
-  .main-nav .nav-item.open .dropdown { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
-}
 
 /* Mobile submenu: vertical guide line along the left of expanded items */
 @media (max-width: 768px) {
@@ -1506,4 +1500,53 @@ details[open] summary::after { content: '−'; }
     padding: 2px 0 2px 12px;
     border-left: 2px solid var(--gold);
   }
+}
+
+/* Current page: gold underline under the menu title (gold stands out best on the navy header) */
+.main-nav .nav-link[aria-current] {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+.dropdown a[aria-current="page"] { color: var(--sky); font-weight: 700; }
+@media (max-width: 768px) {
+  .dropdown a[aria-current="page"] { color: var(--gold); }
+}
+
+/* Header copy of the Request Proposal button: only used on mobile landscape */
+.nav-cta-header { display: none; }
+
+/* Mobile portrait: menu button matches the hero button width (half of the container, minus half the gap) */
+@media (max-width: 768px) and (orientation: portrait) {
+  .main-nav .nav-cta {
+    width: calc((100vw - 66px) / 2);
+    margin: 8px 0 4px 16px;
+    padding-left: 8px; padding-right: 8px;
+  }
+}
+
+/* Mobile landscape: CTA moves to the header (before the hamburger); the menu opens as a horizontal bar */
+@media (max-width: 768px) and (orientation: landscape) {
+  .nav-cta-header {
+    display: inline-block; margin: 0 12px 0 auto; padding: 8px 14px;
+    background: var(--gold); color: var(--navy) !important; border-radius: 8px;
+    font-size: .78rem; font-weight: 800; white-space: nowrap; text-decoration: none;
+  }
+  .main-nav .nav-cta { display: none; }
+  .main-nav.open {
+    flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 4px 8px; padding: 10px 12px;
+  }
+  .main-nav .nav-link { width: auto; }
+  .main-nav .nav-item { display: contents; }
+  .main-nav .nav-item .dropdown {
+    order: 1; flex: 0 0 100%; margin: 4px 0 0; padding: 8px 0 0;
+    border-left: 0; border-top: 2px solid var(--gold);
+  }
+  .main-nav .nav-item.open .dropdown {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 8px;
+  }
+  .main-nav .nav-item.open .dropdown a { padding: 8px 12px; }
 }

@@ -35,6 +35,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Highlight the current page in the main menu (aria-current + underline)
+  (function () {
+    var nav = document.querySelector('.main-nav');
+    if (!nav) return;
+    function norm(path) {
+      return (path || '/').replace(/^\/pages(?=\/|$)/, '').replace(/\/index(\.html)?$/, '/')
+        .replace(/\.html$/, '').replace(/(.)\/+$/, '$1') || '/';
+    }
+    var here = norm(location.pathname);
+    nav.querySelectorAll('.nav-link, .dropdown a').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || href.charAt(0) !== '/' || norm(href) !== here) return;
+      a.setAttribute('aria-current', 'page');
+      var item = a.closest('.nav-item');
+      if (item && a.closest('.dropdown')) {
+        var parent = item.querySelector('.nav-link');
+        if (parent) parent.setAttribute('aria-current', 'true');
+      }
+    });
+  })();
+
   // Course search + filter
   var searchInput = document.getElementById('courseSearch');
   var filterBtns = document.querySelectorAll('.filter-btn');
