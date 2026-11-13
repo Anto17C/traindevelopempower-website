@@ -231,3 +231,6 @@
 
 /* Hero: contact icons on their own line when the brochure button is shown */
 .pt-hero-break { flex-basis: 100%; height: 0; }
+
+/* Hub hero: contact icons alone in the button row stay left-aligned on mobile */
+@media (max-width: 768px) { .page-hero-btns > .contact-icons:only-child { margin: 0 !important; justify-content: flex-start; } }
