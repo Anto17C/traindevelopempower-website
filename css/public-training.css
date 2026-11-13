@@ -252,3 +252,7 @@
 /* Sidebar Request Seats card: brochure is the last action */
 .pt-brochure-btn { margin-bottom: 0; gap: 8px; }
 .sidebar-proposal .btn-sidebar-outline + .pt-brochure-btn { margin-top: 0; }
+
+/* Hub card: breathing room between the "5 Days · In Person" eyebrow and the course title */
+.pt-hub-card h4 { margin: 0 0 14px; }
+.pt-hub-card h3 { margin-top: 0; }
