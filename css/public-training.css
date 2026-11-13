@@ -228,3 +228,6 @@
 @media (max-width: 640px) { .pt-steps { grid-template-columns: 1fr; } .course-body { padding: 36px 0; } }
 .pt-modules, .pt-steps { list-style: none; margin: 0; }
 .pt-block h3.pt-sub { margin-top: 28px; }
+
+/* Hero: contact icons on their own line when the brochure button is shown */
+.pt-hero-break { flex-basis: 100%; height: 0; }
