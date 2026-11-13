@@ -159,7 +159,7 @@
 .course-hero-label {
   display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,.15);
   border: 1px solid rgba(201,168,76,.3); color: var(--gold); padding: 5px 14px; border-radius: 20px;
-  font-size: .72rem; font-weight: 700; letter-spacing: .1em; margin-bottom: 10px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; margin-bottom: 14px;
 }
 .contact-icon-contact { color: #fff; }
 .contact-icon-contact svg { stroke: currentColor; }
