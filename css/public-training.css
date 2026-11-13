@@ -133,6 +133,9 @@
   .pt-modules, .pt-steps { grid-template-columns: 1fr; }
   .pt-facts div { grid-template-columns: 1fr; gap: 2px; }
   .pt-session { padding: 22px 18px; }
+  .pt-hub-row { grid-template-columns: 1fr; gap: 6px; justify-items: start; }
+  .pt-hub-row .pt-status { order: -1; margin-bottom: 4px; }
+  .pt-hub-row a.row-link { white-space: nowrap; }
 }
 
 /* Hero buttons: let long labels wrap instead of clipping on narrow screens */
