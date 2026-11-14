@@ -607,6 +607,21 @@ section { padding: 80px 0; }
   border-radius: var(--radius);
   padding: 20px;
 }
+/* Terms tabs: In-House / Public Training terms (links between two pages) */
+.terms-tabs { background: #fff; border-bottom: 1px solid var(--border); }
+.terms-tab-list { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.terms-tab-list li { margin: 0; }
+.terms-tab-list a {
+  display: block; padding: 16px 22px; font-size: .9rem; font-weight: 700; color: var(--muted);
+  border-bottom: 3px solid transparent; margin-bottom: -1px; text-decoration: none;
+}
+.terms-tab-list a:hover { color: var(--navy); }
+.terms-tab-list a.is-active { color: var(--navy); border-bottom-color: var(--gold); }
+@media (max-width: 560px) {
+  .terms-tab-list { gap: 0; }
+  .terms-tab-list li { flex: 1; display: flex; }
+  .terms-tab-list a { flex: 1; display: flex; align-items: center; justify-content: center; padding: 12px 8px; text-align: center; font-size: .82rem; line-height: 1.3; }
+}
 .legal-nav h5 { color: var(--navy); margin-bottom: 12px; }
 .legal-nav a { display: block; color: var(--muted); font-size: .8rem; padding: 7px 0; border-bottom: 1px solid var(--border); }
 .legal-nav a:last-child { border-bottom: none; }

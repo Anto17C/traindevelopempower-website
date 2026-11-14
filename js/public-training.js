@@ -49,7 +49,12 @@
       r.getAttribute('data-dates') + ' (' + r.getAttribute('data-status') + ')';
   }
 
+  // The Houston session moved from January to March 2027. Old links keep preselecting Houston,
+  // but new inquiries always carry the current session ID.
+  var LEGACY_SESSIONS = { 'ppera-hou-20270125': 'ppera-hou-20270315' };
+
   function selectSession(id) {
+    id = LEGACY_SESSIONS[id] || id;
     var match = radios.filter(function (r) { return r.value === id && isOpen(r); })[0];
     if (!match) return false;
     match.checked = true;
