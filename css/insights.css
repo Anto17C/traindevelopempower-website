@@ -1,0 +1,32 @@
+/* Insights articles: single-column reading layout, responsive data table */
+.article-body { max-width: 780px; margin: 0 auto; }
+.article-lead { font-size: 1.08rem; line-height: 1.75; color: var(--text, #1f2937); }
+.article-body h2 { font-size: 1.35rem; margin: 40px 0 12px; scroll-margin-top: 90px; }
+.article-body p { color: var(--muted); font-size: .95rem; line-height: 1.8; margin: 0 0 16px; }
+.article-body .article-lead { color: var(--navy); }
+.article-body a { text-decoration: underline; text-underline-offset: 2px; }
+
+.article-table-wrap { margin: 26px 0; }
+.article-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.article-table caption { text-align: left; font-weight: 700; color: var(--navy); padding: 0 0 10px; font-size: .9rem; }
+.article-table th, .article-table td { padding: 11px 12px; border: 1px solid var(--border); vertical-align: top; }
+.article-table thead th { background: var(--navy); color: #fff; text-align: left; font-weight: 600; }
+.article-table thead th:not(:first-child), .article-table td { text-align: right; font-variant-numeric: tabular-nums; }
+.article-table tbody th { text-align: left; font-weight: 600; color: var(--navy); background: var(--light); }
+.article-table tbody tr:nth-child(even) td { background: #fbfcfe; }
+
+/* Narrow screens: each case becomes a labelled card, no sideways scrolling */
+@media (max-width: 640px) {
+  .article-table, .article-table tbody, .article-table tr, .article-table th, .article-table td { display: block; width: 100%; }
+  .article-table caption { display: block; width: 100%; }
+  .article-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .article-table tr { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 14px; overflow: hidden; }
+  .article-table tbody th { border: 0; background: var(--navy); color: #fff; padding: 12px 14px; }
+  .article-table td { border: 0; border-top: 1px solid var(--border); text-align: right; display: flex; justify-content: space-between; gap: 16px; padding: 10px 14px; }
+  .article-table td::before { content: attr(data-label); font-weight: 600; color: var(--navy); text-align: left; }
+}
+
+.article-cta { background: var(--navy); border-radius: var(--radius, 12px); padding: 28px; margin: 44px 0 0; color: #fff; }
+.article-cta h2 { color: var(--gold); margin: 0 0 10px; font-size: 1.2rem; }
+.article-cta p { color: rgba(255,255,255,.8); margin: 0 0 18px; }
+.article-cta a.btn { text-decoration: none; }
