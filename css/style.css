@@ -1581,3 +1581,52 @@ details[open] summary::after { content: '−'; }
 .related-courses-grid strong { color: var(--navy); font-size: 1rem; line-height: 1.35; }
 .related-courses-grid span { color: var(--muted); font-size: .8rem; font-weight: 600; letter-spacing: .02em; }
 @media (max-width: 900px) { .related-courses-grid { grid-template-columns: 1fr; } .related-courses { padding: 44px 0; } }
+
+/* In-house course sidebars: Program At a Glance + Request a Proposal move as one sticky group on desktop */
+.course-body-grid > .course-sidebar-inhouse .sidebar-glance-img { height: 96px; }
+.course-body-grid > .course-sidebar-inhouse .sidebar-glance { margin-bottom: 20px; }
+.course-body-grid > .course-sidebar-inhouse .sidebar-stack { position: static; }
+.course-body-grid > .course-sidebar-inhouse .btn-sidebar-outline { margin-bottom: 0; }
+.course-body-grid > .course-sidebar-inhouse .btn-sidebar-gold:focus-visible,
+.course-body-grid > .course-sidebar-inhouse .btn-sidebar-outline:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.course-body-grid > .course-sidebar-inhouse .btn-sidebar-outline:hover { background: rgba(255,255,255,.08); }
+@media (min-width: 1025px) {
+  .course-body-grid > .course-sidebar-inhouse {
+    position: sticky; top: 96px; align-self: start;
+    max-height: calc(100vh - 112px); overflow-y: auto; scrollbar-width: thin;
+  }
+}
+/* Stacked layouts: keep the image visibly shorter than the old 160px */
+@media (max-width: 1024px) { .course-body-grid > .course-sidebar-inhouse .sidebar-glance-img { height: 120px; } }
+@media (max-width: 768px) { .course-body-grid > .course-sidebar-inhouse .sidebar-glance-img { height: 110px; } }
+/* Shorter desktops: tighter spacing so both cards fit */
+@media (min-width: 1025px) and (max-height: 980px) {
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance { margin-bottom: 12px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance-img { height: 80px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance-body { padding: 14px 18px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance-body h4 { margin-bottom: 6px; }
+  .course-body-grid > .course-sidebar-inhouse .glance-row { padding: 4px 0; font-size: .8rem; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-proposal { padding: 16px 18px; margin-bottom: 12px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-proposal h4 { margin-bottom: 6px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-proposal p { margin-bottom: 10px; line-height: 1.5; }
+  .course-body-grid > .course-sidebar-inhouse .btn-sidebar-gold { padding: 9px 14px; margin-bottom: 6px; }
+  .course-body-grid > .course-sidebar-inhouse .btn-sidebar-outline { padding: 8px 14px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-cat { padding: 14px 16px; }
+}
+/* Short laptops: tighter still, so both cards and the category link stay in view */
+@media (min-width: 1025px) and (max-height: 830px) {
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance { margin-bottom: 10px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance-img { height: 56px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-glance-body { padding: 10px 16px; }
+  .course-body-grid > .course-sidebar-inhouse .glance-row { padding: 3px 0; font-size: .78rem; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-proposal { padding: 12px 16px; margin-bottom: 10px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-proposal p { margin-bottom: 8px; font-size: .76rem; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-cat { padding: 10px 14px; }
+  .course-body-grid > .course-sidebar-inhouse .sidebar-cat p { margin-bottom: 6px; }
+}
+/* Very short windows: the group cannot fit, so it scrolls with the page instead of covering content */
+@media (min-width: 1025px) and (max-height: 745px) {
+  .course-body-grid > .course-sidebar-inhouse { position: static; max-height: none; overflow: visible; }
+}
+/* Keep any "other course" pills inside the Request a Proposal card (DTX pages) */
+.course-body-grid > .course-sidebar-inhouse .sidebar-proposal .other-course-pill { display: block; white-space: normal; margin-top: 8px; }
