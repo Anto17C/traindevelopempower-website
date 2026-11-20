@@ -1633,3 +1633,11 @@ details[open] summary::after { content: '−'; }
 .btn-sidebar-gold:hover,
 .btn-sidebar-gold:focus,
 .btn-sidebar-gold:active { color: var(--navy); }
+
+/* Short public-training pointers inside in-house pages */
+.public-training-note {
+  margin: 18px 0 0; padding: 14px 18px; background: var(--light); border-left: 4px solid var(--gold);
+  border-radius: 8px; font-size: .92rem; line-height: 1.7; color: var(--muted);
+}
+.public-training-note a { color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.public-training-note a:hover, .public-training-note a:focus-visible { color: var(--sky); }

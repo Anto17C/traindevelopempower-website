@@ -298,3 +298,4 @@
 .pt-module-notes strong { color: var(--navy); }
 @media (max-width: 760px) { .pt-module { padding: 16px; } }
 .pt-seat-hint { display: block; margin-top: 6px; font-size: .78rem; color: var(--muted); }
+.pt-related-public a { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
