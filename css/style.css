@@ -1630,3 +1630,8 @@ details[open] summary::after { content: '−'; }
 }
 /* Keep any "other course" pills inside the Request a Proposal card (DTX pages) */
 .course-body-grid > .course-sidebar-inhouse .sidebar-proposal .other-course-pill { display: block; white-space: normal; margin-top: 8px; }
+
+/* Gold sidebar button: keep navy text on hover/focus (the global a:hover turns links gold, which hid the label) */
+.btn-sidebar-gold:hover,
+.btn-sidebar-gold:focus,
+.btn-sidebar-gold:active { color: var(--navy); }
