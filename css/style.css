@@ -1565,3 +1565,19 @@ details[open] summary::after { content: '−'; }
   }
   .main-nav .nav-item.open .dropdown a { padding: 8px 12px; }
 }
+
+/* Related in-house courses (bottom of each course page) */
+.related-courses { background: var(--light); padding: 56px 0; border-top: 1px solid var(--border); }
+.related-courses h2 { margin: 6px 0 10px; }
+.related-courses p { color: var(--muted); max-width: 720px; margin: 0 0 24px; line-height: 1.7; }
+.related-courses p a { text-decoration: underline; text-underline-offset: 2px; }
+.related-courses-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.related-courses-grid li { margin: 0; }
+.related-courses-grid a {
+  display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 20px 22px; background: #fff;
+  border: 1.5px solid var(--border); border-radius: var(--radius); text-decoration: none; transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.related-courses-grid a:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-2px); }
+.related-courses-grid strong { color: var(--navy); font-size: 1rem; line-height: 1.35; }
+.related-courses-grid span { color: var(--muted); font-size: .8rem; font-weight: 600; letter-spacing: .02em; }
+@media (max-width: 900px) { .related-courses-grid { grid-template-columns: 1fr; } .related-courses { padding: 44px 0; } }
