@@ -262,3 +262,41 @@
 .pt-faq-item h3 { margin: 0 0 8px; }
 .pt-faq-item p { margin-bottom: 0; }
 .pt-faq a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- Multi-course hub: date-ordered schedule and extra course cards ---- */
+.pt-sched-head { margin: 0 0 14px; }
+.pt-sched-head h3 { margin: 0; font-size: 1.1rem; }
+.pt-schedule-wrap { margin: 0 0 40px; }
+.pt-schedule { width: 100%; border-collapse: collapse; background: #fff; font-size: .9rem; }
+.pt-schedule caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.pt-schedule th, .pt-schedule td { padding: 13px 14px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.pt-schedule thead th { background: var(--navy); color: #fff; font-weight: 600; font-size: .82rem; }
+.pt-schedule tbody th { color: var(--navy); font-weight: 700; white-space: nowrap; }
+.pt-schedule td a { font-weight: 700; white-space: nowrap; }
+.pt-hub-card + .pt-hub-card { margin-top: 24px; }
+.pt-card-offer { margin: 0 0 10px; font-size: .88rem; }
+.pt-card-offer strong { color: var(--navy); }
+@media (max-width: 760px) {
+  .pt-schedule, .pt-schedule tbody, .pt-schedule tr, .pt-schedule th, .pt-schedule td { display: block; width: 100%; }
+  .pt-schedule thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .pt-schedule tr { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 14px; overflow: hidden; background: #fff; }
+  .pt-schedule tbody th { background: var(--navy); color: #fff; border: 0; padding: 11px 14px; white-space: normal; }
+  .pt-schedule td { border: 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; padding: 10px 14px; text-align: right; }
+  .pt-schedule td::before { content: attr(data-label); font-weight: 600; color: var(--navy); text-align: left; flex-shrink: 0; }
+}
+
+/* ---- Single-session course pages (Dubai) ---- */
+.pt-block .pt-sessions.pt-sessions-single { grid-template-columns: minmax(0, 560px); }
+.pt-day { margin: 32px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); font-size: 1.1rem; color: var(--navy); }
+.pt-day:first-of-type { margin-top: 8px; }
+.pt-module { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin-top: 14px; }
+.pt-module h3, .pt-module h4 { margin: 0 0 8px; font-size: 1rem; color: var(--navy); display: flex; gap: 12px; align-items: flex-start; line-height: 1.4; }
+.pt-module-n { flex: 0 0 auto; min-width: 28px; height: 28px; border-radius: 6px; background: var(--navy); color: #fff; font-size: .78rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.pt-block .pt-module p { margin: 0 0 8px; }
+.pt-module-notes { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.pt-module-notes li { font-size: .88rem; color: var(--muted); line-height: 1.6; padding-left: 12px; border-left: 3px solid var(--gold); }
+.pt-module-notes strong { color: var(--navy); }
+.pt-role { color: var(--muted); font-weight: 600; margin-top: -6px; }
+.pt-bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 18px; }
+@media (max-width: 760px) { .pt-bio-grid { grid-template-columns: 1fr; gap: 8px; } .pt-module { padding: 16px; } }
+.pt-seat-hint { display: block; margin-top: 6px; font-size: .78rem; color: var(--muted); }
