@@ -30,3 +30,14 @@
 .article-cta h2 { color: var(--gold); margin: 0 0 10px; font-size: 1.2rem; }
 .article-cta p { color: rgba(255,255,255,.8); margin: 0 0 18px; }
 .article-cta a.btn { text-decoration: none; }
+
+/* Quoted example instructions and corrected commentary */
+.article-body blockquote { margin: 20px 0; padding: 4px 20px; border-left: 4px solid var(--gold); background: var(--light); border-radius: 0 10px 10px 0; }
+.article-body blockquote p { color: var(--navy); margin: 12px 0; }
+
+/* Text tables: left-aligned cells (the default table treatment right-aligns numbers) */
+.article-table-text thead th, .article-table-text td { text-align: left; font-variant-numeric: normal; }
+@media (max-width: 640px) {
+  .article-table-text td { display: block; text-align: left; }
+  .article-table-text td::before { display: block; margin-bottom: 4px; }
+}

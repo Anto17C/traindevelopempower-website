@@ -803,6 +803,26 @@ details[open] summary::after { content: '−'; }
   .sidebar-card { position: static; }
 }
 
+/* Tablets (up to 1024px wide) use the same hamburger menu as phones, so the logo and the full nav never collide */
+@media (max-width: 1024px) {
+  .main-nav {
+    display: none; position: absolute; top: 72px;
+    left: 0; right: 0; background: var(--navy2);
+    border-top: 1px solid rgba(255,255,255,.1);
+    flex-direction: column; align-items: stretch;
+    padding: 12px; gap: 2px; z-index: 999;
+  }
+  .main-nav.open { display: flex; }
+  .nav-link { width: 100%; color: rgba(255,255,255,.85); }
+  .dropdown { position: static; box-shadow: none; border: none; border-radius: 0; padding: 0 0 0 14px; display: block; min-width: auto; background: transparent; }
+  .dropdown a { color: rgba(255,255,255,.65); font-size: .82rem; }
+  .dropdown a:hover { background: rgba(255,255,255,.08); color: var(--gold); }
+  .dropdown a[aria-current="page"] { color: var(--gold); }
+  .nav-item { width: 100%; }
+  .nav-cta { margin: 8px 0 0; text-align: center; display: flex; }
+  .menu-toggle { display: flex; }
+}
+
 @media (max-width: 768px) {
   section { padding: 56px 0; }
   .main-nav {
@@ -1535,6 +1555,16 @@ details[open] summary::after { content: '−'; }
 
 /* Header copy of the Request Proposal button: only used on mobile landscape */
 .nav-cta-header { display: none !important; }
+
+/* Tablets: there is room for the Request Proposal button in the header, next to the hamburger */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-cta-header {
+    display: inline-flex !important; margin: 0 12px 0 auto; padding: 8px 14px;
+    background: var(--gold); color: var(--navy) !important; border-radius: 8px;
+    font-size: .78rem; font-weight: 800; white-space: nowrap; text-decoration: none;
+  }
+  .main-nav .nav-cta { display: none; }
+}
 
 /* Mobile portrait: menu button matches the hero button width (half of the container, minus half the gap) */
 @media (max-width: 768px) and (orientation: portrait) {

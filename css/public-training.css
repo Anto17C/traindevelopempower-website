@@ -288,8 +288,8 @@
   .pt-schedule thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .pt-schedule tr { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 14px; overflow: hidden; background: #fff; }
   .pt-schedule tbody th { background: var(--navy); color: #fff; border: 0; padding: 11px 14px; white-space: normal; }
-  .pt-schedule td { border: 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; padding: 10px 14px; text-align: right; }
-  .pt-schedule td::before { content: attr(data-label); font-weight: 600; color: var(--navy); text-align: left; flex-shrink: 0; }
+  .pt-schedule td { border: 0; border-top: 1px solid var(--border); display: block; padding: 10px 14px; text-align: left; }
+  .pt-schedule td::before { content: attr(data-label) ": "; font-weight: 600; color: var(--navy); }
 }
 
 /* ---- Single-session course pages (Dubai) ---- */
@@ -311,4 +311,11 @@
 /* Desktop only: give the hero button row (Request Seats buttons with icons + contact icons) enough width to stay on one line, so the hero does not grow taller */
 @media (min-width: 1025px) {
   .page-hero-split .page-hero-inner { grid-template-columns: 60% 40%; }
+}
+
+/* Mobile portrait hero: one generic Request Seats button (no city, no preselection on multi-location courses) */
+.hero-seat-mobile { display: none; }
+@media (max-width: 768px) and (orientation: portrait) {
+  .page-hero-btns .hero-seat-city { display: none; }
+  .page-hero-btns .hero-seat-mobile { display: inline-flex; }
 }
