@@ -288,8 +288,8 @@
   .pt-schedule thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .pt-schedule tr { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 14px; overflow: hidden; background: #fff; }
   .pt-schedule tbody th { background: var(--navy); color: #fff; border: 0; padding: 11px 14px; white-space: normal; }
-  .pt-schedule td { border: 0; border-top: 1px solid var(--border); display: block; padding: 10px 14px; text-align: left; }
-  .pt-schedule td::before { content: attr(data-label) ": "; font-weight: 600; color: var(--navy); }
+  .pt-schedule td { border: 0; border-top: 1px solid var(--border); display: flex; align-items: baseline; gap: 8px; padding: 10px 14px; text-align: left; }
+  .pt-schedule td::before { content: attr(data-label) ":"; flex: 0 0 5.4rem; font-weight: 600; color: var(--navy); }
 }
 
 /* ---- Single-session course pages (Dubai) ---- */
