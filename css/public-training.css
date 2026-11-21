@@ -187,13 +187,13 @@
 .sidebar-glance-img { height: 160px; overflow: hidden; }
 .sidebar-glance-img img { width: 100%; height: 100%; object-fit: cover; }
 .sidebar-glance-body { padding: 22px; }
-.sidebar-glance-body h4 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; text-transform: none; letter-spacing: 0; }
+.sidebar-glance-body h4 { color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 14px; }
 .glance-row { display: flex; align-items: flex-start; gap: 10px; font-size: .82rem; color: var(--muted); padding: 7px 0; border-bottom: 1px solid var(--border); }
 .glance-row:last-child { border-bottom: none; }
 .glance-row svg { color: var(--sky); flex-shrink: 0; margin-top: 2px; }
 .glance-row strong { color: var(--navy); }
 .sidebar-proposal { background: var(--navy); border-radius: var(--radius); padding: 24px; }
-.sidebar-proposal h4 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; text-transform: none; letter-spacing: 0; }
+.sidebar-proposal h4 { color: #fff; font-size: .92rem; font-weight: 700; margin-bottom: 10px; }
 .sidebar-proposal p { color: rgba(255,255,255,.7); font-size: .8rem; margin-bottom: 16px; line-height: 1.6; }
 .btn-sidebar-gold { background: var(--gold); color: var(--navy); padding: 11px 16px; border-radius: 9px; font-weight: 700; font-size: .85rem; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; transition: opacity .2s; text-align: center; }
 .btn-sidebar-gold:hover { opacity: .88; color: var(--navy); }
@@ -307,3 +307,8 @@
 .pt-seat-hint { display: block; margin-top: 6px; font-size: .78rem; color: var(--muted); }
 .pt-block .attend-pills + p, .pt-block .pt-related-public { margin-top: 22px; }
 .pt-related-public a { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Hero: give the button row (Request Seats buttons with icons + contact icons) enough width to stay on one line, so the hero does not grow taller */
+@media (min-width: 769px) {
+  .page-hero-split .page-hero-inner { grid-template-columns: 60% 40%; }
+}
