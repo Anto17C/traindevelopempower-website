@@ -197,7 +197,7 @@
 .sidebar-proposal p { color: rgba(255,255,255,.7); font-size: .8rem; margin-bottom: 16px; line-height: 1.6; }
 .btn-sidebar-gold { background: var(--gold); color: var(--navy); padding: 11px 16px; border-radius: 9px; font-weight: 700; font-size: .85rem; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; transition: opacity .2s; text-align: center; }
 .btn-sidebar-gold:hover { opacity: .88; color: var(--navy); }
-.btn-sidebar-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.3); padding: 10px 16px; border-radius: 9px; font-weight: 600; font-size: .85rem; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; text-align: center; }
+.btn-sidebar-outline { gap: 8px; background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.3); padding: 10px 16px; border-radius: 9px; font-weight: 600; font-size: .85rem; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; text-align: center; }
 .btn-sidebar-outline:hover { border-color: #fff; color: #fff; }
 
 /* One sticky sidebar on tall desktop screens; natural scroll otherwise */
