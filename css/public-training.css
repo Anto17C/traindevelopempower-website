@@ -308,7 +308,7 @@
 .pt-block .attend-pills + p, .pt-block .pt-related-public { margin-top: 22px; }
 .pt-related-public a { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 
-/* Hero: give the button row (Request Seats buttons with icons + contact icons) enough width to stay on one line, so the hero does not grow taller */
-@media (min-width: 769px) {
+/* Desktop only: give the hero button row (Request Seats buttons with icons + contact icons) enough width to stay on one line, so the hero does not grow taller */
+@media (min-width: 1025px) {
   .page-hero-split .page-hero-inner { grid-template-columns: 60% 40%; }
 }
