@@ -122,7 +122,6 @@ section { padding: 80px 0; }
 .nav-cta:hover { background: var(--gold2) !important; color: var(--navy) !important; transform: translateY(-1px); }
 /* Request Proposal buttons carry the document icon used on the in-house course pages */
 .nav-cta, .nav-cta-header { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
-.nav-cta svg, .nav-cta-header svg { width: 15px; height: 15px; flex-shrink: 0; }
 
 .menu-toggle {
   display: none; flex-direction: column; gap: 5px;
