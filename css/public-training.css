@@ -292,7 +292,7 @@
   .pt-schedule td::before { content: attr(data-label) ":"; flex: 0 0 5.4rem; font-weight: 600; color: var(--navy); }
 }
 
-/* ---- Single-session course pages (Dubai) ---- */
+/* ---- Single-session course pages ---- */
 .pt-block .pt-sessions.pt-sessions-single { grid-template-columns: minmax(0, 560px); }
 .pt-block h3.pt-day { margin: 44px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); font-size: 1.1rem; color: var(--navy); }
 .pt-block h3.pt-day:first-of-type { margin-top: 8px; }

@@ -50,8 +50,9 @@
   .article-hero { background: linear-gradient(180deg, rgba(11,26,36,.92) 0%, rgba(11,26,36,.84) 100%), url('/images/insights-hero.webp') center right / cover no-repeat, var(--navy); }
 }
 
-/* Insights hub: responsive article cards (a fourth article is one more card) */
+/* Insights hub: responsive article cards (another article is one more card) */
 .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+.insight-grid:has(> .insight-card:only-child) { grid-template-columns: minmax(0, 720px); }  /* a single article reads as a full card, not a narrow tile */
 .insight-card { background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius, 12px); padding: 26px; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
 .insight-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(11,26,36,.10); }
 .insight-topic { color: var(--teal, #076b70); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 10px; }
